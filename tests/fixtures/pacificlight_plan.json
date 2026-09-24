@@ -1,0 +1,403 @@
+[
+  {
+	"id": "01_Easy Save_01 July 2026",
+	
+	"hot": "new deal",
+	
+	"title": "Easy Save",
+	"plancode" : "PLE_EASYSAVE_01.07.2026",
+	"smartmeter" : "no",
+	"ebill" : "no",
+	
+	"month": "No contract",
+	
+	"price": "18%",
+	"priceUnit": "Off",
+	"rateDisplay" : "18% Off",
+	
+	"type": "hotDeals",
+	
+	"image": "https://pacificlight.com.sg/img/uploadsignup/easy_save.jpg",
+	"learnMore" : {
+		"descTitle" : "Save commitment free! ",
+		"graph" : "",
+		"desc" : "",
+		"details" : [
+
+			"Daily Charge of 55¢/day",
+
+			"No early termination charge",
+
+			"Security Deposit Waiver with Recurring Card Payment"
+      ],
+	  
+	  "referral": "no",
+	  
+	"factsheet" : "https://pacificlight.com.sg/support/factsheet-detail/1-easy-save-no-contract-1-july-2026",
+	"facesheetName" : "Easy Save",
+	"factsheetDate" : "01 July 2026",
+	"factsheetType" : "Non-standard",
+	"factsheetPrice" : "Discount off regulated tariff plan: 18% off and Daily Charge of 55¢/day. (Rate excl. 9% GST for Daily Charge is 50¢/day)",
+	"factsheetRenewal" : "This is a Non-Standard Price Plan with no fixed Contract Duration. You can terminate the Contract at any time giving us 10 business days’ notice.",
+	"factsheetFile" : "https://pacificlight.com.sg/img/uploadfactsheet/FS_EasySave_010726.jpg"  
+	}
+  },  {
+	"id": "02_EasyPeasy-6-jul-2026",
+	
+	"title": "Easy Peasy",
+	"plancode" : "PLE_EASYPEASY_01.05.2019",
+	"smartmeter" : "no",
+	"ebill" : "no",
+	
+	"month": "No contract",
+	
+	"price": "26.00",
+	"priceUnit": " &cent;/kWh",
+	"rateDisplay" : "26.00&cent;/kWh + 55&cent daily charge",
+	
+	"image": "https://pacificlight.com.sg/img/uploadsignup/easy_peasy_0.png",
+	"learnMore" : {
+		"descTitle" : "This is a <br/>commitment free plan! ",
+		"graph" : "",
+		"desc" : "",
+		"details" : [
+
+			"Daily Charge of 55¢/day",
+
+			"No early termination charge",
+
+			"Security Deposit Waiver with Recurring Card Payment"
+      ],
+	  
+	  "referral": "no",
+	  
+	"factsheet" : "https://pacificlight.com.sg/support/factsheet-detail/02-easy-peasy-no-contract-6-jul-2026",
+	"facesheetName" : "Easy Peasy ",
+	"factsheetDate" : "6 July 2026",
+	"factsheetType" : "Non-standard",
+	"factsheetPrice" : "26.00¢/kWh + Daily Charge 55¢/day (Rate excl. 9% GST is 23.853¢/kWh + Daily Charge is 50¢/day)",
+	"factsheetRenewal" : "This is a Non-Standard Price Plan with no fixed Contract Duration. You can terminate the Contract at any time giving us 10 business days’ notice.",
+	"factsheetFile" : "https://pacificlight.com.sg/img/uploadfactsheet/FS_EZPZ_060726.jpg"  
+	}
+  },  {
+	"id": "03_9 to 9_06 Jul 2026",
+	
+	"hot": "hot deal",
+	
+	"title": "9 to 9",
+	"plancode" : "PLE_9TO9FIXED_2022.09.23 ",
+	"smartmeter" : "yes",
+	"ebill" : "no",
+	
+	"month": "No contract",
+	
+	"price": "18.50*",
+	"priceUnit": " &cent;/kWh",
+	"rateDisplay" : "18.50&cent;/kWh*",
+	
+	"type": "hotDeals",
+	
+	"image": "https://pacificlight.com.sg/img/uploadsignup/nine-icon_1.png",
+	"learnMore" : {
+		"descTitle" : "Best of both worlds <br/>Sleep commitment-free!",
+		"graph" : "",
+		"desc" : "",
+		"details" : [
+
+			"18.50&cent;/kWh (9pm - 9am) & 38.00&cent;/kWh (9am - 9pm)",
+
+			"Daily Charge of $1.01/day",
+
+			"No early termination charge",
+
+			"Security Deposit Waiver with Recurring Card Payment"
+      ],
+	  
+	  "referral": "no",
+	  
+	"factsheet" : "https://pacificlight.com.sg/support/factsheet-detail/03-9-to-9-no-contract-6-jul-2026",
+	"facesheetName" : "9 to 9",
+	"factsheetDate" : "6 July 2026",
+	"factsheetType" : "Non-standard",
+	"factsheetPrice" : "Two-tiered fixed rate plan: <br>38.00&cent;/kWh from 9am to 9pm and 18.50&cent;/kWh from 9pm to 9am + Daily Charge $1.01/day. (Rates excl. 9% GST are 34.862¢/kWh and 16.972¢/kWh, with a Daily Charge of 92.52¢/day)",
+	"factsheetRenewal" : "This is a Non-Standard Price Plan with no fixed Contract Duration. You can terminate the Contract at any time giving us 10 business days’ notice.",
+	"factsheetFile" : "https://pacificlight.com.sg/img/uploadfactsheet/FS_9to9_03072026.jpg"  
+	}
+  },  {
+	"id": "04_SunnySideUp12_07 Aug 2026",
+	
+	"title": "Sunny Side-Up",
+	"plancode" : "PLE_SUNNYSIDEUP12M_2026.08.07",
+	"smartmeter" : "no",
+	"ebill" : "yes",
+	
+	"month": "12 months",
+	
+	"price": "31.50",
+	"priceUnit": "&cent;/kWh",
+	"rateDisplay" : "31.50&cent;/kWh",
+	
+	"image": "https://pacificlight.com.sg/img/uploadsignup/sunny_side_up_12_v2.png",
+	"learnMore" : {
+		"descTitle" : "Go Green with <br/> free RECs!",
+		"graph" : "",
+		"desc" : "",
+		"details" : [
+
+			"Be carbon neutral with free RECs",
+
+			"Pick KrisFlyer miles or yuu Points",
+
+			"Security Deposit Waiver with Recurring Card Payment"
+      ],
+	  
+	  "referral": "no",
+	  
+	"factsheet" : "https://pacificlight.com.sg/support/factsheet-detail/04-sunny-side-up-12-7-aug-2026",
+	"facesheetName" : "Sunny Side-Up 12",
+	"factsheetDate" : "7 August 2026",
+	"factsheetType" : "Standard",
+	"factsheetPrice" : "Fixed price plan: 31.50¢/kWh  (Rate excl. 9% GST is 28.899¢/kWh)",
+	"factsheetRenewal" : "Auto-renewed contract will remain at the same plan name of similar duration. Auto-renewed electricity rate will be lower than the prevailing Regulated Tariff at renewal. All other fees will remain the same. This is subject to Clause 3.2 of the Residential Electricity Contract.",
+	"factsheetFile" : "https://pacificlight.com.sg/img/uploadfactsheet/FS_SunnySideUp_070826.jpg"  
+	}
+  },  {
+	"id": "05_SavvySaver12_07 Aug 2026",
+	
+	"title": "Savvy Saver",
+	"plancode" : "PLE_SAVVYSAVER12M_2026.08.07",
+	"smartmeter" : "no",
+	"ebill" : "no",
+	
+	"month": "12 months",
+	
+	"price": "31.00",
+	"priceUnit": "&cent;/kWh",
+	"rateDisplay" : "31.00&cent;/kWh",
+	
+	"image": "https://pacificlight.com.sg/img/uploadsignup/savvy_saver_12.png",
+	"learnMore" : {
+		"descTitle" : "Fixed rate for a year! <br/>No worries.",
+		"graph" : "",
+		"desc" : "",
+		"details" : [
+
+			"Pick KrisFlyer miles or yuu Points",
+
+			"Security Deposit Waiver with Recurring Card Payment"
+      ],
+	  
+	  "referral": "no",
+	  
+	"factsheet" : "https://pacificlight.com.sg/support/factsheet-detail/05-savvy-saver-12-7-aug-2026",
+	"facesheetName" : "Savvy Saver 12",
+	"factsheetDate" : "7 August 2026",
+	"factsheetType" : "Standard",
+	"factsheetPrice" : "Fixed price plan: 31.00¢/kWh (Rate excl. 9% GST is 28.44¢/kWh)",
+	"factsheetRenewal" : "Auto-renewed contract will remain on the same plan and duration. The electricity rate will be lower than the prevailing Regulated Tariff at renewal. All other fees remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
+	"factsheetFile" : "https://pacificlight.com.sg/img/uploadfactsheet/FS_SavvySaver12_070826.jpg"  
+	}
+  },  {
+	"id": "06_SavvySaver24_20 Aug 26",
+	
+	"hot": "hot deal",
+	
+	"title": "Savvy Saver",
+	"plancode" : "PLE_SAVVYSAVER24M_2026.08.20",
+	"smartmeter" : "no",
+	"ebill" : "no",
+	
+	"month": "24 months",
+	
+	"price": "29.80",
+	"priceUnit": "&cent;/kWh",
+	"rateDisplay" : "29.80&cent;/kWh",
+	
+	"type": "hotDeals",
+	
+	"image": "https://pacificlight.com.sg/img/uploadsignup/savvy_saver_12.png",
+	"learnMore" : {
+		"descTitle" : "Fixed rate for 2 years!<br/>No worries.",
+		"graph" : "",
+		"desc" : "",
+		"details" : [
+
+			"Pick rebates, KrisFlyer miles or yuu Points",
+
+			"Use a referral code for S$20 off",
+
+			"Security Deposit Waiver with Recurring Card Payment"
+      ],
+	  
+	  "referral": "yes",
+	  
+	"factsheet" : "https://pacificlight.com.sg/support/factsheet-detail/06-savvy-saver-24-20-aug-2026",
+	"facesheetName" : "Savvy Saver 24",
+	"factsheetDate" : "20 August 2026",
+	"factsheetType" : "Standard",
+	"factsheetPrice" : "Fixed price plan: 29.800¢/kWh (Rate excl. 9% GST is 27.339¢/kWh) ",
+	"factsheetRenewal" : "Auto-renewed contract will remain on the same plan and duration. The electricity rate will be lower than the prevailing Regulated Tariff at renewal. All other fees remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
+	"factsheetFile" : "https://pacificlight.com.sg/img/uploadfactsheet/FS_SavvySaver24_20082026.jpg"  
+	}
+  },  {
+	"id": "07_SaveWhileSleeping24_20 Aug 2026",
+	
+	"title": "Save While Sleeping",
+	"plancode" : "PLE_SWSFIXED24M_2026.08.20",
+	"smartmeter" : "yes",
+	"ebill" : "no",
+	
+	"month": "24 months",
+	
+	"price": "22.50*",
+	"priceUnit": "&cent;/kWh",
+	"rateDisplay" : "22.50*&cent;/kWh",
+	
+	"image": "https://pacificlight.com.sg/img/uploadsignup/save_while_sleeping_24.png",
+	"learnMore" : {
+		"descTitle" : "Sweet dreams only! <br/>Save as you snooze.",
+		"graph" : "",
+		"desc" : "",
+		"details" : [
+
+			"22.50&cent;/kWh (11pm - 7am) & 34.50&cent;/kWh (7am - 11pm)",
+
+			"Pick rebates, KrisFlyer miles or yuu Points",
+
+			"Use a referral code for S$20 off",
+
+			"Security Deposit Waiver with Recurring Card Payment"
+      ],
+	  
+	  "referral": "yes",
+	  
+	"factsheet" : "https://pacificlight.com.sg/support/factsheet-detail/07-save-while-sleeping-24-20-aug-2026",
+	"facesheetName" : "Save While Sleeping 24",
+	"factsheetDate" : "20 August 2026",
+	"factsheetType" : "Non-standard",
+	"factsheetPrice" : "Peak/off-peak plan fixed rate plan: <br>i. 34.50&cent;/kWh during peak periods from 7am to 11pm (Day)<br>ii. 22.50&cent;/kWh during off peak periods from 11pm to 7am (Night). (Rates excl. 9% GST are 31.651¢/kWh and 20.642¢/kWh respectively)",
+	"factsheetRenewal" : "You will be notified at least 10 business days before your contract expires. On the renewal date, we will notify you of your auto-renewal electricity rates, with at least one of the tiered rates priced below the prevailing Regulated Tariff. All other fees shall remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
+	"factsheetFile" : "https://pacificlight.com.sg/img/uploadfactsheet/FS_SaveWhileSleeping24_20082026.jpg"  
+	}
+  },  {
+	"id": "08_Stack It Up 24_20 Aug 2026",
+	
+	"title": "Stack It Up ",
+	"plancode" : "PLE_STACKITUP24M_2026.08.20",
+	"smartmeter" : "yes",
+	"ebill" : "no",
+	
+	"month": "24 months",
+	
+	"price": "28.00*",
+	"priceUnit": "&cent;/kWh",
+	"rateDisplay" : "28.00&cent;/kWh*",
+	
+	"image": "https://pacificlight.com.sg/img/uploadsignup/Stack_It_Up_v2.png",
+	"learnMore" : {
+		"descTitle" : "Level up your savings!",
+		"graph" : "",
+		"desc" : "",
+		"details" : [
+
+			"Full rates in Factsheet",
+
+			"Pick rebates, KrisFlyer miles or yuu Points",
+
+			"Use a referral code for S$20 off",
+
+			"Security Deposit Waiver with Recurring Card Payment"
+      ],
+	  
+	  "referral": "yes",
+	  
+	"factsheet" : "https://pacificlight.com.sg/support/factsheet-detail/08-Stack-It-Up-24-20-aug-2026",
+	"facesheetName" : "Stack It Up 24",
+	"factsheetDate" : "20 August 2026",
+	"factsheetType" : "Non-standard",
+	"factsheetPrice" : "Fixed Price Price Plan on Usage per billing period: Stack 1 - below 300kWh@30.00¢/kWh, Stack 2 - 301 to 600kWh@29.40¢/kWh and Stack 3 - above 600 kWh@28.00¢/kWh. (Rates excl. 9% GST are 27.522¢/kWh, 26.972¢/kWh and 25.688¢/kWh respectively)",
+	"factsheetRenewal" : "You will be notified at least 10 business days before your contract expires. On the renewal date, we will notify you of your auto-renewal electricity rates, with at least one of the tiered rates priced below the prevailing Regulated Tariff. All other fees shall remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
+	"factsheetFile" : "https://pacificlight.com.sg/img/uploadfactsheet/FS_StackItUp24_20082026.jpg"  
+	}
+  },  {
+	"id": "09_Savvy Saver 36_20 Aug 2026",
+	
+	"hot": "hot deal",
+	
+	"title": "Savvy Saver",
+	"plancode" : "PLE_SAVVYSAVER36M_2026.08.20",
+	"smartmeter" : "no",
+	"ebill" : "no",
+	
+	"month": "36 months",
+	
+	"price": "29.40",
+	"priceUnit": "&cent;/kWh",
+	"rateDisplay" : "29.40&cent;/kWh",
+	
+	"type": "hotDeals",
+	
+	"image": "https://pacificlight.com.sg/img/uploadsignup/super_saver_36_v2.png",
+	"learnMore" : {
+		"descTitle" : "Fixed rate for 3 years! <br/>No worries.",
+		"graph" : "",
+		"desc" : "",
+		"details" : [
+
+			"Pick rebates, KrisFlyer miles or yuu Points",
+
+			"Use a referral code for S$20 off",
+
+			"Security Deposit Waiver with Recurring Card Payment"
+      ],
+	  
+	  "referral": "yes",
+	  
+	"factsheet" : "https://pacificlight.com.sg/support/factsheet-detail/9-savvy-saver-36-20-aug-2026",
+	"facesheetName" : "Savvy Saver 36",
+	"factsheetDate" : "20 August 2026",
+	"factsheetType" : "Non-standard",
+	"factsheetPrice" : "Fixed price plan: 29.40¢/kWh (Rate excl. 9% GST is 26.972¢/kWh)",
+	"factsheetRenewal" : "You will be notified at least 10 business days before your contract expires. On the renewal date, we will notify you of your auto-renewal electricity rates, which will be lower than the prevailing Regulated Tariff. All other fees shall remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
+	"factsheetFile" : "https://pacificlight.com.sg/img/uploadfactsheet/FS_SavvySaver36_20082026.jpg"  
+	}
+  },  {
+	"id": "10_Classic 60_21 May 2026",
+	
+	"title": "Classic 60",
+	"plancode" : "PLE_CLASSIC60M_2024.08.07",
+	"smartmeter" : "no",
+	"ebill" : "no",
+	
+	"month": "60 months",
+	
+	"price": "8%*",
+	"priceUnit": "off",
+	"rateDisplay" : "8%* off",
+	
+	"image": "https://pacificlight.com.sg/img/uploadsignup/confirm_save_12.png",
+	"learnMore" : {
+		"descTitle" : "Double confirm <br/>your savings! ",
+		"graph" : "",
+		"desc" : "",
+		"details" : [
+
+			"3% off SP Tariff + 5% Prompt Payment Discount*",
+
+			"Monthly recurring payment via GIRO only",
+
+			"Early Termination Charge Waiver. Terms Apply. "
+      ],
+	  
+	  "referral": "yes",
+	  
+	"factsheet" : "https://pacificlight.com.sg/support/factsheet-detail/10-classic-60-20-aug-2026",
+	"facesheetName" : "Classic 60",
+	"factsheetDate" : "20 August 2026",
+	"factsheetType" : "Standard",
+	"factsheetPrice" : "Discount off regulated tariff plan: 3% off and 5% Prompt Payment Discount",
+	"factsheetRenewal" : "You will be notified at least 10 business days before your contract expires. On the renewal date, we will notify you of your auto-renewal electricity rates, which will be lower than the prevailing Regulated Tariff. All other fees shall remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
+	"factsheetFile" : "https://pacificlight.com.sg/img/uploadfactsheet/FS_Classic-60_03072026.png"  
+	}
+  }
+]

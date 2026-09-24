@@ -1,0 +1,100 @@
+{
+ "fetched_at": "2026-09-22T07:04:45+00:00",
+ "plans": [
+  {
+   "id": "tuas-powerfix-24-24",
+   "retailer_id": "tuas",
+   "retailer": "Tuas Power",
+   "name": "PowerFIX 24",
+   "price_type": "fixed",
+   "rates": {
+    "rate": 29.8
+   },
+   "contract_months": 24,
+   "daily_charge_cents": 0.0,
+   "rebate_sgd": 100.0,
+   "rebate_note": "One-time bill rebate with promo code ONLINE",
+   "standard": true,
+   "green": false,
+   "smart_meter_required": false,
+   "eligibility": null,
+   "conditions": [],
+   "factsheet_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerfix_24_20260828(273.4)-$100_bill_rebate.pdf",
+   "source_url": "https://www.savewithtuas.com/our-electricity-plans/",
+   "terms": {},
+   "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/standard_tnc_v190626.pdf"
+  },
+  {
+   "id": "tuas-powerfix-36-36",
+   "retailer_id": "tuas",
+   "retailer": "Tuas Power",
+   "name": "PowerFIX 36",
+   "price_type": "fixed",
+   "rates": {
+    "rate": 29.4
+   },
+   "contract_months": 36,
+   "daily_charge_cents": 0.0,
+   "rebate_sgd": 160.0,
+   "rebate_note": "One-time bill rebate with promo code ONLINE",
+   "standard": false,
+   "green": false,
+   "smart_meter_required": false,
+   "eligibility": null,
+   "conditions": [],
+   "factsheet_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerfix_36_20260828(269.7)-$160_bill_rebate.pdf",
+   "source_url": "https://www.savewithtuas.com/our-electricity-plans/",
+   "terms": {},
+   "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/non-standard-tnc_v190626.pdf"
+  },
+  {
+   "id": "tuas-powerdot-6-6",
+   "retailer_id": "tuas",
+   "retailer": "Tuas Power",
+   "name": "PowerDOT 6",
+   "price_type": "dot_pct",
+   "rates": {
+    "discount_pct": 10.0
+   },
+   "contract_months": 6,
+   "daily_charge_cents": 0.0,
+   "rebate_sgd": 0.0,
+   "rebate_note": null,
+   "standard": true,
+   "green": false,
+   "smart_meter_required": false,
+   "eligibility": null,
+   "conditions": [],
+   "factsheet_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerdot_6_20260803(10_).pdf",
+   "source_url": "https://www.savewithtuas.com/our-electricity-plans/",
+   "terms": {},
+   "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/standard_tnc_v190626.pdf"
+  },
+  {
+   "id": "tuas-powerfix-12-12",
+   "retailer_id": "tuas",
+   "retailer": "Tuas Power",
+   "name": "PowerFIX 12",
+   "price_type": "fixed",
+   "rates": {
+    "rate": 31.0
+   },
+   "contract_months": 12,
+   "daily_charge_cents": 0.0,
+   "rebate_sgd": 0.0,
+   "rebate_note": null,
+   "standard": true,
+   "green": false,
+   "smart_meter_required": false,
+   "eligibility": null,
+   "conditions": [],
+   "factsheet_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerfix_12_20260803(284.4).pdf",
+   "source_url": "https://www.savewithtuas.com/our-electricity-plans/",
+   "terms": {},
+   "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/standard_tnc_v190626.pdf"
+  }
+ ],
+ "observations": {},
+ "status": "ok",
+ "message": ""
+}

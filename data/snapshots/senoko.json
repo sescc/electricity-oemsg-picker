@@ -1,0 +1,183 @@
+{
+ "fetched_at": "2026-09-22T07:04:44+00:00",
+ "plans": [
+  {
+   "id": "senoko-lifepower36-36",
+   "retailer_id": "senoko",
+   "retailer": "Senoko Energy",
+   "name": "LifePower36",
+   "price_type": "fixed",
+   "rates": {
+    "rate": 29.4
+   },
+   "contract_months": 36,
+   "daily_charge_cents": 0.0,
+   "rebate_sgd": 200.0,
+   "rebate_note": "Up to amount; mostly conditional on credit-card/GIRO recurring payment or promo code.",
+   "standard": null,
+   "green": false,
+   "smart_meter_required": false,
+   "eligibility": null,
+   "conditions": [],
+   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-36at1",
+   "source_url": "https://www.senokoenergy.com/households/price-plans",
+   "terms": {},
+   "plan_code": "HH-GMOFIXPG-36at1"
+  },
+  {
+   "id": "senoko-lifepower24-24",
+   "retailer_id": "senoko",
+   "retailer": "Senoko Energy",
+   "name": "LifePower24",
+   "price_type": "fixed",
+   "rates": {
+    "rate": 29.8
+   },
+   "contract_months": 24,
+   "daily_charge_cents": 0.0,
+   "rebate_sgd": 150.0,
+   "rebate_note": "Up to amount; mostly conditional on credit-card/GIRO recurring payment or promo code.",
+   "standard": null,
+   "green": false,
+   "smart_meter_required": false,
+   "eligibility": null,
+   "conditions": [],
+   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-24at1",
+   "source_url": "https://www.senokoenergy.com/households/price-plans",
+   "terms": {},
+   "plan_code": "HH-GMOFIXPG-24at1"
+  },
+  {
+   "id": "senoko-lifepower12-12",
+   "retailer_id": "senoko",
+   "retailer": "Senoko Energy",
+   "name": "LifePower12",
+   "price_type": "fixed",
+   "rates": {
+    "rate": 31.0
+   },
+   "contract_months": 12,
+   "daily_charge_cents": 0.0,
+   "rebate_sgd": 50.0,
+   "rebate_note": "Up to amount; mostly conditional on credit-card/GIRO recurring payment or promo code.",
+   "standard": null,
+   "green": false,
+   "smart_meter_required": false,
+   "eligibility": null,
+   "conditions": [],
+   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-12at1",
+   "source_url": "https://www.senokoenergy.com/households/price-plans",
+   "terms": {},
+   "plan_code": "HH-GMOFIXPG-12at1"
+  },
+  {
+   "id": "senoko-lifesteady36-36",
+   "retailer_id": "senoko",
+   "retailer": "Senoko Energy",
+   "name": "LifeSteady36",
+   "price_type": "dot_cents",
+   "rates": {
+    "discount_cents": 1.64
+   },
+   "contract_months": 36,
+   "daily_charge_cents": 0.0,
+   "rebate_sgd": 200.0,
+   "rebate_note": "Up to amount; mostly conditional on credit-card/GIRO recurring payment or promo code.",
+   "standard": null,
+   "green": false,
+   "smart_meter_required": false,
+   "eligibility": null,
+   "conditions": [],
+   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFDOTPG-36al1",
+   "source_url": "https://www.senokoenergy.com/households/price-plans",
+   "terms": {},
+   "plan_code": "HH-GMOFDOTPG-36al1"
+  },
+  {
+   "id": "senoko-lifesteady24-24",
+   "retailer_id": "senoko",
+   "retailer": "Senoko Energy",
+   "name": "LifeSteady24",
+   "price_type": "dot_cents",
+   "rates": {
+    "discount_cents": 1.64
+   },
+   "contract_months": 24,
+   "daily_charge_cents": 0.0,
+   "rebate_sgd": 150.0,
+   "rebate_note": "Up to amount; mostly conditional on credit-card/GIRO recurring payment or promo code.",
+   "standard": null,
+   "green": false,
+   "smart_meter_required": false,
+   "eligibility": null,
+   "conditions": [],
+   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFDOTPG-24al1",
+   "source_url": "https://www.senokoenergy.com/households/price-plans",
+   "terms": {},
+   "plan_code": "HH-GMOFDOTPG-24al1"
+  },
+  {
+   "id": "senoko-lifesavvy24-24",
+   "retailer_id": "senoko",
+   "retailer": "Senoko Energy",
+   "name": "LifeSavvy24",
+   "price_type": "tou",
+   "rates": {
+    "periods": [
+     {
+      "rate": 36.95,
+      "windows": [
+       {
+        "days": "all",
+        "start": 7,
+        "end": 23
+       }
+      ]
+     }
+    ],
+    "default_rate": 20.05
+   },
+   "contract_months": 24,
+   "daily_charge_cents": 0.0,
+   "rebate_sgd": 150.0,
+   "rebate_note": "Up to amount; mostly conditional on credit-card/GIRO recurring payment or promo code.",
+   "standard": null,
+   "green": false,
+   "smart_meter_required": true,
+   "eligibility": null,
+   "conditions": [],
+   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOPOPPG-24ak2",
+   "source_url": "https://www.senokoenergy.com/households/price-plans",
+   "terms": {},
+   "plan_code": "HH-GMOPOPPG-24ak2"
+  },
+  {
+   "id": "senoko-lifegreen24-24",
+   "retailer_id": "senoko",
+   "retailer": "Senoko Energy",
+   "name": "LifeGreen24",
+   "price_type": "fixed",
+   "rates": {
+    "rate": 30.18
+   },
+   "contract_months": 24,
+   "daily_charge_cents": 0.0,
+   "rebate_sgd": 150.0,
+   "rebate_note": "Up to amount; mostly conditional on credit-card/GIRO recurring payment or promo code.",
+   "standard": null,
+   "green": true,
+   "smart_meter_required": false,
+   "eligibility": null,
+   "conditions": [],
+   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXFG-24at1",
+   "source_url": "https://www.senokoenergy.com/households/price-plans",
+   "terms": {},
+   "plan_code": "HH-GMOFIXFG-24at1"
+  }
+ ],
+ "observations": {
+  "regulated_tariff_cents_incl_gst": 34.78
+ },
+ "status": "ok",
+ "message": ""
+}

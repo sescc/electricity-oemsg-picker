@@ -1,0 +1,24 @@
+{
+  "retailer_id": "keppel",
+  "verified_at": "2026-09-22",
+  "verified_from": "https://www.keppelelectric.com/residential-price-plan",
+  "note": "Hand-copied from the rendered page. Keppel's plan data is served from /api/, which its robots.txt disallows, so it is not scraped automatically.",
+  "plans": [
+    {"name": "SURESAVE DOT", "price_type": "dot_pct", "rates": {"discount_pct": 12}, "contract_months": 0,
+     "standard": false, "eligibility": "sp_customers_only",
+     "conditions": ["Only for new sign-ups switching from SP Group, contract starting from 1 Oct 2026.", "Discount guaranteed for 24 months; no contract, no early termination charge."],
+     "terms": {"early_termination_fee_sgd": 0, "etf_text": "No contract and no early termination charges (retailer page)."}},
+    {"name": "FIXED24", "price_type": "fixed", "rates": {"rate": 29.80}, "contract_months": 24, "standard": true,
+     "rebate_sgd": 145, "rebate_note": "Bill rebates up to $145 (promo/partner conditions)."},
+    {"name": "FIXED36", "price_type": "fixed", "rates": {"rate": 29.40}, "contract_months": 36, "standard": false,
+     "rebate_sgd": 120, "rebate_note": "Bill rebates up to $120 (promo/partner conditions)."},
+    {"name": "FIXED12", "price_type": "fixed", "rates": {"rate": 34.77}, "contract_months": 12, "standard": true,
+     "rebate_sgd": 10, "rebate_note": "Bill rebates up to $10."},
+    {"name": "WEEKEND SAVER", "price_type": "tou", "contract_months": 24, "standard": false,
+     "rates": {"periods": [{"rate": 39.90, "windows": [{"days": "weekday", "start": 9, "end": 21}]}], "default_rate": 27.90},
+     "smart_meter_required": true,
+     "conditions": ["Needs a smart meter for half-hourly readings; $43.60 installation fee if you do not have one."]},
+    {"name": "ecoGreen24", "price_type": "fixed", "rates": {"rate": 38.80}, "contract_months": 24, "standard": false,
+     "green": true, "rebate_sgd": 120, "rebate_note": "Bill rebates up to $120."}
+  ]
+}

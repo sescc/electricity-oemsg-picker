@@ -1,0 +1,10 @@
+{
+  "retailer_id": "sembcorp",
+  "verified_at": "2026-09-22",
+  "verified_from": "https://www.sembcorppower.com/",
+  "note": "Hand-copied from the rendered page. The site sits behind a Cloudflare managed challenge, which this project does not attempt to bypass.",
+  "plans": [
+    {"name": "12M Fixed Price Plan", "price_type": "fixed", "rates": {"rate": 31.00}, "contract_months": 12},
+    {"name": "24M Fixed Price Plan", "price_type": "fixed", "rates": {"rate": 29.80}, "contract_months": 24}
+  ]
+}

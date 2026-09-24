@@ -1,0 +1,115 @@
+{
+ "fetched_at": "2026-09-22T07:09:20+00:00",
+ "plans": [
+  {
+   "id": "geneco-get-it-fixed-12-12",
+   "retailer_id": "geneco",
+   "retailer": "Geneco",
+   "name": "Get It Fixed 12",
+   "price_type": "fixed",
+   "rates": {
+    "rate": 31.0
+   },
+   "contract_months": 12,
+   "daily_charge_cents": 0.0,
+   "rebate_sgd": 15.0,
+   "rebate_note": "Use promo code GENECO15 ($15 bill rebate, limited sign-ups)​. T&Cs apply.",
+   "standard": true,
+   "green": false,
+   "smart_meter_required": false,
+   "eligibility": null,
+   "conditions": [],
+   "factsheet_url": "https://drive.google.com/file/d/1fTfTjEgjD_TpZxUzqO5uyjNkR1nsHDwQ/view?usp=sharing",
+   "source_url": "https://www.geneco.sg/residential/electricity-plans/",
+   "terms": {},
+   "plan_code": "GetItFixed12_20260804"
+  },
+  {
+   "id": "geneco-get-it-fixed-24-24",
+   "retailer_id": "geneco",
+   "retailer": "Geneco",
+   "name": "Get It Fixed 24",
+   "price_type": "fixed",
+   "rates": {
+    "rate": 29.8
+   },
+   "contract_months": 24,
+   "daily_charge_cents": 0.0,
+   "rebate_sgd": 200.0,
+   "rebate_note": "For SP Customers: Use promo code GENECO200 for $200 bill rebate. For all other customers: Use promo code GENECO100 for $100 bill rebate. Limited sign-ups, T&Cs apply.",
+   "standard": true,
+   "green": false,
+   "smart_meter_required": false,
+   "eligibility": null,
+   "conditions": [
+    "Largest rebate only for customers switching from SP Group."
+   ],
+   "factsheet_url": "https://drive.google.com/file/d/1DwYQ0jUXNmtRIfbOt6OmxNz5o9rLH3dw/view?usp=sharing",
+   "source_url": "https://www.geneco.sg/residential/electricity-plans/",
+   "terms": {},
+   "plan_code": "GetItFixed24_20260804",
+   "rebate_sgd_non_sp": 100.0
+  },
+  {
+   "id": "geneco-give-us-a-try-6",
+   "retailer_id": "geneco",
+   "retailer": "Geneco",
+   "name": "Give Us A Try",
+   "price_type": "fixed",
+   "rates": {
+    "rate": 31.0
+   },
+   "contract_months": 6,
+   "daily_charge_cents": 0.0,
+   "rebate_sgd": 0.0,
+   "rebate_note": null,
+   "standard": true,
+   "green": false,
+   "smart_meter_required": false,
+   "eligibility": null,
+   "conditions": [],
+   "factsheet_url": "https://drive.google.com/file/d/1rAbOhMarW3NZD_2AOkP6PC71F-GfYqfW/view?usp=sharing",
+   "source_url": "https://www.geneco.sg/residential/electricity-plans/",
+   "terms": {},
+   "plan_code": "GiveUsATry_20260804"
+  },
+  {
+   "id": "geneco-get-it-7-to-7-24",
+   "retailer_id": "geneco",
+   "retailer": "Geneco",
+   "name": "Get It 7 To 7",
+   "price_type": "tou",
+   "rates": {
+    "periods": [
+     {
+      "rate": 32.5,
+      "windows": [
+       {
+        "days": "all",
+        "start": 7,
+        "end": 19
+       }
+      ]
+     }
+    ],
+    "default_rate": 27.9
+   },
+   "contract_months": 24,
+   "daily_charge_cents": 0.0,
+   "rebate_sgd": 0.0,
+   "rebate_note": null,
+   "standard": false,
+   "green": false,
+   "smart_meter_required": true,
+   "eligibility": null,
+   "conditions": [],
+   "factsheet_url": "https://drive.google.com/file/d/1F6y3F6zOlakB_rLRIMpuoru4_e4Z6Ej9/view?usp=sharing",
+   "source_url": "https://www.geneco.sg/residential/electricity-plans/",
+   "terms": {},
+   "plan_code": "GetIt7To7_20260824"
+  }
+ ],
+ "observations": {},
+ "status": "ok",
+ "message": ""
+}

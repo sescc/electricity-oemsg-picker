@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Electricity Plan Picker SG</title>
+  <meta name="description" content="Compare every Open Electricity Market retailer's residential plans for your household, with tariff forecasts and a contract-switching decision model.">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1>Electricity Plan Picker <span class="tag">Singapore OEM</span></h1>
+    <p class="lede">Which of Singapore's electricity retailers suits <em>your</em> household? This tool uses each retailer's published rates and fact sheets, forecasts the regulated tariff, and plans your contract choices over the time you'll live at this address.</p>
+    <div id="freshness" class="freshness" aria-live="polite">Loading data…</div>
+  </div>
+</header>
+
+<main class="wrap layout">
+  <form id="form" class="panel form" autocomplete="off">
+    <h2>Your household</h2>
+
+    <fieldset>
+      <legend>1 · Home and usage</legend>
+      <label>Home type
+        <select name="dwelling" id="dwelling"></select>
+      </label>
+      <label>Average monthly usage (kWh)
+        <input type="number" name="kwh" id="kwh" min="30" max="5000" step="10">
+        <small id="kwhHint" class="hint"></small>
+      </label>
+      <details id="billsBox" class="bills-box">
+        <summary>Enter your last 12 months of usage (optional, more accurate)</summary>
+        <p class="hint">kWh from your SP bills or app. Skip any month you don't know.</p>
+        <div id="bills" class="bills"></div>
+        <p class="hint" id="billsFit"></p>
+        <button type="button" id="billsClear" class="link-btn">Clear all months</button>
+      </details>
+    </fieldset>
+
+    <fieldset>
+      <legend>2 · When you use electricity</legend>
+      <label>Pattern
+        <select name="profile" id="profile"></select>
+      </label>
+      <label>Share of use between 11pm and 7am: <output id="nightOut"></output>
+        <input type="range" name="night" id="night" min="0.15" max="0.75" step="0.01">
+      </label>
+      <label class="inline"><span>Smart (half-hourly) meter installed?</span>
+        <select name="meter" id="meter">
+          <option value="no">No / not sure</option>
+          <option value="yes">Yes</option>
+        </select>
+      </label>
+      <small class="hint">Peak/off-peak plans need a smart meter. Without one, a $43.60 installation fee is added.</small>
+    </fieldset>
+
+    <fieldset>
+      <legend>3 · Your current supply</legend>
+      <label>Currently on
+        <select name="current" id="current">
+          <option value="sp">SP Group regulated tariff</option>
+          <option value="fixed">A retailer fixed-price plan</option>
+          <option value="dot">A retailer discount-off-tariff plan</option>
+        </select>
+      </label>
+      <div id="currentDetails" class="sub" hidden>
+        <label><span id="curRateLabel">Your rate (¢/kWh incl. GST)</span>
+          <input type="number" name="curRate" id="curRate" step="0.01" min="0" max="60" value="30.5">
+        </label>
+        <label>Months left on the contract
+          <input type="number" name="curMonths" id="curMonths" min="0" max="60" step="1" value="6">
+        </label>
+        <label>Its contract length (what it renews for)
+          <select name="curTerm" id="curTerm">
+            <option value="6">6 months</option>
+            <option value="12">12 months</option>
+            <option value="24" selected>24 months</option>
+            <option value="36">36 months</option>
+          </select>
+        </label>
+        <label>Its early-termination charge (SGD)
+          <input type="number" name="curEtf" id="curEtf" min="0" max="3000" value="200">
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>4 · How long will you stay at this address?</legend>
+      <select name="stay" id="stay">
+        <option value="6">About 6 months</option>
+        <option value="12">About 1 year</option>
+        <option value="24">About 2 years</option>
+        <option value="36" selected>3 years or more</option>
+      </select>
+      <small class="hint">If you move out mid-contract, the early-termination charge counts against that plan.</small>
+    </fieldset>
+
+    <fieldset>
+      <legend>5 · Preferences</legend>
+      <label class="check"><input type="checkbox" name="rebates" id="rebates" checked> Count sign-up rebates (they usually need a promo code or card/GIRO payment)</label>
+      <label class="check"><input type="checkbox" name="green" id="green"> Only green / renewable-certificate plans</label>
+      <label class="check"><input type="checkbox" name="standard" id="standard"> Only EMA "Standard" price plans</label>
+      <label>How much each switch is worth avoiding (SGD of hassle)
+        <input type="number" name="hassle" id="hassle" min="0" max="500" value="20">
+      </label>
+      <label>Risk attitude: <output id="riskOut"></output>
+        <input type="range" name="risk" id="risk" min="0" max="1" step="0.05" value="0.3">
+        <small class="hint">0 = rank by average cost; 1 = rank by bad-case (90th percentile) cost.</small>
+      </label>
+      <label>Assumed early-termination charge when a retailer doesn't publish one (SGD)
+        <input type="number" name="defEtf" id="defEtf" min="0" max="2000" value="250">
+      </label>
+    </fieldset>
+    <p class="hint">Everything recalculates as you change an answer. Nothing you enter leaves your browser.</p>
+  </form>
+
+  <section class="results">
+    <div id="error" class="panel error" hidden></div>
+    <article id="reco" class="panel reco"><p class="muted">Calculating…</p></article>
+
+    <article class="panel">
+      <div class="panel-head">
+        <h2>All plans, ranked for you</h2>
+        <label class="check small"><input type="checkbox" id="showAll"> show every plan</label>
+      </div>
+      <div class="table-scroll"><table id="rank" class="rank"></table></div>
+      <p class="hint" id="rankNote"></p>
+    </article>
+
+    <div class="grid2">
+      <article class="panel">
+        <h2>Regulated tariff: history and forecast</h2>
+        <div class="chart"><canvas id="tariffChart" aria-label="Tariff history and forecast fan chart" role="img"></canvas></div>
+        <p class="hint" id="tariffNote"></p>
+      </article>
+      <article class="panel">
+        <h2>Your expected monthly usage</h2>
+        <div class="chart"><canvas id="usageChart" aria-label="Monthly consumption forecast" role="img"></canvas></div>
+        <p class="hint" id="usageNote"></p>
+      </article>
+    </div>
+
+    <article class="panel">
+      <h2>Cost range over your stay, top plans</h2>
+      <div class="chart tall"><canvas id="costChart" aria-label="Expected cost and range per plan" role="img"></canvas></div>
+      <p class="hint">Bars span the 10th–90th percentile of simulated total cost; the dot is the average. The range comes from tariff uncertainty and what you'd do at each contract renewal.</p>
+    </article>
+
+    <article class="panel">
+      <h2>Data sources and freshness</h2>
+      <div class="table-scroll"><table id="status" class="status"></table></div>
+      <p class="hint" id="statusNote"></p>
+    </article>
+
+    <article class="panel methods">
+      <h2>How it works</h2>
+      <div id="methods"></div>
+    </article>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>Independent tool, not affiliated with EMA, SP Group or any retailer. Always confirm rates and terms in the retailer's fact sheet before signing. Rates are GST-inclusive.</p>
+</footer>
+</body>
+</html>

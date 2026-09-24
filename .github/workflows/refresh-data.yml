@@ -1,0 +1,47 @@
+name: Refresh plan data
+
+on:
+  schedule:
+    - cron: "17 22 * * *"      # daily, 06:17 Singapore time
+  workflow_dispatch:           # manual run by the repo owner (Actions tab -> Run workflow)
+    inputs:
+      force:
+        description: "Ignore the per-retailer 20-hour refresh limit"
+        type: boolean
+        default: false
+
+concurrency:
+  group: refresh-data          # never two scrapes at once
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Test parsers against saved pages
+        run: python -m pytest -q
+      - name: Scrape retailer plans
+        run: python -m scraper.run plans ${{ inputs.force && '--force' || '' }}
+      - name: Refresh statistical datasets (weekly at most)
+        run: python -m scraper.run datasets
+        continue-on-error: true   # models are rebuilt from the last good snapshot
+      - name: Fit models
+        run: python -m analysis.build
+      - name: Commit data if it changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data data/snapshots
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "data: refresh $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
