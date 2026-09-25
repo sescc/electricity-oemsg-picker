@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-09-22T07:09:20+00:00",
+ "generated_at": "2026-09-25T00:34:19+00:00",
  "oem_list_url": "https://www.openelectricitymarket.sg/residential/list-of-retailers",
  "oem_list_check": {
   "checked": true,
-  "checked_at": "2026-09-22T07:09:20+00:00",
+  "checked_at": "2026-09-25T00:34:22+00:00",
   "retailers_found": 7,
   "new_on_oem_list": [],
   "missing_from_oem_list": []
@@ -15,14 +15,12 @@
    "homepage": "https://floenergy.sg/",
    "plans_url": "https://floenergy.sg/residential",
    "method": "scrape",
+   "last_attempt_at": "2026-09-25T00:34:03+00:00",
    "status": "no_residential_plans",
    "message": "Residential plans announced as 'coming soon' (register-interest page).",
-   "last_success_at": "2026-09-22T07:04:36+00:00",
-   "last_attempt_at": "2026-09-22T07:04:35+00:00",
-   "plan_count": 0,
-   "data_as_of": "2026-09-22T07:04:36+00:00",
-   "stale": null,
-   "skipped": "not selected"
+   "last_success_at": "2026-09-25T00:34:05+00:00",
+   "data_as_of": "2026-09-25T00:34:05+00:00",
+   "plan_count": 0
   },
   "geneco": {
    "id": "geneco",
@@ -30,11 +28,11 @@
    "homepage": "https://www.geneco.sg/",
    "plans_url": "https://www.geneco.sg/residential/electricity-plans/",
    "method": "scrape",
-   "last_attempt_at": "2026-09-22T07:09:18+00:00",
+   "last_attempt_at": "2026-09-25T00:34:05+00:00",
    "status": "ok",
    "message": "",
-   "last_success_at": "2026-09-22T07:09:20+00:00",
-   "data_as_of": "2026-09-22T07:09:20+00:00",
+   "last_success_at": "2026-09-25T00:34:09+00:00",
+   "data_as_of": "2026-09-25T00:34:09+00:00",
    "plan_count": 4
   },
   "keppel": {
@@ -55,14 +53,12 @@
    "homepage": "https://pacificlight.com.sg/",
    "plans_url": "https://pacificlight.com.sg/json/plan.json",
    "method": "scrape",
+   "last_attempt_at": "2026-09-25T00:34:09+00:00",
    "status": "ok",
    "message": "",
-   "last_success_at": "2026-09-22T07:04:44+00:00",
-   "last_attempt_at": "2026-09-22T07:04:37+00:00",
-   "plan_count": 10,
-   "data_as_of": "2026-09-22T07:04:44+00:00",
-   "stale": null,
-   "skipped": "not selected"
+   "last_success_at": "2026-09-25T00:34:16+00:00",
+   "data_as_of": "2026-09-25T00:34:16+00:00",
+   "plan_count": 10
   },
   "sembcorp": {
    "id": "sembcorp",
@@ -82,14 +78,12 @@
    "homepage": "https://www.senokoenergy.com/",
    "plans_url": "https://www.senokoenergy.com/households/price-plans",
    "method": "scrape",
+   "last_attempt_at": "2026-09-25T00:34:16+00:00",
    "status": "ok",
    "message": "",
-   "last_success_at": "2026-09-22T07:04:44+00:00",
-   "last_attempt_at": "2026-09-22T07:04:44+00:00",
-   "plan_count": 7,
-   "data_as_of": "2026-09-22T07:04:44+00:00",
-   "stale": null,
-   "skipped": "not selected"
+   "last_success_at": "2026-09-25T00:34:18+00:00",
+   "data_as_of": "2026-09-25T00:34:18+00:00",
+   "plan_count": 7
   },
   "tuas": {
    "id": "tuas",
@@ -97,14 +91,12 @@
    "homepage": "https://www.savewithtuas.com/",
    "plans_url": "https://www.savewithtuas.com/our-electricity-plans/",
    "method": "scrape",
+   "last_attempt_at": "2026-09-25T00:34:18+00:00",
    "status": "ok",
    "message": "",
-   "last_success_at": "2026-09-22T07:04:45+00:00",
-   "last_attempt_at": "2026-09-22T07:04:44+00:00",
-   "plan_count": 4,
-   "data_as_of": "2026-09-22T07:04:45+00:00",
-   "stale": null,
-   "skipped": "not selected"
+   "last_success_at": "2026-09-25T00:34:19+00:00",
+   "data_as_of": "2026-09-25T00:34:19+00:00",
+   "plan_count": 4
   }
  }
 }
