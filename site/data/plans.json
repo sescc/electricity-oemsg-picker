@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-25T00:34:19+00:00",
+ "generated_at": "2026-09-26T00:38:36+00:00",
  "regulated_tariff": {
   "cents_incl_gst": 34.78,
   "quarter": "Q3 2026",
@@ -9,7 +9,7 @@
   ],
   "disagreeing_sources": {},
   "n_sources": 2,
-  "observed_at": "2026-09-25T00:34:18+00:00",
+  "observed_at": "2026-09-26T00:38:36+00:00",
   "stale": false
  },
  "plans": [
@@ -35,7 +35,7 @@
    "source_url": "https://www.geneco.sg/residential/electricity-plans/",
    "terms": {},
    "plan_code": "GetItFixed12_20260804",
-   "data_as_of": "2026-09-25T00:34:09+00:00",
+   "data_as_of": "2026-09-26T00:38:27+00:00",
    "data_method": "scrape"
   },
   {
@@ -63,7 +63,7 @@
    "terms": {},
    "plan_code": "GetItFixed24_20260804",
    "rebate_sgd_non_sp": 100.0,
-   "data_as_of": "2026-09-25T00:34:09+00:00",
+   "data_as_of": "2026-09-26T00:38:27+00:00",
    "data_method": "scrape"
   },
   {
@@ -88,7 +88,7 @@
    "source_url": "https://www.geneco.sg/residential/electricity-plans/",
    "terms": {},
    "plan_code": "GiveUsATry_20260804",
-   "data_as_of": "2026-09-25T00:34:09+00:00",
+   "data_as_of": "2026-09-26T00:38:27+00:00",
    "data_method": "scrape"
   },
   {
@@ -125,7 +125,7 @@
    "source_url": "https://www.geneco.sg/residential/electricity-plans/",
    "terms": {},
    "plan_code": "GetIt7To7_20260824",
-   "data_as_of": "2026-09-25T00:34:09+00:00",
+   "data_as_of": "2026-09-26T00:38:27+00:00",
    "data_method": "scrape"
   },
   {
@@ -338,7 +338,7 @@
     "No early termination charge",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-09-25T00:34:16+00:00",
+   "data_as_of": "2026-09-26T00:38:34+00:00",
    "data_method": "scrape"
   },
   {
@@ -387,7 +387,7 @@
     "No early termination charge",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-09-25T00:34:16+00:00",
+   "data_as_of": "2026-09-26T00:38:34+00:00",
    "data_method": "scrape"
   },
   {
@@ -449,7 +449,7 @@
     "No early termination charge",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-09-25T00:34:16+00:00",
+   "data_as_of": "2026-09-26T00:38:34+00:00",
    "data_method": "scrape"
   },
   {
@@ -507,7 +507,7 @@
     "Pick KrisFlyer miles or yuu Points",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-09-25T00:34:16+00:00",
+   "data_as_of": "2026-09-26T00:38:34+00:00",
    "data_method": "scrape"
   },
   {
@@ -564,7 +564,7 @@
     "Pick KrisFlyer miles or yuu Points",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-09-25T00:34:16+00:00",
+   "data_as_of": "2026-09-26T00:38:34+00:00",
    "data_method": "scrape"
   },
   {
@@ -622,7 +622,7 @@
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-09-25T00:34:16+00:00",
+   "data_as_of": "2026-09-26T00:38:34+00:00",
    "data_method": "scrape"
   },
   {
@@ -693,7 +693,7 @@
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-09-25T00:34:16+00:00",
+   "data_as_of": "2026-09-26T00:38:34+00:00",
    "data_method": "scrape"
   },
   {
@@ -765,7 +765,7 @@
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-09-25T00:34:16+00:00",
+   "data_as_of": "2026-09-26T00:38:34+00:00",
    "data_method": "scrape"
   },
   {
@@ -823,7 +823,7 @@
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-09-25T00:34:16+00:00",
+   "data_as_of": "2026-09-26T00:38:34+00:00",
    "data_method": "scrape"
   },
   {
@@ -875,7 +875,7 @@
     "Monthly recurring payment via GIRO only",
     "Early Termination Charge Waiver. Terms Apply."
    ],
-   "data_as_of": "2026-09-25T00:34:16+00:00",
+   "data_as_of": "2026-09-26T00:38:34+00:00",
    "data_method": "scrape"
   },
   {
@@ -977,7 +977,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-36at1"
    },
    "plan_code": "HH-GMOFIXPG-36at1",
-   "data_as_of": "2026-09-25T00:34:18+00:00",
+   "data_as_of": "2026-09-26T00:38:36+00:00",
    "data_method": "scrape"
   },
   {
@@ -1026,7 +1026,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-24at1"
    },
    "plan_code": "HH-GMOFIXPG-24at1",
-   "data_as_of": "2026-09-25T00:34:18+00:00",
+   "data_as_of": "2026-09-26T00:38:36+00:00",
    "data_method": "scrape"
   },
   {
@@ -1070,7 +1070,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-12at1"
    },
    "plan_code": "HH-GMOFIXPG-12at1",
-   "data_as_of": "2026-09-25T00:34:18+00:00",
+   "data_as_of": "2026-09-26T00:38:36+00:00",
    "data_method": "scrape"
   },
   {
@@ -1124,7 +1124,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFDOTPG-36al1"
    },
    "plan_code": "HH-GMOFDOTPG-36al1",
-   "data_as_of": "2026-09-25T00:34:18+00:00",
+   "data_as_of": "2026-09-26T00:38:36+00:00",
    "data_method": "scrape"
   },
   {
@@ -1173,7 +1173,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFDOTPG-24al1"
    },
    "plan_code": "HH-GMOFDOTPG-24al1",
-   "data_as_of": "2026-09-25T00:34:18+00:00",
+   "data_as_of": "2026-09-26T00:38:36+00:00",
    "data_method": "scrape"
   },
   {
@@ -1234,7 +1234,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOPOPPG-24ak2"
    },
    "plan_code": "HH-GMOPOPPG-24ak2",
-   "data_as_of": "2026-09-25T00:34:18+00:00",
+   "data_as_of": "2026-09-26T00:38:36+00:00",
    "data_method": "scrape"
   },
   {
@@ -1283,7 +1283,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXFG-24at1"
    },
    "plan_code": "HH-GMOFIXFG-24at1",
-   "data_as_of": "2026-09-25T00:34:18+00:00",
+   "data_as_of": "2026-09-26T00:38:36+00:00",
    "data_method": "scrape"
   },
   {
@@ -1320,7 +1320,7 @@
     "source_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerfix_24_20260828(273.4)-$100_bill_rebate.pdf"
    },
    "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/standard_tnc_v190626.pdf",
-   "data_as_of": "2026-09-25T00:34:19+00:00",
+   "data_as_of": "2026-09-26T00:38:36+00:00",
    "data_method": "scrape"
   },
   {
@@ -1357,7 +1357,7 @@
     "source_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerfix_36_20260828(269.7)-$160_bill_rebate.pdf"
    },
    "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/non-standard-tnc_v190626.pdf",
-   "data_as_of": "2026-09-25T00:34:19+00:00",
+   "data_as_of": "2026-09-26T00:38:36+00:00",
    "data_method": "scrape"
   },
   {
@@ -1394,7 +1394,7 @@
     "source_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerdot_6_20260803(10_).pdf"
    },
    "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/standard_tnc_v190626.pdf",
-   "data_as_of": "2026-09-25T00:34:19+00:00",
+   "data_as_of": "2026-09-26T00:38:36+00:00",
    "data_method": "scrape"
   },
   {
@@ -1431,7 +1431,7 @@
     "source_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerfix_12_20260803(284.4).pdf"
    },
    "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/standard_tnc_v190626.pdf",
-   "data_as_of": "2026-09-25T00:34:19+00:00",
+   "data_as_of": "2026-09-26T00:38:36+00:00",
    "data_method": "scrape"
   }
  ]
