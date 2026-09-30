@@ -1,25 +1,25 @@
 {
- "generated_at": "2026-09-22T06:49:51+00:00",
+ "generated_at": "2026-09-30T01:19:08+00:00",
  "sources": {
   "ses": {
    "ok": true,
    "url": "https://www.ema.gov.sg/content/dam/corporate/resources/singapore-energy-statistics/excel/SES_tidy.xlsx.coredownload.xlsx",
-   "fetched_at": "2026-09-22T06:49:56+00:00"
+   "fetched_at": "2026-09-30T01:19:14+00:00"
   },
   "tariff_datagov": {
    "ok": true,
    "url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_61eac3cdb086814af485dcc682b75ae9&limit=5",
-   "fetched_at": "2026-09-22T06:49:56+00:00"
+   "fetched_at": "2026-09-30T01:19:15+00:00"
   },
   "weather_history": {
    "ok": true,
    "url": "https://archive-api.open-meteo.com/v1/archive",
-   "fetched_at": "2026-09-22T06:49:57+00:00"
+   "fetched_at": "2026-09-30T01:19:16+00:00"
   },
   "weather_seasonal": {
    "ok": true,
    "url": "https://seasonal-api.open-meteo.com/v1/seasonal",
-   "fetched_at": "2026-09-22T06:49:58+00:00"
+   "fetched_at": "2026-09-30T01:19:16+00:00"
   }
  },
  "ses": {
@@ -4114,15 +4114,15 @@
  },
  "weather_seasonal": {
   "2026-10": {
-   "cdd_mean": 78.43,
-   "cdd_p10": 68.25,
-   "cdd_p90": 89.73,
+   "cdd_mean": 72.21,
+   "cdd_p10": 63.94,
+   "cdd_p90": 83.35,
    "members": 50
   },
   "2026-11": {
-   "cdd_mean": 88.3,
-   "cdd_p10": 79.65,
-   "cdd_p90": 93.63,
+   "cdd_mean": 79.09,
+   "cdd_p10": 70.63,
+   "cdd_p90": 85.73,
    "members": 50
   },
   "2026-12": {
@@ -4144,9 +4144,9 @@
    "members": 50
   },
   "2027-03": {
-   "cdd_mean": 125.75,
-   "cdd_p10": 115.26,
-   "cdd_p90": 140.24,
+   "cdd_mean": 126.3,
+   "cdd_p10": 114.44,
+   "cdd_p90": 139.06,
    "members": 50
   }
  }
