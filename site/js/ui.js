@@ -77,6 +77,22 @@ export function gapNote(gaps) {
   return `No tariff observed for ${esc(list.join(', '))}; the history skips ${list.length === 1 ? 'it' : 'them'} rather than guessing.`;
 }
 
+// Warning badge (HTML, escaped) when the tariff quoted on the page has no confirmed quarter, or differs from the
+// tariff the forecast starts from. `rt` = plans.json regulated_tariff, `modelTariff` = model.json tariff; '' when
+// either is missing, the quote is not a number, or all is consistent.
+export function tariffNotice(rt, modelTariff, fmt = fmtDate) { // `fmt` is unused: kept for symmetry with modelStatusBadge
+  if (!rt || !modelTariff || typeof rt.cents_incl_gst !== 'number' || !Number.isFinite(rt.cents_incl_gst)) return '';
+  if (typeof modelTariff.current_incl_gst !== 'number') return '';
+  const start = esc(modelTariff.current_quarter);
+  if (!rt.quarter) {
+    return `<span class="badge warn">Tariff quarter not confirmed by any retailer page; the forecast starts from ${start} at ${esc(cents(modelTariff.current_incl_gst))}</span>`;
+  }
+  if (Math.abs(rt.cents_incl_gst - modelTariff.current_incl_gst) > 0.005) {
+    return `<span class="badge warn">Tariff quoted by retailers (${esc(cents(rt.cents_incl_gst))}) differs from the one the forecast starts from (${esc(cents(modelTariff.current_incl_gst))}, ${start})</span>`;
+  }
+  return '';
+}
+
 // Warning badge (HTML) when the last refresh could not refit the forecast model. Nothing for "ok", a missing
 // file (null/undefined) or anything unrecognised. The error text goes in a title attribute, escaped.
 export function modelStatusBadge(ms, fmt = fmtDate) {

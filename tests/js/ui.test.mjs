@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  contractLabel, eligible, esc, gapNote, hasPublishedEtf, historySeries, modelStatusBadge, planLabel, plural, safeUrl, typeLabel,
+  contractLabel, eligible, esc, gapNote, hasPublishedEtf, historySeries, modelStatusBadge, planLabel, plural, safeUrl, tariffNotice, typeLabel,
 } from '../../site/js/ui.js';
 
 test('esc escapes & < > " \' and tolerates null/undefined', () => {
@@ -132,6 +132,49 @@ test('gapNote: empty for none/missing, escapes labels, singular and plural wordi
   assert.equal(gapNote(['2026Q3', '2026Q4']), 'No tariff observed for 2026Q3, 2026Q4; the history skips them rather than guessing.');
   assert.ok(!gapNote(['<script>x</script>']).includes('<script>'));
   assert.ok(gapNote(['<b>']).includes('&lt;b&gt;'));
+});
+
+const RT = { cents_incl_gst: 31.16, quarter: 'Q4 2026' };
+const MT = { current_incl_gst: 31.16, current_quarter: '2026Q4' };
+
+test('tariffNotice: a labelled quote that matches the forecast start shows nothing', () => {
+  assert.equal(tariffNotice(RT, MT), '');
+});
+
+test('tariffNotice: an unlabelled quote warns and names the quarter and value the forecast uses', () => {
+  for (const quarter of [null, undefined, '']) {
+    const html = tariffNotice({ ...RT, quarter }, { current_incl_gst: 34.78, current_quarter: '2026Q3' });
+    assert.equal(html, '<span class="badge warn">Tariff quarter not confirmed by any retailer page; the forecast starts from 2026Q3 at 34.78¢</span>');
+  }
+});
+
+test('tariffNotice: a labelled quote that differs from the forecast start warns with both values', () => {
+  const html = tariffNotice(RT, { current_incl_gst: 34.78, current_quarter: '2026Q3' });
+  assert.equal(html, '<span class="badge warn">Tariff quoted by retailers (31.16¢) differs from the one the forecast starts from (34.78¢, 2026Q3)</span>');
+});
+
+test('tariffNotice: differences up to 0.005 are rounding noise', () => {
+  assert.equal(tariffNotice(RT, { ...MT, current_incl_gst: 31.164 }), '');
+  assert.notEqual(tariffNotice(RT, { ...MT, current_incl_gst: 31.17 }), '');
+});
+
+test('tariffNotice: missing inputs or a non-number quote show nothing', () => {
+  assert.equal(tariffNotice(null, MT), '');
+  assert.equal(tariffNotice(undefined, MT), '');
+  assert.equal(tariffNotice(RT, null), '');
+  assert.equal(tariffNotice(RT, undefined), '');
+  assert.equal(tariffNotice({ ...RT, cents_incl_gst: '31.16' }, MT), '');
+  assert.equal(tariffNotice({ ...RT, cents_incl_gst: null }, MT), '');
+  assert.equal(tariffNotice({ ...RT, cents_incl_gst: NaN }, MT), '');
+  assert.equal(tariffNotice({ quarter: null }, MT), '');
+});
+
+test('tariffNotice: the forecast quarter is escaped', () => {
+  const html = tariffNotice({ ...RT, quarter: null }, { current_incl_gst: 31.16, current_quarter: '<b>2026Q4</b>' });
+  assert.ok(!html.includes('<b>'));
+  assert.ok(html.includes('&lt;b&gt;2026Q4&lt;/b&gt;'));
+  const html2 = tariffNotice(RT, { current_incl_gst: 40, current_quarter: '<b>x</b>' });
+  assert.ok(!html2.includes('<b>') && html2.includes('&lt;b&gt;'));
 });
 
 test('modelStatusBadge: only a stale state shows a warning; ok or missing file shows nothing', () => {

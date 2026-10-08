@@ -60,6 +60,8 @@ graph LR
     SJ -.->|"freshness badges"| Row
     MS -.->|"modelStatusBadge (stale only)"| Row
     MJ -->|"historySeries / gapNote"| Hist
+    PJ -.->|"tariffNotice (unlabelled or ≠ model)"| Row
+    MJ -.->|"tariffNotice"| Row
     style Plan fill:#4f8cf7,color:#fff
     style PJ fill:#4f8cf7,color:#fff
     style MJ fill:#4f8cf7,color:#fff
@@ -91,6 +93,7 @@ graph LR
 | `historySeries` | `History × Gaps → Row*` | Total | official rows (missing `source` = official) and `retailer_quote` rows; each gap inside the observed range becomes a null row; missing or empty gaps are fine |
 | `gapNote` | `Gaps → 𝕊` | Total | warning line with escaped quarter labels; empty string when there are no gaps |
 | `modelStatusBadge` | `ModelStatus? → 𝕊` | Partial | defined only for `state = stale` (escaped `error` in `title`); empty for `ok`, a missing file or anything unrecognised |
+| `tariffNotice` | `RegulatedTariff? × ModelTariff? → 𝕊` | Partial | a warning when the banner quote is unlabelled or differs from `model.json.tariff.current_incl_gst`; empty when labelled and equal, or when either side is missing (confirm-tariff-quarter) |
 
 ## 5. Functors
 **MDP state space** `S = Plan × monthsLeft × levelAtSigning × currentLevel`, actions

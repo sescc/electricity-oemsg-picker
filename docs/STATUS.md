@@ -4,7 +4,7 @@
 
 | Component | State | Headline gap | In flight | Detail |
 | --- | --- | --- | --- | --- |
-| Ingest | ✅ live | unlabelled quote when PacificLight is down (low likelihood) | — | [ingest/STATUS.md](ingest/STATUS.md) |
+| Ingest | ✅ live | Senoko quarter label untested on a live CI run (fixture + live page checked) | — | [ingest/STATUS.md](ingest/STATUS.md) |
 | Analysis | ✅ live | `build_or_keep` failure path tested but not yet exercised in CI | — | [analysis/STATUS.md](analysis/STATUS.md) |
 | Site | ✅ live | — | — | [site/STATUS.md](site/STATUS.md) |
 

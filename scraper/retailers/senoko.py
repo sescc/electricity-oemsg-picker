@@ -21,9 +21,19 @@ class Senoko(Adapter):
     def parse(self, raw: str) -> ScrapeResult:
         soup = BeautifulSoup(raw, "lxml")
         plans, obs = [], {}
-        m = re.search(r"prevailing SP tariff of\s*" + CENTS, soup.get_text(" ", strip=True))
-        if m:
-            obs["regulated_tariff_cents_incl_gst"] = float(m.group(1))
+        page_text = soup.get_text(" ", strip=True)
+        m = re.search(r"prevailing SP tariff of\s*" + CENTS, page_text)
+        banner = re.search(r"(Q[1-4])\s*(\d{4})\s*SP Tariff of\s*" + CENTS, page_text, re.I)
+        prevailing = float(m.group(1)) if m else None
+        quoted = float(banner.group(3)) if banner else None
+        if prevailing is not None:
+            obs["regulated_tariff_cents_incl_gst"] = prevailing
+        elif quoted is not None:
+            obs["regulated_tariff_cents_incl_gst"] = quoted
+        # The label is trusted only when the banner and the "prevailing" sentence agree (or the banner is all
+        # there is): they are edited separately, so a mismatch means one is out of date. No label beats a wrong one.
+        if banner and (prevailing is None or prevailing == quoted):
+            obs["tariff_quarter"] = f"{banner.group(1).upper()} {banner.group(2)}"
         for card in soup.select("div.promotions-card"):
             fs = card.find("a", href=re.compile(r"FS\?plancode=HH-"))
             if not fs:

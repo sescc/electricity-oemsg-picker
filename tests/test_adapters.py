@@ -38,6 +38,42 @@ def test_senoko():
     assert savvy["rates"]["default_rate"] == 20.05
     assert len(res.plans) == 7  # promotion cards are not mistaken for plans
     assert res.observations["regulated_tariff_cents_incl_gst"] == 34.78
+    assert res.observations["tariff_quarter"] == "Q3 2026"
+
+
+def _senoko_page(banner=None, prevailing=None):
+    parts = []
+    if banner:
+        parts.append(f"<p>lowest rates in town from 20.05&#162;/kWh (w/GST) vs {banner}&#162;/kWh (w/GST)!</p>")
+    if prevailing:
+        parts.append(f"<p>Compared with prevailing SP tariff of {prevailing}&#162;/kWh (incl. GST)</p>")
+    return "<html><body>" + "".join(parts) + "</body></html>"
+
+
+def test_senoko_contradicting_page_gives_value_but_no_quarter_label():
+    res = Senoko().parse(_senoko_page("Q4 2026 SP Tariff of 31.16", "34.78"))
+    assert res.plans == []
+    assert res.observations == {"regulated_tariff_cents_incl_gst": 34.78}
+
+
+def test_senoko_agreeing_banner_and_prevailing_text_gives_quarter_label():
+    res = Senoko().parse(_senoko_page("q4  2026 sp tariff of 31.16", "31.16"))
+    assert res.observations == {"regulated_tariff_cents_incl_gst": 31.16, "tariff_quarter": "Q4 2026"}
+
+
+def test_senoko_banner_only_gives_value_and_quarter_label():
+    res = Senoko().parse(_senoko_page("Q4 2026 SP Tariff of 31.16"))
+    assert res.observations == {"regulated_tariff_cents_incl_gst": 31.16, "tariff_quarter": "Q4 2026"}
+
+
+def test_senoko_prevailing_only_gives_value_without_label():
+    res = Senoko().parse(_senoko_page(prevailing="34.78"))
+    assert res.observations == {"regulated_tariff_cents_incl_gst": 34.78}
+
+
+def test_senoko_no_tariff_sentences_gives_no_tariff_keys():
+    res = Senoko().parse(_senoko_page())
+    assert res.plans == [] and res.observations == {}
 
 
 def test_geneco_converts_ex_gst_rates():

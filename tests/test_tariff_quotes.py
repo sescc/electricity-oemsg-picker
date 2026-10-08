@@ -71,6 +71,14 @@ def test_label_without_as_of_is_kept_because_nothing_contradicts_it():
     assert c["quarter"] == "Q3 2026" and c["ignored_sources"] == {}
 
 
+def test_senoko_label_confirms_the_quarter_when_pacificlight_is_absent():
+    c = consensus_current({"senoko": {K: 31.16, "tariff_quarter": "Q4 2026", "as_of": "2026-10-08T05:18:00+00:00"}})
+    assert c["cents_incl_gst"] == 31.16 and c["quarter"] == "Q4 2026"
+    assert c["agreeing_sources"] == ["senoko"]
+    rec = record_quote({}, {**c, "stale": False})
+    assert rec["2026Q4"]["cents_incl_gst"] == 31.16 and rec["2026Q4"]["sources"] == ["senoko"]
+
+
 def test_consensus_without_any_quote_is_none():
     assert consensus_current({"a": {}, "b": {K: 0}}) is None
 

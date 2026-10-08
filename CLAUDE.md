@@ -12,8 +12,8 @@ Singapore Open Electricity Market (OEM) retailer and plan for a household:
 ## Commands
 
 ```bash
-python -m pytest -q          # 87 Python tests, offline (tests/fixtures, tests/fixtures_build.py)
-node --test                  # 35 JS tests (tests/js/*.test.mjs)
+python -m pytest -q          # 93 Python tests, offline (tests/fixtures, tests/fixtures_build.py)
+node --test                  # 41 JS tests (tests/js/*.test.mjs)
 python -m scraper.run plans [--force] [--only id,id]
 python -m scraper.run datasets [--force]
 python -m analysis.build
@@ -148,6 +148,8 @@ Context: `Refresh plan data` failed every day from 2026-10-01 with `KeyError: '2
 | Q10 | New shared package **`common/tariff.py`** holds the GST constants (`GST_RATE`, `GST_FACTOR`), `merge_history` and the quarter and timestamp helpers. `analysis/` no longer imports `scraper` (test-enforced). | Claude | Suggestions #1 and #2; clears the Law 4 advisory |
 | Q11 | The two current-tariff copies stay (the `plans.json` banner and the `model.json` MDP), and a test asserts they agree | Claude | Suggestion #3 |
 | Q12 | `analysis/build.py` is split into a pure `build_model` and an I/O `main`. Pure UI helpers moved to `site/js/ui.js` with node tests. | Claude | Suggestion #4 |
+| Q14 | **Senoko also labels the tariff quarter**, from its "Qn YYYY SP Tariff of Y¢/kWh" banner, but only when Y equals the page's "prevailing SP tariff" figure. A page that contradicts itself gets no label. | Claude (confirm-tariff-quarter) | Closes the PacificLight-down gap. The live page was checked once on 2026-10-08 ("Q4 2026 … 31.16") |
+| Q15 | **The page flags an unconfirmed or inconsistent current tariff** (`tariffNotice`): when the banner quote has no quarter, or differs from `model.json.tariff.current_incl_gst` by more than 0.005¢ | Claude (confirm-tariff-quarter) | Defence in depth for Q1 ("degrade visibly") if both labelled sources fail |
 | Q13 | The user runs `git pull --ff-only` once, because the local checkout was 6 bot commits behind. Afterwards, pull before editing locally. Claude never pulls. | User | Git writes are the user's job |
 ---
 
@@ -196,7 +198,10 @@ Context: `Refresh plan data` failed every day from 2026-10-01 with `KeyError: '2
 | A quarter was never quoted or recorded | Listed in `history_gaps`; the chart breaks; `prev_ex` = latest earlier quarter | `test_missing_quarter_is_a_reported_gap_not_an_interpolation`, `test_adjacent_dlog_skips_changes_across_a_gap_and_ewma_survives_it` |
 | A stale previous-quarter snapshot vs a fresh read after the quarter change | The old-quarter reading is dropped (`ignored_sources`) | `test_stale_old_quarter_snapshot_does_not_outvote_fresh_read`, `test_old_quarter_sources_are_dropped_even_when_they_are_the_majority` |
 | A read late on 30 Sep UTC that is already 1 Oct in Singapore | Counts as Q4 | `test_quarter_boundary_is_singapore_time` |
-| Only a disagreeing source carries a quarter label (PacificLight down, or PacificLight disagrees) | `quarter: null`; the quote is shown but not recorded | `test_quarter_label_comes_only_from_an_agreeing_source` |
+| Only a disagreeing source carries a quarter label (PacificLight down, or PacificLight disagrees) | `quarter: null`; the quote is shown but not recorded, and the page warns "Tariff quarter not confirmed…" | `test_quarter_label_comes_only_from_an_agreeing_source`, `tariffNotice` tests |
+| PacificLight down, Senoko up | Senoko's own label confirms the quarter, and the quote is recorded | `test_senoko_label_confirms_the_quarter_when_pacificlight_is_absent` |
+| Senoko's banner and "prevailing" text disagree (one is out of date) | The prevailing value is used with no label | `test_senoko_contradicting_page_gives_value_but_no_quarter_label` |
+| Banner quote differs from the tariff the forecast starts from (e.g. stale-model or stale-quote fallback) | Warning badge with both values | `tariffNotice` tests |
 | Label two quarters ahead, or a pre-announced next-quarter label | Rejected / accepted | `test_quarter_label_must_be_plausible_for_when_it_was_read` |
 | A retailer revises an already-recorded quarter | Overwritten, old value kept as `revised_from` | `test_record_quote_revision_overwrites_and_remembers_old_value` |
 | The stale-fallback tariff (all quote sources failed) | Not recorded as a new quote | `test_run_plans_does_not_record_the_stale_fallback` |
@@ -210,7 +215,7 @@ Context: `Refresh plan data` failed every day from 2026-10-01 with `KeyError: '2
 
 - ~~Git wasn't installed on the dev machine, so the GitHub workflows have never run.~~ They ran from 2026-09-25 (green until 2026-09-30, then failing until the Q-series fix). Fix verified live 2026-10-08: manual run green, including the bot `git push` under checkout v7; `tariff_quotes.json` committed with Q3 and Q4; Pages deployed.
 - Keppel and Sembcorp need manual updates in `data/curated/*.json` (bump `verified_at`).
-- Only PacificLight labels the tariff quarter. If PacificLight fails and Senoko works, the new quote is shown unlabelled and not recorded, and the model stays on the last recorded quarter with no UI flag for the mismatch (open item, low likelihood).
+- ~~Only PacificLight labels the tariff quarter …~~ Closed 2026-10-08 by Q14/Q15. Both PacificLight and Senoko label the quarter, and if both fail the page warns.
 - Load profiles are typical shapes (adjustable night share), not metered data.
 - Discount-off-tariff plans are assumed to discount the whole per-kWh tariff.
 - Months are counted from the start of the analysis (the next quarter start), not from today's date.

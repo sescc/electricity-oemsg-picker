@@ -5,7 +5,7 @@ import {
 import { etfFor, policyAt, simulate, solve } from './mdp.js';
 import {
   QUOTE_LABEL, cents, contractLabel, daysAgo, eligible, esc, fmtDate, gapNote, hasPublishedEtf, historySeries, modelStatusBadge,
-  monthName, planLabel, plural, safeUrl, sgd, typeLabel,
+  monthName, planLabel, plural, safeUrl, sgd, tariffNotice, typeLabel,
 } from './ui.js';
 
 const METER_FEE = 43.6;
@@ -209,6 +209,7 @@ function renderFreshness() {
     `<span>Models fitted <b>${fmtDate(model.generated_at)}</b></span>`,
   ];
   bits.push(modelStatusBadge(DATA.modelStatus));
+  bits.push(tariffNotice(rt, model.tariff));
   if (rt?.stale) bits.push(`<span class="badge warn">Tariff quote last read ${fmtDate(rt.observed_at)}; it may be out of date</span>`);
   if (stale.length) bits.push(`<span class="badge warn">${stale.length} retailer(s) showing last-known data</span>`);
   if (daysAgo(plans.generated_at) > 3) bits.push('<span class="badge warn">Plan data is more than 3 days old</span>');

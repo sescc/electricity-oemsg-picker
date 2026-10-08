@@ -64,7 +64,7 @@ graph LR
 | Morphism | Signature | Partiality | Semantics |
 | --- | --- | --- | --- |
 | `parse?` | `RetailerPage → Plan*` | Partial | adapter `parse()`; pure; undefined (raises / fails validation) when the layout changed (N2, N5) |
-| `observe?` | `RetailerPage → TariffObservation` | Partial | the current-quarter tariff quoted on a retailer page (PacificLight, Senoko) (S7) |
+| `observe?` | `RetailerPage → TariffObservation` | Partial | the current-quarter tariff quoted on a retailer page (PacificLight, Senoko) (S7). `tariff_quarter` comes from PacificLight's "Regulated Tariff in Qn YYYY" and from Senoko's "Qn YYYY SP Tariff of Y¢" (the latter only when Y equals the page's prevailing figure) |
 | `snap_plans` | `RetailerSnapshot → Plan*` | Total | last-known-good plans, carrying their original `fetched_at` |
 | `cur_plans` | `CuratedDoc → Plan*` | Total | hand-verified plans (Keppel, Sembcorp) with `verified_at` (S3, S4) |
 | `extract_terms?` | `FactSheet → Terms` | Partial | ETF (flat / schedule / by dwelling), auto-renewal, standard flag; undefined when no field found (D3, N8) |

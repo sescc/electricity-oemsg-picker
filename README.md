@@ -58,7 +58,7 @@ python -m scraper.run plans --force      # scrape retailers (polite: takes a few
 python -m scraper.run datasets --force   # EMA SES, data.gov.sg tariff, Open-Meteo
 python -m analysis.build                 # fit models -> site/data/model.json
 python -m http.server 8765 --directory site
-python -m pytest -q && node --test       # 87 Python + 35 JS tests, offline (saved fixtures)
+python -m pytest -q && node --test       # 93 Python + 41 JS tests, offline (saved fixtures)
 ```
 
 ## Deploy to GitHub Pages

@@ -6,13 +6,15 @@
 ## Headline
 ✅ Built. The quarter-gap bug (a quote for a quarter the official series lacks, lost when the
 quarter turned over) is fixed: quotes are now recorded per quarter in `tariff_quotes.json`
-(55 Python tests at the fix, 70 with `common/`). Biggest gap: live scraping from a GitHub
+(55 Python tests at the fix, 70 with `common/`). Senoko now also labels the tariff quarter (only when its banner
+and "prevailing" sentence agree), so the quarter is still confirmed and recorded when PacificLight is down
+(93 Python tests). Biggest gap: live scraping from a GitHub
 runner (bot challenges, robots, rate limits) is only partly verified — watch the next Actions runs.
 
 ## Completeness
 | Object / morphism | State | Notes |
 | --- | --- | --- |
-| 5 scraping adapters + 2 curated | ✅ built | Keppel/Sembcorp need manual `verified_at` bumps |
+| 5 scraping adapters + 2 curated | ✅ built | Keppel/Sembcorp need manual `verified_at` bumps; Senoko and PacificLight both label the tariff quarter |
 | fallback functor | ✅ built | tested |
 | `enrich_terms` + cache | ✅ built | once-per-URL rule untested |
 | `consensus_current` | ✅ built | tested, incl. quarter-change and label rules |

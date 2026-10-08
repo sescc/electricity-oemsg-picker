@@ -44,6 +44,7 @@
 | ranking table | `RankedRow* → DOM` | `site/js/app.js:renderRanking` | built |
 | freshness badges | `status.json × model_status? → DOM` | `site/js/app.js:renderFreshness`, `site/js/app.js:renderStatus` | built |
 | `modelStatusBadge` | `ModelStatus? → HTML` (empty unless `state = stale`) | `site/js/ui.js:modelStatusBadge` | built |
+| `tariffNotice` | `RegulatedTariff? × ModelTariff? → HTML` (empty when labelled and equal, or either side missing; warns on an unlabelled quote or a value mismatch) | `site/js/ui.js:tariffNotice`, used in `site/js/app.js:renderFreshness` | built |
 | `historySeries` | `History × Gaps → Row*` (gap rows are null) | `site/js/ui.js:historySeries` | built |
 | `gapNote` | `Gaps → HTML` (empty if none) | `site/js/ui.js:gapNote` | built |
 | retailer-quote marker | legend/tooltip label | `site/js/ui.js:QUOTE_LABEL` | built |
@@ -68,6 +69,7 @@
 | 9. gaps are breaks, not interpolated | `site/js/ui.js:historySeries` | `tests/js/ui.test.mjs` ("historySeries: a gap inside the range becomes a null row…") |
 | `eligible` rules (N6) | `site/js/ui.js:eligible` | `tests/js/ui.test.mjs` ("eligible: …") |
 | labels, `gapNote`, `modelStatusBadge` | `site/js/ui.js:contractLabel` | `tests/js/ui.test.mjs` ("contractLabel…", "gapNote…", "modelStatusBadge…") |
+| unconfirmed or inconsistent current tariff is flagged | `site/js/ui.js:tariffNotice` | `tests/js/ui.test.mjs` ("tariffNotice: a labelled quote that matches…", "tariffNotice: an unlabelled quote warns…", "tariffNotice: a labelled quote that differs…", "tariffNotice: differences up to 0.005…", "tariffNotice: missing inputs…", "tariffNotice: the forecast quarter is escaped") |
 | TOU windows / blocks / dot | `site/js/billing.js:energyCents` | `tests/js/billing.test.mjs` |
 | household shrinkage | `site/js/household.js:fitHousehold` | `tests/js/household.test.mjs` |
 | ETF schedules | `site/js/mdp.js:etfFor` | `tests/js/mdp.test.mjs` ("ETF schedule by month and by dwelling") |
