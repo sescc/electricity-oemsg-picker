@@ -3,14 +3,14 @@
 > Top-level architecture doc (FRAMEWORK §4). Names the four atoms, lists components
 > (each linking to its ARCHITECTURE.md), and runs the §4.5 coherence checklist against
 > the code. Detail lives in the component docs. Source of record: `.github/workflows/*.yml`,
-> `scraper/run.py`, `analysis/build.py`, `site/js/app.js`. Rationale for every decision:
+> `scraper/run.py`, `analysis/build.py`, `common/tariff.py`, `site/js/app.js`. Rationale for every decision:
 > the decision log in the root `CLAUDE.md`.
 
 ## 1. Why
 The system is a pipeline split across a physical boundary no server bridges: CI can
 scrape but can't see the user; the browser can see the user but can't scrape (CORS, no
 secrets). Modeling it with `Loc` and `Trm` makes that split explicit — the **only**
-channels between the two halves are three committed JSON files — so any feature that
+channels between the two halves are the committed JSON files in `site/data/` — so any feature that
 needs per-user data in CI, or live scraping in the browser, fails Law 1 on paper before
 it's written (D5, D6).
 
@@ -20,6 +20,8 @@ it's written (D5, D6).
 | --- | --- | --- |
 | `Plan` | normalised retail plan, GST-incl. ¢/kWh | runner RAM · `data/snapshots/<id>.json` · `site/data/plans.json` · browser |
 | `RegulatedTariff` | consensus current-quarter tariff | `plans.json` |
+| `TariffQuotes` | past `RegulatedTariff` per quarter (extends the lagging official series) | `data/snapshots/tariff_quotes.json` |
+| `ModelStatus` | `ok` / `stale` + when the model was last fitted | `site/data/model_status.json` |
 | `RetailerStatus`, `OemListCheck` | freshness / fallback | `site/data/status.json` |
 | `DatasetsSnapshot` | SES, data.gov.sg, weather | `data/snapshots/datasets.json` |
 | `Model` | climatology, forecasts, fits, fan, Markov chain | `site/data/model.json` |
@@ -28,9 +30,9 @@ it's written (D5, D6).
 **Trn** (owning component)
 | Trn | t_from → t_to | Component |
 | --- | --- | --- |
-| `run_plans` | pages → `plans.json`, `status.json` | Ingest |
+| `run_plans` | pages → `plans.json`, `status.json`, `tariff_quotes.json` | Ingest |
 | `run_datasets` | sources → `datasets.json` | Ingest |
-| `build` | `datasets.json` × `plans.json` → `model.json` | Analysis |
+| `build_or_keep` | `datasets.json` × `plans.json` × `tariff_quotes.json` → `model.json` × `model_status.json` (keeps the previous `model.json` on failure) | Analysis |
 | `compute` | JSON × `Inputs` → ranked rows + recommendation | Site |
 
 **Loc** — `GitHubRunner` (CI job, or a developer machine), `GitHubRepo`, `PagesCDN`,
@@ -42,7 +44,7 @@ it's written (D5, D6).
 | `http_get` | pages, fact sheets, datasets | RetailerHosts/DataHosts → GitHubRunner |
 | `git_commit_data` | `site/data/*`, `data/snapshots/*` | GitHubRunner → GitHubRepo |
 | `deploy` | `site/` | GitHubRepo → PagesCDN |
-| `fetch_data` | three JSON files | PagesCDN → Browser |
+| `fetch_data` | `plans.json`, `status.json`, `model.json`, optional `model_status.json` | PagesCDN → Browser |
 | `bills_store` | `Bill*` | Browser ↔ localStorage |
 
 ## 3. Components
@@ -89,11 +91,11 @@ graph LR
 - [x] 1. Placement honesty — every browser `Trn` reads fetched JSON or form state; CI `Trn`s read files in the checkout or `http_get` responses.
 - [x] 2. Transmission well-typing — all five `Trm`s carry named files/data and cross real boundaries.
 - [x] 3. Placement totality — every `Trn` has a site and a component.
-- [~] 4. Dependency mediation — Analysis → Ingest is mediated by files, except the direct `merge_history` import (same Loc, so not a failure; suggestion #1).
-- [x] 5. Composition soundness — the system is `Ingest ⋈ Analysis ⋈ Site` glued on `datasets.json`, `plans.json`, `status.json`, `model.json`; nothing redescribed.
+- [x] 4. Dependency mediation — Analysis ↔ Ingest couple only through files plus the neutral shared module `common/tariff.py`, which imports neither (test-enforced; shared-tariff-module).
+- [x] 5. Composition soundness — the system is `Ingest ⋈ Analysis ⋈ Site` glued on `datasets.json`, `tariff_quotes.json`, `plans.json`, `status.json`, `model.json`, `model_status.json`; nothing redescribed.
 - [x] 6. runsAt is a relation — multi-placements listed in §4.
 
 ## 6. Modeling smells swept (§3)
 - No parallel objects: curated, scraped, snapshot, current and SP-tariff plans are one `Plan`.
 - Deduced not copied: ranking, headline and charts derive from one `rows`; model selection is `argmin` backtest.
-- Duplicated constant: GST encoded twice (suggestion #2). The current tariff exists in two files (suggestion #3).
+- GST is encoded once (`common/tariff.py:GST_FACTOR`). The current tariff exists in two files by design (`plans.json` banner, `model.json` MDP); a test asserts they agree.

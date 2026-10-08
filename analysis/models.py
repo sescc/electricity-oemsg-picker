@@ -20,6 +20,8 @@ import math
 
 import numpy as np
 
+from common.tariff import quarter_key, shift_quarter
+
 from .ols import ols
 
 COVID = ("2020-04", "2021-12")  # circuit breaker + work-from-home period
@@ -41,10 +43,7 @@ def month_of_quarter(q: str) -> str:
     return f"{y}-{(int(n) - 1) * 3 + 1:02d}"
 
 
-def next_quarter(q: str, k: int = 1) -> str:
-    y, n = map(int, q.split("Q"))
-    idx = y * 4 + (n - 1) + k
-    return f"{idx // 4}Q{idx % 4 + 1}"
+next_quarter = shift_quarter        # one implementation, in common/tariff.py; this name is used widely here
 
 
 # ---------------------------------------------------------------- consumption
@@ -172,6 +171,7 @@ def simulate_tariff(fit: dict, ds: dict, start_quarter: str, start_value_ex: flo
     """
     rng = np.random.default_rng(seed)
     X = fit["X"]
+    mode = "full" if mode == "model" else mode   # backtest() names the ARX candidate "model"
     if mode == "full":
         beta = fit["full"]["beta"]
         exog_contrib = X[:, 3:] @ beta[3:]       # b1*du + b2*dd + b3*w for each historical quarter
@@ -232,12 +232,65 @@ def fan(paths: np.ndarray, first_quarter: str) -> list[dict]:
     return out
 
 
-def ewma_vol(series: list[float], lam: float = 0.9) -> list[float]:
-    """EWMA volatility of log changes (RiskMetrics-style), per quarter."""
-    r = np.diff(np.log(series))
+def adjacent_dlog(tariff: dict[str, float]) -> list[tuple[str, float]]:
+    """(quarter, ln change vs the previous quarter) for every quarter whose predecessor is present.
+
+    A change that would span a missing quarter is skipped, never interpolated or attributed to
+    one quarter, so volatility is only measured on genuine one-quarter changes."""
+    return [(q, math.log(tariff[q]) - math.log(tariff[next_quarter(q, -1)]))
+            for q in sorted(tariff) if next_quarter(q, -1) in tariff]
+
+
+def ewma_vol(dlog: list[float], lam: float = 0.9) -> list[float]:
+    """EWMA volatility of one-quarter log changes (RiskMetrics-style); one value per change."""
+    r = np.asarray(dlog, dtype=float)
+    if not len(r):
+        return []
     v = float(np.var(r[:8])) if len(r) >= 8 else float(np.var(r))
     out = []
     for x in r:
         v = lam * v + (1 - lam) * x * x
         out.append(math.sqrt(v))
     return out
+
+
+# ---------------------------------------------------------------- tariff history extension
+def _extend(tariff_q, quotes, current, gst):
+    official_last = max(tariff_q)
+    out = dict(tariff_q)
+    sources = {q: "official" for q in out}
+    quoted = {}                                   # the GST-inclusive figure exactly as a retailer quoted it
+    for q, rec in sorted(quotes.items()):
+        if q > official_last and rec.get("cents_incl_gst"):
+            out[q], sources[q], quoted[q] = round(rec["cents_incl_gst"] / gst, 2), "retailer_quote", rec["cents_incl_gst"]
+    if current and current.get("cents_incl_gst") and current.get("quarter"):
+        cq = quarter_key(current["quarter"])
+        if cq and cq > official_last and cq >= max(out):     # the live quote wins over a recorded one
+            out[cq], sources[cq], quoted[cq] = round(current["cents_incl_gst"] / gst, 2), "retailer_quote", current["cents_incl_gst"]
+    final = max(out)
+    gaps, q = [], next_quarter(official_last)
+    while q < final:
+        if q not in out:
+            gaps.append(q)
+        q = next_quarter(q)
+    return dict(sorted(out.items())), sources, gaps, quoted
+
+
+def extend_history(tariff_q: dict[str, float], quotes: dict, current: dict | None,
+                   gst: float) -> tuple[dict[str, float], dict[str, str], list[str]]:
+    """Extend the official quarterly tariff (ex GST) with retailer-quoted quarters it lacks.
+
+    Returns (tariff, source per quarter, gaps). Recorded quotes (`quotes`, keyed "2026Q3") and the
+    live `current` quote are GST-inclusive and are divided by `gst`; they are only used for quarters
+    after the last official one. Quarters nobody quoted are reported in `gaps`, never interpolated.
+    """
+    return _extend(tariff_q, quotes, current, gst)[:3]
+
+
+def quoted_incl_gst(tariff_q: dict[str, float], quotes: dict, current: dict | None,
+                    gst: float) -> dict[str, float]:
+    """GST-inclusive value, exactly as quoted, of each quarter `extend_history` took from a retailer.
+
+    Dividing a quote by GST and multiplying back can drift by 0.01 after rounding (e.g. 28.04),
+    so published GST-inclusive figures for those quarters use the quote itself."""
+    return _extend(tariff_q, quotes, current, gst)[3]

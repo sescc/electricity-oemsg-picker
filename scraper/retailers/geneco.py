@@ -4,6 +4,8 @@ from __future__ import annotations
 import json
 import re
 
+from common.tariff import GST_FACTOR
+
 from ..schema import make_plan
 from .base import Adapter, ScrapeResult
 
@@ -38,7 +40,7 @@ class Geneco(Adapter):
             if not rs:
                 continue
             r = rs[0]
-            gst = float(r.get("GSTRate") or 1.09)
+            gst = float(r.get("GSTRate") or GST_FACTOR)
             to_c = lambda x: round(float(x) * 100 * gst, 2)  # SGD/kWh ex-GST -> cents/kWh incl. GST
             common = dict(retailer_id=self.id, retailer=self.name, name=p["Name"],
                           contract_months=int(p.get("ContractDuration") or 0),

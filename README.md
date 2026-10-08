@@ -58,7 +58,7 @@ python -m scraper.run plans --force      # scrape retailers (polite: takes a few
 python -m scraper.run datasets --force   # EMA SES, data.gov.sg tariff, Open-Meteo
 python -m analysis.build                 # fit models -> site/data/model.json
 python -m http.server 8765 --directory site
-python -m pytest -q && node --test       # 28 Python + 20 JS tests, offline (saved fixtures)
+python -m pytest -q && node --test       # 87 Python + 35 JS tests, offline (saved fixtures)
 ```
 
 ## Deploy to GitHub Pages
@@ -68,10 +68,14 @@ python -m pytest -q && node --test       # 28 Python + 20 JS tests, offline (sav
 3. Settings → Actions → General → Workflow permissions: **Read and write** (the data job commits JSON).
 4. `refresh-data.yml` runs daily. `pages.yml` deploys after each successful refresh and on changes to `site/`.
 
-> **Not yet verified on GitHub.** Git wasn't installed on the development machine, so neither workflow has run.
-> The same commands they call (`pytest`, `scraper.run plans/datasets`, `analysis.build`, `node --test`) were
-> all run locally. Watch the first Actions run. Tuas (Incapsula) may block GitHub's IP ranges; the app then shows
-> Tuas's last-known plans marked "stale", as covered by `tests/test_run_fallback.py`.
+The site is meant to run unattended. A retailer that can't be scraped falls back to its last-known plans, marked
+"stale". If the models can't be refitted, the last good `model.json` is kept and the page says when it was last
+fitted (`site/data/model_status.json`). Neither case stops the refresh or the deploy. The page always shows when the
+data was last updated. If it looks old, open Actions → "Refresh plan data" → **Run workflow**.
+
+The official tariff statistics lag by a quarter or more, so the tariff quoted by retailers is recorded every quarter
+(`data/snapshots/tariff_quotes.json`) and fills the recent quarters. Those quarters are marked as retailer-quoted on
+the chart. A quarter that was never observed is shown as a gap, never interpolated.
 
 ## Known limits
 

@@ -2,11 +2,11 @@
 
 > Model-first (FRAMEWORK §2/§4). Intended specification for this component; the
 > code realises it (see IMPLEMENTATION.md). Source of record: `site/index.html`,
-> `site/js/app.js`, `site/js/billing.js`, `site/js/household.js`, `site/js/mdp.js`.
+> `site/js/app.js`, `site/js/ui.js`, `site/js/billing.js`, `site/js/household.js`, `site/js/mdp.js`.
 > Decisions P1–P9, B1–B4, N3–N8 in the root `CLAUDE.md`.
 
 ## 1. Overview
-The static GitHub Pages app. It fetches the three published JSON files, reads the
+The static GitHub Pages app. It fetches the published JSON files (three required, plus an optional `model_status.json`), reads the
 household's inputs (and optional past bills), and computes everything per-user in the
 browser: the usage forecast, each plan's monthly bill, the contract-switching MDP by
 backward induction, a Monte-Carlo simulation of each first action, and the ranking. No
@@ -25,6 +25,8 @@ graph LR
     PJ["plans.json"]
     SJ["status.json"]
     MJ["model.json"]
+    MS["model_status.json (optional)"]
+    Hist["TariffSeries"]
     Inp["Inputs"]
     Bills["Bill*"]
     HF["HouseholdFit"]
@@ -56,10 +58,13 @@ graph LR
     Sim --> Row
     Row -.->|"best (deduced)"| Rec
     SJ -.->|"freshness badges"| Row
+    MS -.->|"modelStatusBadge (stale only)"| Row
+    MJ -->|"historySeries / gapNote"| Hist
     style Plan fill:#4f8cf7,color:#fff
     style PJ fill:#4f8cf7,color:#fff
     style MJ fill:#4f8cf7,color:#fff
     style SJ fill:#4f8cf7,color:#fff
+    style MS fill:#4f8cf7,color:#fff
     style Rec fill:#9a9a9a,color:#fff
     style HF fill:#9a9a9a,color:#fff
 ```
@@ -83,6 +88,9 @@ graph LR
 | `best` | `RankedRow* → Recommendation` | Deduced | argmin score; "wait until end of MMM YYYY" when keep wins (P8) |
 | `frozen_check` | `→ 𝔹` | Deduced | re-solve with `frozenOffers`; warns if the winner changes (P3) |
 | `esc` / `safeUrl` | `𝕊 → 𝕊` / `𝕊 → 𝕊?` | Total / Partial | every scraped string escaped; only `https://` links rendered |
+| `historySeries` | `History × Gaps → Row*` | Total | official rows (missing `source` = official) and `retailer_quote` rows; each gap inside the observed range becomes a null row; missing or empty gaps are fine |
+| `gapNote` | `Gaps → 𝕊` | Total | warning line with escaped quarter labels; empty string when there are no gaps |
+| `modelStatusBadge` | `ModelStatus? → 𝕊` | Partial | defined only for `state = stale` (escaped `error` in `title`); empty for `ok`, a missing file or anything unrecognised |
 
 ## 5. Functors
 **MDP state space** `S = Plan × monthsLeft × levelAtSigning × currentLevel`, actions
@@ -98,18 +106,19 @@ graph LR
 6. `deduction: recommendation = best(rows)`; table, headline and charts read the same `rows`.
 7. `constraint: no scraped string reaches innerHTML unescaped; no non-https URL is linked`.
 8. `constraint: bills never leave the browser (localStorage only, try/catch)` (B4).
+9. `constraint: quarters in history_gaps are rendered as breaks, never interpolated`; `retailer_quote` points are marked as not-yet-official.
 
 ## 7. Atoms owned (FRAMEWORK §4)
 **Trn** — every row of §4, placed in the browser main thread; `billing`, `household`,
-`mdp` are also placed in the Node test runner (`node --test`) and in the Pages workflow
-before deploy.
+`mdp` and the pure helpers in `ui.js` are also placed in the Node test runner (`node --test`)
+and in the Pages workflow before deploy.
 
 **Loc** — `Browser` (main thread + localStorage), `Pages CDN` (static files), Node (tests).
 
 **Trm**
 | `Trm` | carries | c_from → c_to |
 | --- | --- | --- |
-| `fetch_data` | `plans.json`, `status.json`, `model.json` | Pages CDN → Browser |
+| `fetch_data` | `plans.json`, `status.json`, `model.json`, optional `model_status.json` | Pages CDN → Browser |
 | `load_app` | `index.html`, `js/*`, `css/*` | Pages CDN → Browser |
 | `bills_store` | `Bill*` | Browser RAM ↔ localStorage (`electricity-picker.bills.v1`) |
 | `deploy` | `site/` | GitHub repo → Pages CDN (pages workflow, only after a successful refresh) |
@@ -122,7 +131,8 @@ before deploy.
 | --- | --- | --- | --- |
 | `plans_json` | `Ingest → Site` | Stored | `Plan*` + `regulated_tariff` |
 | `status_json` | `Ingest → Site` | Stored | freshness, fallback, OEM list check |
-| `model_json` | `Analysis → Site` | Stored | chain, fan, consumption coefs, weather |
+| `model_json` | `Analysis → Site` | Stored | chain, fan, consumption coefs, weather; `tariff.history[].source` (`official` \| `retailer_quote`, missing = official) and `tariff.history_gaps` (quarters nobody observed, may be absent or empty) |
+| `model_status_json` | `Analysis → Site` | Stored, optional | `site/data/model_status.json`: `{state: ok\|stale, model_as_of, checked_at, error?}`; a missing file means no information and shows nothing |
 
 ## 9. Coherence notes
 - **Law 1**: every `Trn` reads either the fetched JSON or form state present in the
@@ -130,4 +140,5 @@ before deploy.
   than computing on nothing.
 - **Law 6**: `billing`/`mdp` run in two places by design (browser + Node tests) — same code.
 - Current tariff is read from `model.json.tariff.current_incl_gst` (Analysis), while
-  `plans.json.regulated_tariff` is the source it was derived from — see suggestion #3.
+  `plans.json.regulated_tariff` feeds the freshness banner; the two copies are checked to agree by
+  `tests/test_common.py` (shared-tariff-module, closes suggestion #3).

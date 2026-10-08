@@ -186,7 +186,12 @@ def run_plans(force: bool = False, only: set[str] | None = None) -> None:
         current["observed_at"] = max(filter(None, (observations[s].get("as_of") for s in current["agreeing_sources"])),
                                      default=None)
         current["stale"] = hours_since(current["observed_at"]) > STALE_TARIFF_HOURS
-    elif prev:
+    # Keep every labelled quote: plans.json only holds the latest one, and the official series lags
+    # a quarter or more. `prev` is recorded first so a quote never recorded before is not lost;
+    # only a freshly read consensus is recorded as current (the stale fallback below is ignored).
+    quotes = tariff_src.update_quotes(load(SNAP / "tariff_quotes.json", {}), prev, current)
+    save(SNAP / "tariff_quotes.json", quotes)
+    if not current and prev:
         current = {**prev, "stale": True}
     save(OUT / "plans.json", {"generated_at": now(), "regulated_tariff": current, "plans": all_plans})
     save(OUT / "status.json", {"generated_at": now(), "oem_list_url": OEM_LIST_URL,
@@ -233,8 +238,8 @@ def main(argv=None) -> int:
     if a.what in ("datasets", "all"):
         run_datasets(a.force)
     if a.what == "all":
-        from analysis.build import main as build
-        build()
+        from analysis.build import build_or_keep
+        build_or_keep()
     return 0
 
 

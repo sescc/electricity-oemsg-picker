@@ -12,8 +12,8 @@ Singapore Open Electricity Market (OEM) retailer and plan for a household:
 ## Commands
 
 ```bash
-python -m pytest -q          # 28 Python tests, offline (tests/fixtures)
-node --test                  # 20 JS tests (tests/js/*.test.mjs)
+python -m pytest -q          # 87 Python tests, offline (tests/fixtures, tests/fixtures_build.py)
+node --test                  # 35 JS tests (tests/js/*.test.mjs)
 python -m scraper.run plans [--force] [--only id,id]
 python -m scraper.run datasets [--force]
 python -m analysis.build
@@ -24,7 +24,8 @@ python -m http.server 8765 --directory site   # or the "site" entry in .claude/l
 
 - **Rates:** always GST-inclusive ¢/kWh. Convert when a page is parsed, never when it's displayed (`scraper/schema.py`).
 - **Adapters:** `parse()` is pure and fixture-tested; `fetch()` does the I/O. Add a fixture and a test for every new adapter.
-- **Scraped strings are untrusted:** escape them with `esc()` and put URLs through `safeUrl()` in `app.js`.
+- **Scraped strings are untrusted:** escape them with `esc()` and put URLs through `safeUrl()` (both in `site/js/ui.js`).
+- **GST and quarter helpers live in `common/tariff.py`** only; never re-encode 1.09 or quarter parsing elsewhere.
 - **No invented numbers:** if a value can't be read, mark it as unknown or assumed in the UI.
 - **Architecture docs:** `docs/` follows supercharge (see `docs/architecture-map.md`); plan changes with `/opsx:propose`, and update `docs/<component>/IMPLEMENTATION.md` with the code.
 - **Python tests:** use `.venv\Scripts\python.exe -m pytest`; WSL's system Python lacks the dependencies.
@@ -70,7 +71,7 @@ Dates are 2026-09-22 unless stated otherwise. "User" means the decision was conf
 | R2 | ≥5 s between requests to the same host; max 20 requests per host per run; retries on 429/5xx with backoff |
 | R3 | Each retailer is scraped at most once every **20 h** unless `--force`; datasets are refreshed at most every **7 days** |
 | R4 | Each fact sheet is fetched **once per URL** (URLs are versioned) and cached in `data/snapshots/terms_cache.json`; errors are retried after 7 days; at most 25 fetches per run |
-| R5 | Workflow `concurrency` prevents overlapping scrapes; Pages deploys only after a *successful* refresh |
+| R5 | Workflow `concurrency` prevents overlapping scrapes; Pages deploys only after a *successful* refresh. *(Model failures no longer fail the refresh: see Q2.)* |
 
 ## Normalisation (schema)
 
@@ -129,6 +130,25 @@ Dates are 2026-09-22 unless stated otherwise. "User" means the decision was conf
 | T4 | graphify runs `--code-only` | Claude | No LLM API key available |
 | T5 | Drift check runs on a throwaway git copy in the scratchpad | Claude | The folder isn't a git repo, and git add/commit is the user's job |
 
+## Refresh failure fix and backlog — 2026-10-08
+
+Context: `Refresh plan data` failed every day from 2026-10-01 with `KeyError: '2026Q3'` in `analysis/build.py`, so Pages stayed on 2026-09-30 data. The official tariff series ended at 2026Q2. Q3 existed only as the live retailer quote, and it was lost when the quote rolled to Q4 2026 (31.16¢).
+
+| # | Decision | By | Rationale |
+|---|---|---|---|
+| Q1 | **The site runs unattended.** Stale or missing data is fine as long as the page shows when it was last scraped. The user presses "Run workflow" if data looks old. No recurring manual steps. | User | Stated after the 8-day silent failure |
+| Q2 | **A model failure degrades and never halts the run** (`build_or_keep`). The last good `model.json` is kept, `site/data/model_status.json` says `stale`, and the scraped data is still committed and deployed. Pytest failures still halt. **Supersedes R5 for model failures.** | Claude, following Q1 | One bad input had blocked plans, status and deploy for 8 days |
+| Q3 | **Every labelled, non-stale tariff quote is persisted per quarter** in `data/snapshots/tariff_quotes.json`. Each run first records the previous run's quote (self-healing back-fill), then the fresh one. A revised value overwrites and keeps `revised_from`. | Claude | The official series lags by a quarter or more. Without this, a quarter is lost every time the quote rolls over |
+| Q4 | The Q3 2026 quote (34.78) is **back-filled by code** from origin's `plans.json` on the first run. It is not hand-written. | Claude | "No invented numbers": it is a real observation (2026-09-30, PacificLight + Senoko) |
+| Q5 | **Consensus rules:** readings from an earlier calendar quarter than the newest reading are dropped; ties go to the most recent read. The quarter label is taken only from an agreeing source, and only if it is that quarter or the next (pre-announcement). Quarters are computed in **Singapore time**. | Claude | Found at the quarter boundary: a stale Q3 snapshot would tie with a fresh Q4 read and win by insertion order |
+| Q6 | **History gaps are reported, never interpolated** (`model.json.tariff.history_gaps`; the UI shows the break and a note). Rows carry `source: official \| retailer_quote`. Volatility uses only adjacent-quarter changes. | Claude | "No invented numbers"; a change spanning a gap would inflate volatility |
+| Q7 | Quote-sourced quarters publish the GST-inclusive value **exactly as quoted**, not quote ÷ 1.09 × 1.09 | Claude (Sonnet agent, reviewed) | The round trip drifted by 0.01 for about 8% of values and broke the model-equals-plans check |
+| Q8 | `model_status.json` is a separate file rather than a field in `status.json` | Claude | One writer per file: `status.json` belongs to Ingest |
+| Q9 | Actions bumped to Node-24 majors (checkout, setup-python and setup-node v7; configure-pages v6; upload-pages-artifact v5; deploy-pages v5). Runners **pinned to `ubuntu-24.04`**. | Claude | Node 20 deprecation warnings; `ubuntu-latest` moves to Ubuntu 26 on 2026-10-19. Breaking changes were reviewed and none apply (`site/` has no dotfiles; the `workflow_run` trigger is not PR-triggered) |
+| Q10 | New shared package **`common/tariff.py`** holds the GST constants (`GST_RATE`, `GST_FACTOR`), `merge_history` and the quarter and timestamp helpers. `analysis/` no longer imports `scraper` (test-enforced). | Claude | Suggestions #1 and #2; clears the Law 4 advisory |
+| Q11 | The two current-tariff copies stay (the `plans.json` banner and the `model.json` MDP), and a test asserts they agree | Claude | Suggestion #3 |
+| Q12 | `analysis/build.py` is split into a pure `build_model` and an I/O `main`. Pure UI helpers moved to `site/js/ui.js` with node tests. | Claude | Suggestion #4 |
+| Q13 | The user runs `git pull --ff-only` once, because the local checkout was 6 bot commits behind. Afterwards, pull before editing locally. Claude never pulls. | User | Git writes are the user's job |
 ---
 
 # Edge cases discussed and how they are handled
@@ -171,12 +191,26 @@ Dates are 2026-09-22 unless stated otherwise. "User" means the decision was conf
 | Page opened from disk (`file://`) | Error message asks to serve over HTTP | `main()` |
 | `requestAnimationFrame` doesn't fire in hidden tabs | Recompute is scheduled with `setTimeout` only | `initForm` |
 | Narrow/mobile layout overflowing horizontally | `minmax(0,1fr)` + `min-width: 0` on grid children | `app.css` |
-| XSS via scraped text or URLs | `esc()` on every interpolation; only `https://` links rendered | `app.js` |
+| XSS via scraped text or URLs | `esc()` on every interpolation; only `https://` links rendered | `ui.js`, `ui.test.mjs` |
+| The quote rolls to a new quarter while the official series lags (the 2026-10-01 failure) | Recorded quotes bridge the missing quarters | `test_first_of_october_regression_recorded_q3_quote_bridges_the_gap`, `test_exact_pre_fix_failure_input_no_longer_raises` |
+| A quarter was never quoted or recorded | Listed in `history_gaps`; the chart breaks; `prev_ex` = latest earlier quarter | `test_missing_quarter_is_a_reported_gap_not_an_interpolation`, `test_adjacent_dlog_skips_changes_across_a_gap_and_ewma_survives_it` |
+| A stale previous-quarter snapshot vs a fresh read after the quarter change | The old-quarter reading is dropped (`ignored_sources`) | `test_stale_old_quarter_snapshot_does_not_outvote_fresh_read`, `test_old_quarter_sources_are_dropped_even_when_they_are_the_majority` |
+| A read late on 30 Sep UTC that is already 1 Oct in Singapore | Counts as Q4 | `test_quarter_boundary_is_singapore_time` |
+| Only a disagreeing source carries a quarter label (PacificLight down, or PacificLight disagrees) | `quarter: null`; the quote is shown but not recorded | `test_quarter_label_comes_only_from_an_agreeing_source` |
+| Label two quarters ahead, or a pre-announced next-quarter label | Rejected / accepted | `test_quarter_label_must_be_plausible_for_when_it_was_read` |
+| A retailer revises an already-recorded quarter | Overwritten, old value kept as `revised_from` | `test_record_quote_revision_overwrites_and_remembers_old_value` |
+| The stale-fallback tariff (all quote sources failed) | Not recorded as a new quote | `test_run_plans_does_not_record_the_stale_fallback` |
+| Model build raises (bad data, singular matrix, NaN) | Previous `model.json` kept; `model_status.json` is `stale` with the error; exit 0; UI badge "Forecast model last fitted …" | `test_build_or_keep_keeps_previous_model_when_inputs_are_corrupt`, `…_when_a_model_step_fails`, `modelStatusBadge` tests |
+| Model build fails and there is no previous model | Exit 0, `model_as_of: null`, no invented date in the UI | `test_build_or_keep_with_no_previous_model_still_exits_zero` |
+| `model_status.json` missing (older deployment) | Treated as "no information"; one 404 in the console | `loadData` (`optional`) |
+| GST round trip drifts 0.01 on quoted values | The quote is published as is | `test_recorded_quote_quarters_publish_the_quote_exactly` |
+| The ARX model wins the backtest (it never has; random walk always won) | `backtest` calls it `"model"` but `simulate_tariff` only knew `"full"`, so it would have raised `ValueError`. The name is now mapped. Found by the rule-1 test | `tests/test_build_model.py` (rule 1, each candidate wins in turn) |
 
 # Known limits / open items
 
-- Git wasn't installed on the dev machine, so the GitHub workflows have **never run**. Watch the first Actions run.
+- ~~Git wasn't installed on the dev machine, so the GitHub workflows have never run.~~ They ran from 2026-09-25 (green until 2026-09-30, then failing until the Q-series fix). The fix and the action bumps (checkout v6+ credential handling for the bot `git push`) are verified only once the first run after the push is green.
 - Keppel and Sembcorp need manual updates in `data/curated/*.json` (bump `verified_at`).
+- Only PacificLight labels the tariff quarter. If PacificLight fails and Senoko works, the new quote is shown unlabelled and not recorded, and the model stays on the last recorded quarter with no UI flag for the mismatch (open item, low likelihood).
 - Load profiles are typical shapes (adjustable night share), not metered data.
 - Discount-off-tariff plans are assumed to discount the whole per-kWh tariff.
 - Months are counted from the start of the analysis (the next quarter start), not from today's date.

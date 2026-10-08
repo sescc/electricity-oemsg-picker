@@ -3,18 +3,16 @@ import {
   DWELLINGS, addMonths, consumptionForecast, daysIn, fitHousehold, past12Months, pastCdd, quarterStartMonth,
 } from './household.js';
 import { etfFor, policyAt, simulate, solve } from './mdp.js';
+import {
+  QUOTE_LABEL, cents, contractLabel, daysAgo, eligible, esc, fmtDate, gapNote, hasPublishedEtf, historySeries, modelStatusBadge,
+  monthName, planLabel, plural, safeUrl, sgd, typeLabel,
+} from './ui.js';
 
 const METER_FEE = 43.6;
 const MAX_MONTHS = 36;
 const BILLS_KEY = 'electricity-picker.bills.v1';
 const SIM_PATHS = 800; // per plan; enough for stable P10/P90 (±~1%) while staying interactive
 const $ = (id) => document.getElementById(id);
-const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const sgd = (x) => `$${Math.round(x).toLocaleString('en-SG')}`;
-const cents = (x) => `${x.toFixed(2)}¢`;
-const fmtDate = (iso) => (iso ? new Date(iso).toLocaleDateString('en-SG', { day: 'numeric', month: 'short', year: 'numeric' }) : 'unknown');
-const daysAgo = (iso) => (iso ? (Date.now() - new Date(iso).getTime()) / 864e5 : Infinity);
-const safeUrl = (u) => (/^https:\/\//i.test(u || '') ? u : null);
 
 let DATA = null;
 const charts = {};
@@ -25,8 +23,10 @@ async function loadData() {
     if (!r.ok) throw new Error(`${f}: HTTP ${r.status}`);
     return r.json();
   };
-  const [plans, status, model] = await Promise.all([get('plans.json'), get('status.json'), get('model.json')]);
-  return { plans, status, model };
+  // model_status.json is optional (absent on older deployments): a missing or broken file means "no information"
+  const optional = async (f) => { try { return await get(f); } catch { return null; } };
+  const [plans, status, model, modelStatus] = await Promise.all([get('plans.json'), get('status.json'), get('model.json'), optional('model_status.json')]);
+  return { plans, status, model, modelStatus };
 }
 
 // ------------------------------------------------------------------ form
@@ -63,8 +63,6 @@ function initForm() {
   $('form').addEventListener('change', () => schedule(60));
   $('showAll').addEventListener('change', () => renderRanking(window.__last));
 }
-
-const monthName = (ym) => new Date(`${ym}-01T00:00:00`).toLocaleDateString('en-SG', { month: 'short', year: 'numeric' });
 
 // Past-12-month bill inputs. Values stay in this browser only (localStorage), never sent anywhere.
 function initBills(setTypical) {
@@ -131,13 +129,6 @@ function readForm() {
 }
 
 // ------------------------------------------------------------------ model run
-function eligible(p, inp) {
-  if (inp.greenOnly && !p.green) return false;
-  if (inp.standardOnly && p.standard !== true) return false; // unknown status is excluded, not admitted
-  if (p.eligibility === 'sp_customers_only' && inp.current !== 'sp') return false;
-  return true;
-}
-
 function currentPlan(inp) {
   if (inp.current === 'sp') return { ...SP_TARIFF_PLAN, name: 'Stay on the regulated tariff' };
   return {
@@ -205,11 +196,6 @@ function compute(inp) {
     sensitivity: { frozenBest: plans[frozenBest], sameWinner: frozenBest === rows[0].q } };
 }
 
-function hasPublishedEtf(p) {
-  const t = p.terms || {};
-  return !!(t.etf_schedule?.length || t.etf_by_dwelling || typeof t.early_termination_fee_sgd === 'number');
-}
-
 // ------------------------------------------------------------------ rendering
 function renderFreshness() {
   const { plans, status, model } = DATA;
@@ -222,36 +208,11 @@ function renderFreshness() {
     `<span>${ret.length} retailers on the OEM list · ${plans.plans.length} residential plans</span>`,
     `<span>Models fitted <b>${fmtDate(model.generated_at)}</b></span>`,
   ];
+  bits.push(modelStatusBadge(DATA.modelStatus));
   if (rt?.stale) bits.push(`<span class="badge warn">Tariff quote last read ${fmtDate(rt.observed_at)}; it may be out of date</span>`);
   if (stale.length) bits.push(`<span class="badge warn">${stale.length} retailer(s) showing last-known data</span>`);
   if (daysAgo(plans.generated_at) > 3) bits.push('<span class="badge warn">Plan data is more than 3 days old</span>');
   $('freshness').innerHTML = bits.filter(Boolean).join('');
-}
-
-const plural = (n, w) => `${n} ${w}${n === 1 ? '' : 's'}`;
-
-function contractLabel(p, inp, long) {
-  if (p.id === 'current') {
-    const m = inp.curMonths;
-    if (!long) return m ? `${m} mo left` : 'ended';
-    return m ? `${plural(m, 'month')} left (renews for ${p.contract_months} months)` : `contract ended (renews for ${p.contract_months} months)`;
-  }
-  if (!p.contract_months) return long ? 'no contract' : 'none';
-  return long ? `${p.contract_months}-month contract` : `${p.contract_months} mo`;
-}
-
-function planLabel(p) { return `${p.name}${p.retailer_id === 'sp' || p.id === 'current' ? '' : ` · ${p.retailer}`}`; }
-
-function typeLabel(p) {
-  const r = p.rates;
-  switch (p.price_type) {
-    case 'fixed': return `Fixed ${cents(r.rate)}`;
-    case 'dot_pct': return r.discount_pct ? `${r.discount_pct}% off tariff` : 'Regulated tariff';
-    case 'dot_cents': return `${r.discount_cents}¢ off tariff`;
-    case 'tou': return `Peak ${cents(r.periods[0].rate)} / off-peak ${cents(r.default_rate)}`;
-    case 'block': return `Tiered ${r.blocks.map((b) => cents(b.rate)).join(' → ')}`;
-    default: return p.price_type;
-  }
 }
 
 function badges(p, row) {
@@ -405,29 +366,49 @@ function chart(id, cfg) {
 
 function renderTariffChart() {
   const t = DATA.model.tariff;
-  const hist = t.history.filter((h) => h.quarter >= '2016Q1');
+  // Quarters nobody observed (t.history_gaps) are null points: the line breaks there, nothing is interpolated.
+  // Rows from retailer-quoted tariffs (source === 'retailer_quote') get their own marker series.
+  const hist = historySeries(t.history, t.history_gaps);
   const labels = [...hist.map((h) => h.quarter), ...t.fan_incl_gst.map((f) => f.quarter)];
   const pad = (arr, before) => [...Array(before).fill(null), ...arr];
   const n = hist.length;
   const anchor = hist[n - 1].incl_gst;
   const band = (k) => pad([anchor, ...t.fan_incl_gst.map((f) => f[k])], n - 1);
-  const c1 = css('--chart-1'), c2 = css('--chart-2');
+  const c1 = css('--chart-1'), c2 = css('--chart-2'), warn = css('--warn');
+  const quoted = hist.map((h) => (h.source === 'retailer_quote' ? h.incl_gst : null));
+  const datasets = [
+    { label: 'Actual', data: hist.map((h) => h.incl_gst), borderColor: c1, pointRadius: 0, borderWidth: 2, stepped: true, spanGaps: false },
+  ];
+  if (quoted.some((v) => v != null)) {
+    datasets.push({
+      label: QUOTE_LABEL, data: quoted, showLine: false, borderColor: warn, backgroundColor: warn,
+      pointStyle: 'triangle', pointRadius: 5, pointHoverRadius: 6,
+    });
+  }
+  datasets.push(
+    { label: '90th pct', data: band('p90'), borderColor: 'transparent', backgroundColor: `${c2}22`, pointRadius: 0, fill: '+1' },
+    { label: '10th pct', data: band('p10'), borderColor: 'transparent', pointRadius: 0, fill: false },
+    { label: 'Median forecast', data: band('p50'), borderColor: c2, borderDash: [5, 4], pointRadius: 0, borderWidth: 2 },
+  );
+  // fill: '+1' pairs the 90th-pct dataset with the one right after it, so the quote series must stay before them
   chart('tariffChart', {
     type: 'line',
-    data: {
-      labels,
-      datasets: [
-        { label: 'Actual', data: hist.map((h) => h.incl_gst), borderColor: c1, pointRadius: 0, borderWidth: 2, stepped: true },
-        { label: '90th pct', data: band('p90'), borderColor: 'transparent', backgroundColor: `${c2}22`, pointRadius: 0, fill: '+1' },
-        { label: '10th pct', data: band('p10'), borderColor: 'transparent', pointRadius: 0, fill: false },
-        { label: 'Median forecast', data: band('p50'), borderColor: c2, borderDash: [5, 4], pointRadius: 0, borderWidth: 2 },
-      ],
-    },
+    data: { labels, datasets },
     options: {
       plugins: { legend: { labels: { filter: (i) => !i.text.includes('pct') } }, tooltip: { mode: 'index', intersect: false } },
       scales: { x: { ticks: { maxTicksLimit: 8 } }, y: { title: { text: '¢/kWh incl. GST' } } },
     },
   });
+  // one muted warning line under the chart for quarters nobody observed (created on demand, updated on redraw)
+  let gapEl = $('tariffGaps');
+  if (!gapEl) {
+    gapEl = document.createElement('p');
+    gapEl.id = 'tariffGaps';
+    gapEl.className = 'hint gapnote';
+    $('tariffNote').before(gapEl);
+  }
+  gapEl.innerHTML = gapNote(t.history_gaps);
+  gapEl.hidden = !gapEl.innerHTML;
   const bt = t.backtest;
   $('tariffNote').textContent = `Shaded band: 10th–90th percentile of ${t.n_paths.toLocaleString()} simulated paths. ` +
     `Forecast dynamics: ${t.simulation_model.replace('_', ' ')} (lowest one-quarter-ahead error in a ${bt.n}-quarter backtest). ` +

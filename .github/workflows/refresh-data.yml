@@ -19,11 +19,12 @@ permissions:
 
 jobs:
   refresh:
-    runs-on: ubuntu-latest
+    # Pinned: ubuntu-latest switches to Ubuntu 26 on 2026-10-19; stay on 24.04 for a reproducible Python 3.12 setup.
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: pip

@@ -32,6 +32,7 @@ graph LR
     Fact["FactSheet (PDF/HTML)"]
     Obs["TariffObservation"]
     RT["RegulatedTariff"]
+    TQ["TariffQuotes"]
     St["RetailerStatus"]
     OEM["OemList"]
     DS["DatasetsSnapshot"]
@@ -42,6 +43,7 @@ graph LR
     Fact -.->|"extract_terms? (partial)"| Terms
     Plan -.->|"terms?"| Terms
     Obs -->|"consensus_current (deduced)"| RT
+    RT -->|"record_quote (labelled, not stale; previous quote first)"| TQ
     St -->|"status_of"| Plan
     OEM -.->|"diff_adapters (deduced)"| St
     style Plan fill:#4f8cf7,color:#fff
@@ -49,6 +51,7 @@ graph LR
     style Cur fill:#4f8cf7,color:#fff
     style Terms fill:#4f8cf7,color:#fff
     style RT fill:#9a9a9a,color:#fff
+    style TQ fill:#4f8cf7,color:#fff
     style DS fill:#4f8cf7,color:#fff
     style Page fill:#f7c04f,color:#000
     style Fact fill:#f7c04f,color:#000
@@ -66,7 +69,8 @@ graph LR
 | `cur_plans` | `CuratedDoc → Plan*` | Total | hand-verified plans (Keppel, Sembcorp) with `verified_at` (S3, S4) |
 | `extract_terms?` | `FactSheet → Terms` | Partial | ETF (flat / schedule / by dwelling), auto-renewal, standard flag; undefined when no field found (D3, N8) |
 | `terms?` | `Plan → Terms` | Partial | attached once per fact-sheet URL via the cache (R4) |
-| `consensus_current` | `TariffObservation* → RegulatedTariff` | Deduced | mode of agreeing quotes; `observed_at` = newest `as_of` of agreeing sources; `stale` after 48 h |
+| `consensus_current` | `TariffObservation* → RegulatedTariff` | Deduced | observations from an earlier calendar quarter than the newest `as_of` are dropped; mode of the rest, ties → most recent `as_of`; `quarter` only from an agreeing source with label ∈ [q(as_of), q(as_of)+1], else `None`; `observed_at` = newest `as_of` of agreeing sources; `stale` after 48 h |
+| `record_quote` | `TariffQuotes × RegulatedTariff → TariffQuotes` | Total | identity unless labelled and not stale; a different value for a recorded quarter overwrites and keeps `revised_from`. Applied to the previous run's quote, then the new one |
 | `status_of` | `RetailerStatus → Plan*` | Total | per-retailer outcome: `ok · no_residential_plans · curated · failed · blocked_by_robots` + `stale?` |
 | `diff_adapters` | `OemList → {new, missing}` | Deduced | OEM hosts vs adapter homepages; "could not be checked" when nothing parsed (S5) |
 | `with_gst` | `ℝ(ex) → ℝ(incl)` | Total | the only GST conversion point for scraped rates (convention "Rates") |
@@ -103,6 +107,7 @@ not change what any fetch returns — naturality is the "never bypass bot protec
 6. `constraint: each fact-sheet URL is fetched at most once (errors retried after 7 d), ≤ 25 per run` (R4).
 7. `invariant: tiered plans never ranked on a headline rate` — unparseable price text ⟹ plan rejected (N2).
 8. `constraint: datasets refreshed at most every 7 days; a failed source keeps its previous value` (R3).
+9. `invariant: every labelled, non-stale RegulatedTariff ever published is in TariffQuotes` — the past quarter's quote survives the quarter change (fix-tariff-quarter-gap).
 
 ## 7. Atoms owned (FRAMEWORK §4)
 **Trn**
@@ -111,6 +116,7 @@ not change what any fetch returns — naturality is the "never bypass bot protec
 | `scrape ⊸` | `Adapter → ScrapeResult` | `scraper/retailers/base.py:Adapter` |
 | `parse` | `RetailerPage → Plan*` | each `scraper/retailers/*.py` adapter |
 | `run_plans ⊸` | `Adapters × Snapshots → plans.json × status.json` | `scraper/run.py:run_plans` |
+| `update_quotes ⊸` | `TariffQuotes × prev quote × consensus → TariffQuotes` | `scraper/sources/tariff.py:update_quotes` (called from `run_plans`) |
 | `enrich_terms ⊸` | `Plan* × TermsCache → Plan*` | `scraper/run.py:enrich_terms` |
 | `check_retailer_list ⊸` | `OemPage → OemListCheck` | `scraper/run.py:check_retailer_list` |
 | `run_datasets ⊸` | `Sources → DatasetsSnapshot` | `scraper/run.py:run_datasets` |
@@ -134,10 +140,13 @@ developer machine. Pure `parse` is also placed in the pytest process against fix
 | `status_json` | `Ingest → Site` | Stored (`site/data/status.json`) | freshness / fallback badges |
 | `datasets_snapshot` | `Ingest → Analysis` | Stored (`data/snapshots/datasets.json`) | SES, data.gov.sg, weather |
 | `regulated_tariff` | `Ingest → Analysis` | Stored (in `plans.json`) | extends the tariff history by the current quarter |
-| `merge_history` | `ℝ^months × ℝ^months → ℝ^months` | Deduced | lives here but is called by Analysis (see suggestions #1) |
+| `tariff_quotes` | `Ingest → Analysis` | Stored (`data/snapshots/tariff_quotes.json`) | `TariffQuotes`: recorded quote per past quarter; extends the lagging official history |
+| `common/tariff.py` (shared module) | `merge_history`, GST constants, quarter helpers | Code import | imported by Ingest and Analysis; imports neither (replaces the former `merge_history` reach from Analysis into Ingest code) |
 
 ## 9. Coherence notes
 - **Law 1** holds: every `parse` input is delivered by `http_get` or a fixture file.
 - **Law 2** holds: the only cross-Loc flows are `http_get` and `git_commit_data`, both typed.
 - **Law 4**: Ingest → Analysis dependency is mediated by files in the same checkout
-  (same Loc at contact point in CI); locally the same.
+  (same Loc at contact point in CI); locally the same. Shared code is a neutral module,
+  `common/tariff.py`, that imports neither component, so no code-level reach remains.
+- `TariffQuotes` is written only by `run_plans`; Analysis reads it as a file (`tariff_quotes` port).

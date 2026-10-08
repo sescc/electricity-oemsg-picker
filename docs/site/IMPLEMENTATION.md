@@ -20,7 +20,8 @@
 | Morphism | Signature | Realising code | State |
 | --- | --- | --- | --- |
 | `fetch_data` | CDN → Browser | `site/js/app.js:loadData` | built |
-| `eligible` | `Plan × Inputs → 𝔹` | `site/js/app.js:eligible` | built |
+| `model_status_json` read | optional fetch; 404 or bad JSON → `null` | `site/js/app.js:loadData` (the `optional` wrapper for `model_status.json`) | built |
+| `eligible` | `Plan × Inputs → 𝔹` | `site/js/ui.js:eligible` | built |
 | `currentPlan` | `Inputs → Plan` | `site/js/app.js:currentPlan` | built |
 | `fitHousehold?` | `Bill* → HouseholdFit` | `site/js/household.js:fitHousehold` | built |
 | past CDD | `Weather × month → cdd` | `site/js/household.js:pastCdd` | built |
@@ -41,9 +42,16 @@
 | `score`, `frozen_check` | deduced | `site/js/app.js:compute` | built |
 | `best` / headline | `RankedRow* → Rec` | `site/js/app.js:renderRecommendation` | built |
 | ranking table | `RankedRow* → DOM` | `site/js/app.js:renderRanking` | built |
-| freshness badges | `status.json → DOM` | `site/js/app.js:renderFreshness`, `site/js/app.js:renderStatus` | built |
+| freshness badges | `status.json × model_status? → DOM` | `site/js/app.js:renderFreshness`, `site/js/app.js:renderStatus` | built |
+| `modelStatusBadge` | `ModelStatus? → HTML` (empty unless `state = stale`) | `site/js/ui.js:modelStatusBadge` | built |
+| `historySeries` | `History × Gaps → Row*` (gap rows are null) | `site/js/ui.js:historySeries` | built |
+| `gapNote` | `Gaps → HTML` (empty if none) | `site/js/ui.js:gapNote` | built |
+| retailer-quote marker | legend/tooltip label | `site/js/ui.js:QUOTE_LABEL` | built |
+| tariff chart | `TariffHistory × fan → chart` | `site/js/app.js:renderTariffChart` | built |
+| label helpers | `Plan × Inputs → 𝕊` | `site/js/ui.js:contractLabel`, `site/js/ui.js:planLabel`, `site/js/ui.js:typeLabel`, `site/js/ui.js:hasPublishedEtf` | built |
+| format helpers | `ℝ / date → 𝕊` | `site/js/ui.js:sgd`, `site/js/ui.js:cents`, `site/js/ui.js:plural`, `site/js/ui.js:fmtDate`, `site/js/ui.js:monthName`, `site/js/ui.js:daysAgo` | built |
 | `bills_store` | RAM ↔ localStorage | `site/js/app.js:initBills` | built |
-| `esc` / `safeUrl` | `𝕊 → 𝕊` | `site/js/app.js:esc`, `site/js/app.js:safeUrl` | built |
+| `esc` / `safeUrl` | `𝕊 → 𝕊` | `site/js/ui.js:esc`, `site/js/ui.js:safeUrl` | built |
 | recompute scheduling | input → `run` | `site/js/app.js:initForm` | built |
 
 ## Composition rules → where enforced
@@ -55,12 +63,18 @@
 | 4. rebates one-off | `site/js/mdp.js:solve` | `tests/js/mdp.test.mjs` ("rebates are one-off…") |
 | 5. move-out pays ETF | `site/js/mdp.js:solve` | `tests/js/mdp.test.mjs` ("moving out before the contract ends…") |
 | 6. one `rows` for all views | `site/js/app.js:compute` | — (structural) |
-| 7. escaping | `site/js/app.js:esc` | — (untested) |
+| 7. escaping | `site/js/ui.js:esc` | `tests/js/ui.test.mjs` ("esc escapes…", "safeUrl accepts only https") |
 | 8. bills local only | `site/js/app.js:initBills` | — (untested) |
+| 9. gaps are breaks, not interpolated | `site/js/ui.js:historySeries` | `tests/js/ui.test.mjs` ("historySeries: a gap inside the range becomes a null row…") |
+| `eligible` rules (N6) | `site/js/ui.js:eligible` | `tests/js/ui.test.mjs` ("eligible: …") |
+| labels, `gapNote`, `modelStatusBadge` | `site/js/ui.js:contractLabel` | `tests/js/ui.test.mjs` ("contractLabel…", "gapNote…", "modelStatusBadge…") |
 | TOU windows / blocks / dot | `site/js/billing.js:energyCents` | `tests/js/billing.test.mjs` |
 | household shrinkage | `site/js/household.js:fitHousehold` | `tests/js/household.test.mjs` |
 | ETF schedules | `site/js/mdp.js:etfFor` | `tests/js/mdp.test.mjs` ("ETF schedule by month and by dwelling") |
 
 ## Notes / divergences
-- `site/js/app.js` mixes compute (`compute`) with rendering; the pure parts
-  (`eligible`, `currentPlan`) are not unit-tested because they are not exported.
+- `site/js/app.js` still mixes compute (`compute`) with rendering. The pure, DOM-free helpers
+  now live in `site/js/ui.js` and are unit-tested (`tests/js/ui.test.mjs`); `currentPlan`, `billsFit`
+  and `badges` stay in `app.js` because they read form or module state (`DATA`).
+- `model_status.json` may be absent (older deployments): the browser treats that as "no information".
+  The 404 shows once in the console; it is not an error.

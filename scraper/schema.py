@@ -17,14 +17,15 @@ from __future__ import annotations
 
 import re
 
-GST = 0.09
+from common.tariff import GST_FACTOR
+
 PRICE_TYPES = {"fixed", "dot_pct", "dot_cents", "tou", "block"}
 SANE_RATE = (8.0, 70.0)         # cents/kWh incl. GST; anything outside is a parse error
 SANE_CONTRACT = {0, 6, 12, 18, 24, 25, 36, 48, 60}
 
 
 def with_gst(cents_ex: float) -> float:
-    return round(cents_ex * (1 + GST), 3)
+    return round(cents_ex * GST_FACTOR, 3)
 
 
 def slug(*parts: str) -> str:

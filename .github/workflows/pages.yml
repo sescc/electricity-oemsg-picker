@@ -22,22 +22,23 @@ jobs:
   deploy:
     # after a data refresh, deploy only if it succeeded (a failed refresh leaves the live site as is)
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
-    runs-on: ubuntu-latest
+    # Pinned: ubuntu-latest switches to Ubuntu 26 on 2026-10-19; stay on 24.04 for a reproducible Node 22 setup.
+    runs-on: ubuntu-24.04
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: main              # after a data refresh, deploy the commit it pushed
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: "22"
       - name: Unit-test the in-browser models
         run: node --test
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

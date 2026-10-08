@@ -75,6 +75,8 @@ input:disabled { opacity: .7; }
 .link-btn { background: none; border: 0; padding: 0; color: var(--accent); font: inherit; font-size: .8rem; cursor: pointer; text-decoration: underline; }
 .hint { display: block; color: var(--muted); font-size: .8rem; margin: 2px 0 0; }
 .muted { color: var(--muted); }
+.gapnote { color: var(--warn); }
+.gapnote[hidden] { display: none; }
 
 .reco h2 { font-size: .85rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 4px; }
 .reco .plan { font-size: 1.5rem; font-weight: 700; margin: 0; }
