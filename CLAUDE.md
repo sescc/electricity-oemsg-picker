@@ -208,7 +208,7 @@ Context: `Refresh plan data` failed every day from 2026-10-01 with `KeyError: '2
 
 # Known limits / open items
 
-- ~~Git wasn't installed on the dev machine, so the GitHub workflows have never run.~~ They ran from 2026-09-25 (green until 2026-09-30, then failing until the Q-series fix). The fix and the action bumps (checkout v6+ credential handling for the bot `git push`) are verified only once the first run after the push is green.
+- ~~Git wasn't installed on the dev machine, so the GitHub workflows have never run.~~ They ran from 2026-09-25 (green until 2026-09-30, then failing until the Q-series fix). Fix verified live 2026-10-08: manual run green, including the bot `git push` under checkout v7; `tariff_quotes.json` committed with Q3 and Q4; Pages deployed.
 - Keppel and Sembcorp need manual updates in `data/curated/*.json` (bump `verified_at`).
 - Only PacificLight labels the tariff quarter. If PacificLight fails and Senoko works, the new quote is shown unlabelled and not recorded, and the model stays on the last recorded quarter with no UI flag for the mismatch (open item, low likelihood).
 - Load profiles are typical shapes (adjustable night share), not metered data.
