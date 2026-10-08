@@ -1,25 +1,25 @@
 {
- "generated_at": "2026-09-30T01:19:17+00:00",
+ "generated_at": "2026-10-08T05:19:51+00:00",
  "sources": {
   "ses": {
    "ok": true,
    "url": "https://www.ema.gov.sg/content/dam/corporate/resources/singapore-energy-statistics/excel/SES_tidy.xlsx.coredownload.xlsx",
-   "fetched_at": "2026-09-30T01:19:14+00:00"
+   "fetched_at": "2026-10-08T05:19:46+00:00"
   },
   "tariff_datagov": {
    "ok": true,
    "url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_61eac3cdb086814af485dcc682b75ae9&limit=5",
-   "fetched_at": "2026-09-30T01:19:15+00:00"
+   "fetched_at": "2026-10-08T05:19:49+00:00"
   },
   "weather_history": {
    "ok": true,
    "url": "https://archive-api.open-meteo.com/v1/archive",
-   "fetched_at": "2026-09-30T01:19:16+00:00"
+   "fetched_at": "2026-10-08T05:19:50+00:00"
   },
   "weather_seasonal": {
    "ok": true,
    "url": "https://seasonal-api.open-meteo.com/v1/seasonal",
-   "fetched_at": "2026-09-30T01:19:16+00:00"
+   "fetched_at": "2026-10-08T05:19:51+00:00"
   }
  },
  "gst_factor": 1.09,
@@ -41,54 +41,49 @@
   },
   "forecast": {
    "2026-10": {
-    "cdd_per_day": 1.6793,
-    "raw_cdd_per_day": 2.3753,
-    "p10": 1.4073,
-    "p90": 2.0458,
+    "cdd_per_day": 1.8505,
+    "raw_cdd_per_day": 2.5339,
+    "p10": 1.5373,
+    "p90": 2.1584,
     "members": 50
    },
    "2026-11": {
-    "cdd_per_day": 1.9057,
-    "raw_cdd_per_day": 2.6016,
-    "p10": 1.6274,
-    "p90": 2.1241,
+    "cdd_per_day": 1.7005,
+    "raw_cdd_per_day": 2.3839,
+    "p10": 1.41,
+    "p90": 1.94,
     "members": 50
    },
    "2026-12": {
-    "cdd_per_day": 2.0659,
-    "raw_cdd_per_day": 2.7618,
-    "p10": 1.6879,
-    "p90": 2.3168,
+    "cdd_per_day": 2.0479,
+    "raw_cdd_per_day": 2.7313,
+    "p10": 1.8133,
+    "p90": 2.2584,
     "members": 50
    },
    "2027-01": {
-    "cdd_per_day": 2.1872,
-    "raw_cdd_per_day": 2.8832,
-    "p10": 1.7912,
-    "p90": 2.4652,
+    "cdd_per_day": 2.1568,
+    "raw_cdd_per_day": 2.8401,
+    "p10": 1.7778,
+    "p90": 2.5166,
     "members": 50
    },
    "2027-02": {
-    "cdd_per_day": 2.7606,
-    "raw_cdd_per_day": 3.4566,
-    "p10": 2.3968,
-    "p90": 3.1399,
+    "cdd_per_day": 2.7679,
+    "raw_cdd_per_day": 3.4513,
+    "p10": 2.413,
+    "p90": 3.1739,
     "members": 50
    },
    "2027-03": {
-    "cdd_per_day": 3.4586,
-    "raw_cdd_per_day": 4.1546,
-    "p10": 3.0685,
-    "p90": 3.8784,
+    "cdd_per_day": 3.5337,
+    "raw_cdd_per_day": 4.2171,
+    "p10": 3.0617,
+    "p90": 3.9683,
     "members": 50
    }
   },
   "recent": [
-   {
-    "month": "2023-09",
-    "cdd_per_day": 3.0767,
-    "mean_temp": 27.077
-   },
    {
     "month": "2023-10",
     "cdd_per_day": 3.1,
@@ -263,6 +258,11 @@
     "month": "2026-08",
     "cdd_per_day": 4.2065,
     "mean_temp": 28.206
+   },
+   {
+    "month": "2026-09",
+    "cdd_per_day": 3.61,
+    "mean_temp": 27.61
    }
   ]
  },
@@ -2247,441 +2247,535 @@
    {
     "quarter": "2005Q1",
     "ex_gst": 16.7,
-    "incl_gst": 18.2
+    "incl_gst": 18.2,
+    "source": "official"
    },
    {
     "quarter": "2005Q2",
     "ex_gst": 16.1,
-    "incl_gst": 17.55
+    "incl_gst": 17.55,
+    "source": "official"
    },
    {
     "quarter": "2005Q3",
     "ex_gst": 18.3,
-    "incl_gst": 19.95
+    "incl_gst": 19.95,
+    "source": "official"
    },
    {
     "quarter": "2005Q4",
     "ex_gst": 19.6,
-    "incl_gst": 21.36
+    "incl_gst": 21.36,
+    "source": "official"
    },
    {
     "quarter": "2006Q1",
     "ex_gst": 21.0,
-    "incl_gst": 22.89
+    "incl_gst": 22.89,
+    "source": "official"
    },
    {
     "quarter": "2006Q2",
     "ex_gst": 20.5,
-    "incl_gst": 22.35
+    "incl_gst": 22.35,
+    "source": "official"
    },
    {
     "quarter": "2006Q3",
     "ex_gst": 21.2,
-    "incl_gst": 23.11
+    "incl_gst": 23.11,
+    "source": "official"
    },
    {
     "quarter": "2006Q4",
     "ex_gst": 21.6,
-    "incl_gst": 23.54
+    "incl_gst": 23.54,
+    "source": "official"
    },
    {
     "quarter": "2007Q1",
     "ex_gst": 20.0,
-    "incl_gst": 21.8
+    "incl_gst": 21.8,
+    "source": "official"
    },
    {
     "quarter": "2007Q2",
     "ex_gst": 18.9,
-    "incl_gst": 20.6
+    "incl_gst": 20.6,
+    "source": "official"
    },
    {
     "quarter": "2007Q3",
     "ex_gst": 20.5,
-    "incl_gst": 22.35
+    "incl_gst": 22.35,
+    "source": "official"
    },
    {
     "quarter": "2007Q4",
     "ex_gst": 21.4,
-    "incl_gst": 23.33
+    "incl_gst": 23.33,
+    "source": "official"
    },
    {
     "quarter": "2008Q1",
     "ex_gst": 22.6,
-    "incl_gst": 24.63
+    "incl_gst": 24.63,
+    "source": "official"
    },
    {
     "quarter": "2008Q2",
     "ex_gst": 23.9,
-    "incl_gst": 26.05
+    "incl_gst": 26.05,
+    "source": "official"
    },
    {
     "quarter": "2008Q3",
     "ex_gst": 25.1,
-    "incl_gst": 27.36
+    "incl_gst": 27.36,
+    "source": "official"
    },
    {
     "quarter": "2008Q4",
     "ex_gst": 30.5,
-    "incl_gst": 33.25
+    "incl_gst": 33.25,
+    "source": "official"
    },
    {
     "quarter": "2009Q1",
     "ex_gst": 22.9,
-    "incl_gst": 24.96
+    "incl_gst": 24.96,
+    "source": "official"
    },
    {
     "quarter": "2009Q2",
     "ex_gst": 18.0,
-    "incl_gst": 19.62
+    "incl_gst": 19.62,
+    "source": "official"
    },
    {
     "quarter": "2009Q3",
     "ex_gst": 19.3,
-    "incl_gst": 21.04
+    "incl_gst": 21.04,
+    "source": "official"
    },
    {
     "quarter": "2009Q4",
     "ex_gst": 21.7,
-    "incl_gst": 23.65
+    "incl_gst": 23.65,
+    "source": "official"
    },
    {
     "quarter": "2010Q1",
     "ex_gst": 22.9,
-    "incl_gst": 24.96
+    "incl_gst": 24.96,
+    "source": "official"
    },
    {
     "quarter": "2010Q2",
     "ex_gst": 23.6,
-    "incl_gst": 25.72
+    "incl_gst": 25.72,
+    "source": "official"
    },
    {
     "quarter": "2010Q3",
     "ex_gst": 24.1,
-    "incl_gst": 26.27
+    "incl_gst": 26.27,
+    "source": "official"
    },
    {
     "quarter": "2010Q4",
     "ex_gst": 23.3,
-    "incl_gst": 25.4
+    "incl_gst": 25.4,
+    "source": "official"
    },
    {
     "quarter": "2011Q1",
     "ex_gst": 24.1,
-    "incl_gst": 26.27
+    "incl_gst": 26.27,
+    "source": "official"
    },
    {
     "quarter": "2011Q2",
     "ex_gst": 25.6,
-    "incl_gst": 27.9
+    "incl_gst": 27.9,
+    "source": "official"
    },
    {
     "quarter": "2011Q3",
     "ex_gst": 27.3,
-    "incl_gst": 29.76
+    "incl_gst": 29.76,
+    "source": "official"
    },
    {
     "quarter": "2011Q4",
     "ex_gst": 27.0,
-    "incl_gst": 29.43
+    "incl_gst": 29.43,
+    "source": "official"
    },
    {
     "quarter": "2012Q1",
     "ex_gst": 27.59,
-    "incl_gst": 30.07
+    "incl_gst": 30.07,
+    "source": "official"
    },
    {
     "quarter": "2012Q2",
     "ex_gst": 28.78,
-    "incl_gst": 31.37
+    "incl_gst": 31.37,
+    "source": "official"
    },
    {
     "quarter": "2012Q3",
     "ex_gst": 28.08,
-    "incl_gst": 30.61
+    "incl_gst": 30.61,
+    "source": "official"
    },
    {
     "quarter": "2012Q4",
     "ex_gst": 27.27,
-    "incl_gst": 29.72
+    "incl_gst": 29.72,
+    "source": "official"
    },
    {
     "quarter": "2013Q1",
     "ex_gst": 26.28,
-    "incl_gst": 28.65
+    "incl_gst": 28.65,
+    "source": "official"
    },
    {
     "quarter": "2013Q2",
     "ex_gst": 26.7,
-    "incl_gst": 29.1
+    "incl_gst": 29.1,
+    "source": "official"
    },
    {
     "quarter": "2013Q3",
     "ex_gst": 25.95,
-    "incl_gst": 28.29
+    "incl_gst": 28.29,
+    "source": "official"
    },
    {
     "quarter": "2013Q4",
     "ex_gst": 26.08,
-    "incl_gst": 28.43
+    "incl_gst": 28.43,
+    "source": "official"
    },
    {
     "quarter": "2014Q1",
     "ex_gst": 25.65,
-    "incl_gst": 27.96
+    "incl_gst": 27.96,
+    "source": "official"
    },
    {
     "quarter": "2014Q2",
     "ex_gst": 25.73,
-    "incl_gst": 28.05
+    "incl_gst": 28.05,
+    "source": "official"
    },
    {
     "quarter": "2014Q3",
     "ex_gst": 25.68,
-    "incl_gst": 27.99
+    "incl_gst": 27.99,
+    "source": "official"
    },
    {
     "quarter": "2014Q4",
     "ex_gst": 25.28,
-    "incl_gst": 27.56
+    "incl_gst": 27.56,
+    "source": "official"
    },
    {
     "quarter": "2015Q1",
     "ex_gst": 23.29,
-    "incl_gst": 25.39
+    "incl_gst": 25.39,
+    "source": "official"
    },
    {
     "quarter": "2015Q2",
     "ex_gst": 20.87,
-    "incl_gst": 22.75
+    "incl_gst": 22.75,
+    "source": "official"
    },
    {
     "quarter": "2015Q3",
     "ex_gst": 22.41,
-    "incl_gst": 24.43
+    "incl_gst": 24.43,
+    "source": "official"
    },
    {
     "quarter": "2015Q4",
     "ex_gst": 20.35,
-    "incl_gst": 22.18
+    "incl_gst": 22.18,
+    "source": "official"
    },
    {
     "quarter": "2016Q1",
     "ex_gst": 19.5,
-    "incl_gst": 21.26
+    "incl_gst": 21.26,
+    "source": "official"
    },
    {
     "quarter": "2016Q2",
     "ex_gst": 17.68,
-    "incl_gst": 19.27
+    "incl_gst": 19.27,
+    "source": "official"
    },
    {
     "quarter": "2016Q3",
     "ex_gst": 19.27,
-    "incl_gst": 21.0
+    "incl_gst": 21.0,
+    "source": "official"
    },
    {
     "quarter": "2016Q4",
     "ex_gst": 19.13,
-    "incl_gst": 20.85
+    "incl_gst": 20.85,
+    "source": "official"
    },
    {
     "quarter": "2017Q1",
     "ex_gst": 20.2,
-    "incl_gst": 22.02
+    "incl_gst": 22.02,
+    "source": "official"
    },
    {
     "quarter": "2017Q2",
     "ex_gst": 21.39,
-    "incl_gst": 23.32
+    "incl_gst": 23.32,
+    "source": "official"
    },
    {
     "quarter": "2017Q3",
     "ex_gst": 20.72,
-    "incl_gst": 22.58
+    "incl_gst": 22.58,
+    "source": "official"
    },
    {
     "quarter": "2017Q4",
     "ex_gst": 20.3,
-    "incl_gst": 22.13
+    "incl_gst": 22.13,
+    "source": "official"
    },
    {
     "quarter": "2018Q1",
     "ex_gst": 21.56,
-    "incl_gst": 23.5
+    "incl_gst": 23.5,
+    "source": "official"
    },
    {
     "quarter": "2018Q2",
     "ex_gst": 22.15,
-    "incl_gst": 24.14
+    "incl_gst": 24.14,
+    "source": "official"
    },
    {
     "quarter": "2018Q3",
     "ex_gst": 23.65,
-    "incl_gst": 25.78
+    "incl_gst": 25.78,
+    "source": "official"
    },
    {
     "quarter": "2018Q4",
     "ex_gst": 24.13,
-    "incl_gst": 26.3
+    "incl_gst": 26.3,
+    "source": "official"
    },
    {
     "quarter": "2019Q1",
     "ex_gst": 23.85,
-    "incl_gst": 26.0
+    "incl_gst": 26.0,
+    "source": "official"
    },
    {
     "quarter": "2019Q2",
     "ex_gst": 22.79,
-    "incl_gst": 24.84
+    "incl_gst": 24.84,
+    "source": "official"
    },
    {
     "quarter": "2019Q3",
     "ex_gst": 24.22,
-    "incl_gst": 26.4
+    "incl_gst": 26.4,
+    "source": "official"
    },
    {
     "quarter": "2019Q4",
     "ex_gst": 23.43,
-    "incl_gst": 25.54
+    "incl_gst": 25.54,
+    "source": "official"
    },
    {
     "quarter": "2020Q1",
     "ex_gst": 24.24,
-    "incl_gst": 26.42
+    "incl_gst": 26.42,
+    "source": "official"
    },
    {
     "quarter": "2020Q2",
     "ex_gst": 23.02,
-    "incl_gst": 25.09
+    "incl_gst": 25.09,
+    "source": "official"
    },
    {
     "quarter": "2020Q3",
     "ex_gst": 19.6,
-    "incl_gst": 21.36
+    "incl_gst": 21.36,
+    "source": "official"
    },
    {
     "quarter": "2020Q4",
     "ex_gst": 21.43,
-    "incl_gst": 23.36
+    "incl_gst": 23.36,
+    "source": "official"
    },
    {
     "quarter": "2021Q1",
     "ex_gst": 20.76,
-    "incl_gst": 22.63
+    "incl_gst": 22.63,
+    "source": "official"
    },
    {
     "quarter": "2021Q2",
     "ex_gst": 22.55,
-    "incl_gst": 24.58
+    "incl_gst": 24.58,
+    "source": "official"
    },
    {
     "quarter": "2021Q3",
     "ex_gst": 23.38,
-    "incl_gst": 25.48
+    "incl_gst": 25.48,
+    "source": "official"
    },
    {
     "quarter": "2021Q4",
     "ex_gst": 24.11,
-    "incl_gst": 26.28
+    "incl_gst": 26.28,
+    "source": "official"
    },
    {
     "quarter": "2022Q1",
     "ex_gst": 25.44,
-    "incl_gst": 27.73
+    "incl_gst": 27.73,
+    "source": "official"
    },
    {
     "quarter": "2022Q2",
     "ex_gst": 27.94,
-    "incl_gst": 30.45
+    "incl_gst": 30.45,
+    "source": "official"
    },
    {
     "quarter": "2022Q3",
     "ex_gst": 30.17,
-    "incl_gst": 32.89
+    "incl_gst": 32.89,
+    "source": "official"
    },
    {
     "quarter": "2022Q4",
     "ex_gst": 29.74,
-    "incl_gst": 32.42
+    "incl_gst": 32.42,
+    "source": "official"
    },
    {
     "quarter": "2023Q1",
     "ex_gst": 28.95,
-    "incl_gst": 31.56
+    "incl_gst": 31.56,
+    "source": "official"
    },
    {
     "quarter": "2023Q2",
     "ex_gst": 27.43,
-    "incl_gst": 29.9
+    "incl_gst": 29.9,
+    "source": "official"
    },
    {
     "quarter": "2023Q3",
     "ex_gst": 27.74,
-    "incl_gst": 30.24
+    "incl_gst": 30.24,
+    "source": "official"
    },
    {
     "quarter": "2023Q4",
     "ex_gst": 28.7,
-    "incl_gst": 31.28
+    "incl_gst": 31.28,
+    "source": "official"
    },
    {
     "quarter": "2024Q1",
     "ex_gst": 29.89,
-    "incl_gst": 32.58
+    "incl_gst": 32.58,
+    "source": "official"
    },
    {
     "quarter": "2024Q2",
     "ex_gst": 29.79,
-    "incl_gst": 32.47
+    "incl_gst": 32.47,
+    "source": "official"
    },
    {
     "quarter": "2024Q3",
     "ex_gst": 29.88,
-    "incl_gst": 32.57
+    "incl_gst": 32.57,
+    "source": "official"
    },
    {
     "quarter": "2024Q4",
     "ex_gst": 29.1,
-    "incl_gst": 31.72
+    "incl_gst": 31.72,
+    "source": "official"
    },
    {
     "quarter": "2025Q1",
     "ex_gst": 28.12,
-    "incl_gst": 30.65
+    "incl_gst": 30.65,
+    "source": "official"
    },
    {
     "quarter": "2025Q2",
     "ex_gst": 28.12,
-    "incl_gst": 30.65
+    "incl_gst": 30.65,
+    "source": "official"
    },
    {
     "quarter": "2025Q3",
     "ex_gst": 27.47,
-    "incl_gst": 29.94
+    "incl_gst": 29.94,
+    "source": "official"
    },
    {
     "quarter": "2025Q4",
     "ex_gst": 27.55,
-    "incl_gst": 30.03
+    "incl_gst": 30.03,
+    "source": "official"
    },
    {
     "quarter": "2026Q1",
     "ex_gst": 26.71,
-    "incl_gst": 29.11
+    "incl_gst": 29.11,
+    "source": "official"
    },
    {
     "quarter": "2026Q2",
     "ex_gst": 27.27,
-    "incl_gst": 29.72
+    "incl_gst": 29.72,
+    "source": "official"
    },
    {
     "quarter": "2026Q3",
     "ex_gst": 31.91,
-    "incl_gst": 34.78
+    "incl_gst": 34.78,
+    "source": "retailer_quote"
+   },
+   {
+    "quarter": "2026Q4",
+    "ex_gst": 28.59,
+    "incl_gst": 31.16,
+    "source": "retailer_quote"
    }
   ],
-  "current_quarter": "2026Q3",
-  "current_incl_gst": 34.78,
+  "history_gaps": [],
+  "current_quarter": "2026Q4",
+  "current_incl_gst": 31.16,
   "model": {
    "equation": "dy_t = c + phi*dy_{t-1} + g*(y_{t-1}-mean) + b1*dln(USEP)_{t-1} + b2*dln(peak demand)_{t-1} + b3*CDD_anom_{t-1} + e_t",
    "n": 81,
@@ -2691,10 +2785,10 @@
    "coefs": [
     {
      "name": "intercept",
-     "coef": -0.00252,
+     "coef": -0.0028,
      "se": 0.00767,
-     "t": -0.328,
-     "p": 0.7427
+     "t": -0.365,
+     "p": 0.7152
     },
     {
      "name": "dy_lag1",
@@ -2759,13 +2853,9 @@
   },
   "simulation_model": "random_walk",
   "volatility": {
-   "hist_sd_quarterly_dlog": 0.0719,
-   "ewma_latest": 0.0615,
+   "hist_sd_quarterly_dlog": 0.0726,
+   "ewma_latest": 0.0679,
    "ewma": [
-    {
-     "quarter": "2016Q4",
-     "vol": 0.0679
-    },
     {
      "quarter": "2017Q1",
      "vol": 0.0667
@@ -2921,157 +3011,161 @@
     {
      "quarter": "2026Q3",
      "vol": 0.0615
+    },
+    {
+     "quarter": "2026Q4",
+     "vol": 0.0679
     }
    ]
   },
   "fan_incl_gst": [
    {
-    "quarter": "2026Q4",
-    "p5": 31.536,
-    "p10": 32.205,
-    "p25": 33.805,
-    "p50": 35.488,
-    "p75": 36.783,
-    "p90": 37.726,
-    "p95": 38.2,
-    "mean": 35.136
-   },
-   {
     "quarter": "2027Q1",
-    "p5": 29.314,
-    "p10": 31.545,
-    "p25": 33.468,
-    "p50": 35.4,
-    "p75": 37.847,
-    "p90": 39.4,
-    "p95": 41.249,
-    "mean": 35.463
+    "p5": 28.255,
+    "p10": 28.855,
+    "p25": 30.288,
+    "p50": 31.796,
+    "p75": 32.956,
+    "p90": 33.801,
+    "p95": 34.226,
+    "mean": 31.48
    },
    {
     "quarter": "2027Q2",
-    "p5": 29.096,
-    "p10": 30.833,
-    "p25": 33.059,
-    "p50": 35.389,
-    "p75": 38.928,
-    "p90": 40.757,
-    "p95": 42.581,
-    "mean": 35.728
+    "p5": 26.264,
+    "p10": 28.263,
+    "p25": 29.986,
+    "p50": 31.717,
+    "p75": 33.909,
+    "p90": 35.301,
+    "p95": 36.957,
+    "mean": 31.773
    },
    {
     "quarter": "2027Q3",
-    "p5": 27.999,
-    "p10": 29.788,
-    "p25": 32.722,
-    "p50": 35.351,
-    "p75": 39.304,
-    "p90": 42.904,
-    "p95": 44.288,
-    "mean": 35.936
+    "p5": 26.069,
+    "p10": 27.625,
+    "p25": 29.619,
+    "p50": 31.707,
+    "p75": 34.878,
+    "p90": 36.517,
+    "p95": 38.151,
+    "mean": 32.01
    },
    {
     "quarter": "2027Q4",
-    "p5": 27.213,
-    "p10": 29.023,
-    "p25": 32.488,
-    "p50": 36.027,
-    "p75": 39.896,
-    "p90": 43.815,
-    "p95": 45.663,
-    "mean": 36.25
+    "p5": 25.086,
+    "p10": 26.689,
+    "p25": 29.318,
+    "p50": 31.673,
+    "p75": 35.214,
+    "p90": 38.44,
+    "p95": 39.68,
+    "mean": 32.197
    },
    {
     "quarter": "2028Q1",
-    "p5": 26.559,
-    "p10": 28.804,
-    "p25": 32.407,
-    "p50": 36.341,
-    "p75": 40.722,
-    "p90": 44.832,
-    "p95": 47.395,
-    "mean": 36.609
+    "p5": 24.382,
+    "p10": 26.003,
+    "p25": 29.107,
+    "p50": 32.279,
+    "p75": 35.745,
+    "p90": 39.256,
+    "p95": 40.912,
+    "mean": 32.478
    },
    {
     "quarter": "2028Q2",
-    "p5": 26.323,
-    "p10": 28.578,
-    "p25": 32.225,
-    "p50": 36.463,
-    "p75": 41.317,
-    "p90": 45.968,
-    "p95": 48.699,
-    "mean": 36.918
+    "p5": 23.795,
+    "p10": 25.807,
+    "p25": 29.035,
+    "p50": 32.56,
+    "p75": 36.486,
+    "p90": 40.168,
+    "p95": 42.464,
+    "mean": 32.8
    },
    {
     "quarter": "2028Q3",
-    "p5": 26.196,
-    "p10": 28.032,
-    "p25": 32.053,
-    "p50": 36.503,
-    "p75": 41.725,
-    "p90": 46.884,
-    "p95": 50.052,
-    "mean": 37.154
+    "p5": 23.584,
+    "p10": 25.605,
+    "p25": 28.872,
+    "p50": 32.67,
+    "p75": 37.018,
+    "p90": 41.185,
+    "p95": 43.632,
+    "mean": 33.077
    },
    {
     "quarter": "2028Q4",
-    "p5": 25.786,
-    "p10": 27.951,
-    "p25": 31.993,
-    "p50": 36.977,
-    "p75": 42.469,
-    "p90": 47.732,
-    "p95": 51.567,
-    "mean": 37.557
+    "p5": 23.47,
+    "p10": 25.115,
+    "p25": 28.719,
+    "p50": 32.705,
+    "p75": 37.384,
+    "p90": 42.006,
+    "p95": 44.844,
+    "mean": 33.289
    },
    {
     "quarter": "2029Q1",
-    "p5": 25.223,
-    "p10": 27.501,
-    "p25": 31.876,
-    "p50": 37.252,
-    "p75": 42.914,
-    "p90": 48.67,
-    "p95": 52.927,
-    "mean": 37.832
+    "p5": 23.103,
+    "p10": 25.043,
+    "p25": 28.665,
+    "p50": 33.13,
+    "p75": 38.05,
+    "p90": 42.766,
+    "p95": 46.202,
+    "mean": 33.65
    },
    {
     "quarter": "2029Q2",
-    "p5": 24.607,
-    "p10": 27.159,
-    "p25": 31.676,
-    "p50": 37.423,
-    "p75": 43.539,
-    "p90": 49.717,
-    "p95": 54.027,
-    "mean": 38.037
+    "p5": 22.599,
+    "p10": 24.64,
+    "p25": 28.56,
+    "p50": 33.376,
+    "p75": 38.449,
+    "p90": 43.607,
+    "p95": 47.42,
+    "mean": 33.896
    },
    {
     "quarter": "2029Q3",
-    "p5": 24.715,
-    "p10": 26.982,
-    "p25": 31.499,
-    "p50": 37.332,
-    "p75": 43.655,
-    "p90": 50.514,
-    "p95": 55.193,
-    "mean": 38.256
+    "p5": 22.047,
+    "p10": 24.333,
+    "p25": 28.381,
+    "p50": 33.529,
+    "p75": 39.009,
+    "p90": 44.544,
+    "p95": 48.406,
+    "mean": 34.08
+   },
+   {
+    "quarter": "2029Q4",
+    "p5": 22.143,
+    "p10": 24.174,
+    "p25": 28.222,
+    "p50": 33.448,
+    "p75": 39.113,
+    "p90": 45.259,
+    "p95": 49.45,
+    "mean": 34.276
    }
   ],
   "markov": {
    "k": 5,
    "levels_incl_gst": [
-    28.908,
-    33.426,
-    36.041,
-    39.132,
-    45.224
+    25.9,
+    29.948,
+    32.291,
+    35.06,
+    40.519
    ],
    "edges_incl_gst": [
-    31.773,
-    34.666,
-    37.435,
-    41.566
+    28.467,
+    31.059,
+    33.54,
+    37.241
    ],
    "transition": [
     [

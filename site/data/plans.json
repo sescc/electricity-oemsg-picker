@@ -1,15 +1,16 @@
 {
- "generated_at": "2026-09-30T01:19:06+00:00",
+ "generated_at": "2026-10-08T05:19:39+00:00",
  "regulated_tariff": {
-  "cents_incl_gst": 34.78,
-  "quarter": "Q3 2026",
+  "cents_incl_gst": 31.16,
+  "quarter": "Q4 2026",
   "agreeing_sources": [
    "pacificlight",
    "senoko"
   ],
   "disagreeing_sources": {},
   "n_sources": 2,
-  "observed_at": "2026-09-30T01:18:49+00:00",
+  "ignored_sources": {},
+  "observed_at": "2026-10-08T05:18:31+00:00",
   "stale": false
  },
  "plans": [
@@ -35,7 +36,7 @@
    "source_url": "https://www.geneco.sg/residential/electricity-plans/",
    "terms": {},
    "plan_code": "GetItFixed12_20260804",
-   "data_as_of": "2026-09-30T01:18:40+00:00",
+   "data_as_of": "2026-10-08T05:18:22+00:00",
    "data_method": "scrape"
   },
   {
@@ -45,12 +46,12 @@
    "name": "Get It Fixed 24",
    "price_type": "fixed",
    "rates": {
-    "rate": 29.8
+    "rate": 29.0
    },
    "contract_months": 24,
    "daily_charge_cents": 0.0,
    "rebate_sgd": 200.0,
-   "rebate_note": "For SP Customers: Use promo code GENECO200 for $200 bill rebate. For all other customers: Use promo code GENECO100 for $100 bill rebate. Limited sign-ups, T&Cs apply.",
+   "rebate_note": "Exclusive rate for the first 1000 sign-ups. For SP Customers: Use promo code GENECO200 for $200 bill rebate. For all other customers: Use promo code GENECO100 for $100 bill rebate. Limited sign-ups, T&Cs apply.",
    "standard": true,
    "green": false,
    "smart_meter_required": false,
@@ -58,12 +59,12 @@
    "conditions": [
     "Largest rebate only for customers switching from SP Group."
    ],
-   "factsheet_url": "https://drive.google.com/file/d/1DwYQ0jUXNmtRIfbOt6OmxNz5o9rLH3dw/view?usp=sharing",
+   "factsheet_url": "https://drive.google.com/file/d/165FkF_27bn2Q945tbgyenP1bcmPQIXXC/view?usp=sharing",
    "source_url": "https://www.geneco.sg/residential/electricity-plans/",
    "terms": {},
-   "plan_code": "GetItFixed24_20260804",
+   "plan_code": "GetItFixed24_20260930",
    "rebate_sgd_non_sp": 100.0,
-   "data_as_of": "2026-09-30T01:18:40+00:00",
+   "data_as_of": "2026-10-08T05:18:22+00:00",
    "data_method": "scrape"
   },
   {
@@ -88,7 +89,7 @@
    "source_url": "https://www.geneco.sg/residential/electricity-plans/",
    "terms": {},
    "plan_code": "GiveUsATry_20260804",
-   "data_as_of": "2026-09-30T01:18:40+00:00",
+   "data_as_of": "2026-10-08T05:18:22+00:00",
    "data_method": "scrape"
   },
   {
@@ -125,7 +126,7 @@
    "source_url": "https://www.geneco.sg/residential/electricity-plans/",
    "terms": {},
    "plan_code": "GetIt7To7_20260824",
-   "data_as_of": "2026-09-30T01:18:40+00:00",
+   "data_as_of": "2026-10-08T05:18:22+00:00",
    "data_method": "scrape"
   },
   {
@@ -338,7 +339,7 @@
     "No early termination charge",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-09-30T01:18:47+00:00",
+   "data_as_of": "2026-10-08T05:18:30+00:00",
    "data_method": "scrape"
   },
   {
@@ -348,7 +349,7 @@
    "name": "Easy Peasy",
    "price_type": "fixed",
    "rates": {
-    "rate": 26.0
+    "rate": 27.0
    },
    "contract_months": 0,
    "daily_charge_cents": 55.0,
@@ -359,7 +360,7 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/02-easy-peasy-no-contract-6-jul-2026",
+   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/02-easy-peasy-no-contract-7-oct-2026",
    "source_url": "https://pacificlight.com.sg/home/plans-new",
    "terms": {
     "etf_text": "No early termination charge (retailer plan data).",
@@ -378,8 +379,8 @@
     "late_payment_text": "27.80% per annum, calculated daily from the date of transaction until receipt of full payment.",
     "auto_renewal_text": "This is a Non-Standard Price Plan with no fixed Contract Duration. You can terminate the Contract at any time giving us 10 business days’ notice.",
     "auto_renews": false,
-    "fetched_at": "2026-09-22T07:05:06+00:00",
-    "source_url": "https://pacificlight.com.sg/support/factsheet-detail/02-easy-peasy-no-contract-6-jul-2026"
+    "fetched_at": "2026-10-08T05:18:48+00:00",
+    "source_url": "https://pacificlight.com.sg/support/factsheet-detail/02-easy-peasy-no-contract-7-oct-2026"
    },
    "plan_code": "PLE_EASYPEASY_01.05.2019",
    "extras": [
@@ -387,7 +388,7 @@
     "No early termination charge",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-09-30T01:18:47+00:00",
+   "data_as_of": "2026-10-08T05:18:30+00:00",
    "data_method": "scrape"
   },
   {
@@ -399,7 +400,7 @@
    "rates": {
     "periods": [
      {
-      "rate": 38.0,
+      "rate": 36.95,
       "windows": [
        {
         "days": "all",
@@ -409,7 +410,7 @@
       ]
      }
     ],
-    "default_rate": 18.5
+    "default_rate": 20.05
    },
    "contract_months": 0,
    "daily_charge_cents": 101.0,
@@ -420,7 +421,7 @@
    "smart_meter_required": true,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/03-9-to-9-no-contract-6-jul-2026",
+   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/03-9-to-9-no-contract-7-oct-2026",
    "source_url": "https://pacificlight.com.sg/home/plans-new",
    "terms": {
     "etf_text": "No early termination charge (retailer plan data).",
@@ -439,17 +440,17 @@
     "late_payment_text": "27.80% per annum, calculated daily from the date of transaction until receipt of full payment",
     "auto_renewal_text": "This is a Non-Standard Price Plan with no fixed Contract Duration. You can terminate the Contract at any time giving us 10 business days’ notice.",
     "auto_renews": false,
-    "fetched_at": "2026-09-22T07:05:11+00:00",
-    "source_url": "https://pacificlight.com.sg/support/factsheet-detail/03-9-to-9-no-contract-6-jul-2026"
+    "fetched_at": "2026-10-08T05:18:53+00:00",
+    "source_url": "https://pacificlight.com.sg/support/factsheet-detail/03-9-to-9-no-contract-7-oct-2026"
    },
    "plan_code": "PLE_9TO9FIXED_2022.09.23 ",
    "extras": [
-    "18.50¢/kWh (9pm - 9am) & 38.00¢/kWh (9am - 9pm)",
+    "20.05¢/kWh (9pm - 9am) & 36.95¢/kWh (9am - 9pm)",
     "Daily Charge of $1.01/day",
     "No early termination charge",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-09-30T01:18:47+00:00",
+   "data_as_of": "2026-10-08T05:18:30+00:00",
    "data_method": "scrape"
   },
   {
@@ -459,7 +460,7 @@
    "name": "Sunny Side-Up",
    "price_type": "fixed",
    "rates": {
-    "rate": 31.5
+    "rate": 31.0
    },
    "contract_months": 12,
    "daily_charge_cents": 0.0,
@@ -470,7 +471,7 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/04-sunny-side-up-12-7-aug-2026",
+   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/04-sunny-side-up-12-01-oct-2026",
    "source_url": "https://pacificlight.com.sg/home/plans-new",
    "terms": {
     "etf_text": "HDB 1 and 2 Room - $160 HDB 3 Room - $220 HDB 4 Room - $320 HDB 5 Room - $380 HDB Executive, Jumbo or Multi-Gen - $460 Condominium, Apartment or Shophouse - $480 Terrace - $720 Semi-Detached - $1,000 Bungalow or Penthouse - $2,000",
@@ -498,16 +499,16 @@
     "auto_renewal_text": "Auto-renewed contract will remain at the same plan name of similar duration. Auto-renewed electricity rate will be lower than the prevailing Regulated Tariff at renewal. All other fees will remain the same. This is subject to Clause 3.2 of the Residential Electricity Contract.",
     "auto_renews": false,
     "contract_months_factsheet": 12,
-    "fetched_at": "2026-09-22T07:05:16+00:00",
-    "source_url": "https://pacificlight.com.sg/support/factsheet-detail/04-sunny-side-up-12-7-aug-2026"
+    "fetched_at": "2026-10-08T05:18:58+00:00",
+    "source_url": "https://pacificlight.com.sg/support/factsheet-detail/04-sunny-side-up-12-01-oct-2026"
    },
-   "plan_code": "PLE_SUNNYSIDEUP12M_2026.08.07",
+   "plan_code": "PLE_SUNNYSIDEUP12M_2026.10.01",
    "extras": [
     "Be carbon neutral with free RECs",
     "Pick KrisFlyer miles or yuu Points",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-09-30T01:18:47+00:00",
+   "data_as_of": "2026-10-08T05:18:30+00:00",
    "data_method": "scrape"
   },
   {
@@ -517,7 +518,7 @@
    "name": "Savvy Saver",
    "price_type": "fixed",
    "rates": {
-    "rate": 31.0
+    "rate": 30.5
    },
    "contract_months": 12,
    "daily_charge_cents": 0.0,
@@ -528,7 +529,7 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/05-savvy-saver-12-7-aug-2026",
+   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/05-savvy-saver-12-8-oct-2026",
    "source_url": "https://pacificlight.com.sg/home/plans-new",
    "terms": {
     "etf_text": "HDB 1 and 2 Room - $160 HDB 3 Room - $220 HDB 4 Room - $320 HDB 5 Room - $380 HDB Executive, Jumbo or Multi-Gen - $460 Condominium, Apartment or Shophouse - $480 Terrace - $720 Semi-Detached - $1,000 Bungalow or Penthouse - $2,000",
@@ -556,15 +557,15 @@
     "auto_renewal_text": "Auto-renewed contract will remain on the same plan and duration. The electricity rate will be lower than the prevailing Regulated Tariff at renewal. All other fees remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
     "auto_renews": false,
     "contract_months_factsheet": 12,
-    "fetched_at": "2026-09-22T07:05:21+00:00",
-    "source_url": "https://pacificlight.com.sg/support/factsheet-detail/05-savvy-saver-12-7-aug-2026"
+    "fetched_at": "2026-10-08T05:19:03+00:00",
+    "source_url": "https://pacificlight.com.sg/support/factsheet-detail/05-savvy-saver-12-8-oct-2026"
    },
-   "plan_code": "PLE_SAVVYSAVER12M_2026.08.07",
+   "plan_code": "PLE_SAVVYSAVER12M_2026.10.08",
    "extras": [
     "Pick KrisFlyer miles or yuu Points",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-09-30T01:18:47+00:00",
+   "data_as_of": "2026-10-08T05:18:30+00:00",
    "data_method": "scrape"
   },
   {
@@ -574,7 +575,7 @@
    "name": "Savvy Saver",
    "price_type": "fixed",
    "rates": {
-    "rate": 29.8
+    "rate": 29.0
    },
    "contract_months": 24,
    "daily_charge_cents": 0.0,
@@ -585,7 +586,7 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/06-savvy-saver-24-20-aug-2026",
+   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/06-savvy-saver-24-8-oct-2026",
    "source_url": "https://pacificlight.com.sg/home/plans-new",
    "terms": {
     "etf_text": "HDB 1 and 2 Room - $160 HDB 3 Room - $220 HDB 4 Room - $320 HDB 5 Room - $380 HDB Executive, Jumbo or Multi-Gen - $460 Condominium, Apartment or Shophouse - $480 Terrace - $720 Semi-Detached - $1,000 Bungalow or Penthouse - $2,000",
@@ -613,16 +614,16 @@
     "auto_renewal_text": "Auto-renewed contract will remain on the same plan and duration. The electricity rate will be lower than the prevailing Regulated Tariff at renewal. All other fees remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
     "auto_renews": false,
     "contract_months_factsheet": 24,
-    "fetched_at": "2026-09-22T07:05:26+00:00",
-    "source_url": "https://pacificlight.com.sg/support/factsheet-detail/06-savvy-saver-24-20-aug-2026"
+    "fetched_at": "2026-10-08T05:19:08+00:00",
+    "source_url": "https://pacificlight.com.sg/support/factsheet-detail/06-savvy-saver-24-8-oct-2026"
    },
-   "plan_code": "PLE_SAVVYSAVER24M_2026.08.20",
+   "plan_code": "PLE_SAVVYSAVER24M_2026.10.08",
    "extras": [
     "Pick rebates, KrisFlyer miles or yuu Points",
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-09-30T01:18:47+00:00",
+   "data_as_of": "2026-10-08T05:18:30+00:00",
    "data_method": "scrape"
   },
   {
@@ -634,7 +635,7 @@
    "rates": {
     "periods": [
      {
-      "rate": 34.5,
+      "rate": 33.0,
       "windows": [
        {
         "days": "all",
@@ -644,7 +645,7 @@
       ]
      }
     ],
-    "default_rate": 22.5
+    "default_rate": 23.0
    },
    "contract_months": 24,
    "daily_charge_cents": 0.0,
@@ -655,7 +656,7 @@
    "smart_meter_required": true,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/07-save-while-sleeping-24-20-aug-2026",
+   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/07-save-while-sleeping-24-8-oct-2026",
    "source_url": "https://pacificlight.com.sg/home/plans-new",
    "terms": {
     "etf_text": "HDB 1 and 2 Room - $160 HDB 3 Room - $220 HDB 4 Room - $320 HDB 5 Room - $380 HDB Executive, Jumbo or Multi-Gen - $460 Condominium, Apartment or Shophouse - $480 Terrace - $720 Semi-Detached - $1,000 Bungalow or Penthouse - $2,000",
@@ -683,17 +684,17 @@
     "auto_renewal_text": "You will be notified at least 10 business days before your contract expires. On the renewal date, we will notify you of your auto-renewal electricity rates, with at least one of the tiered rates priced below the prevailing Regulated Tariff. All other fees shall remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
     "auto_renews": false,
     "contract_months_factsheet": 24,
-    "fetched_at": "2026-09-22T07:05:31+00:00",
-    "source_url": "https://pacificlight.com.sg/support/factsheet-detail/07-save-while-sleeping-24-20-aug-2026"
+    "fetched_at": "2026-10-08T05:19:13+00:00",
+    "source_url": "https://pacificlight.com.sg/support/factsheet-detail/07-save-while-sleeping-24-8-oct-2026"
    },
-   "plan_code": "PLE_SWSFIXED24M_2026.08.20",
+   "plan_code": "PLE_SWSFIXED24M_2026.10.08",
    "extras": [
-    "22.50¢/kWh (11pm - 7am) & 34.50¢/kWh (7am - 11pm)",
+    "23.00¢/kWh (11pm - 7am) & 33.00¢/kWh (7am - 11pm)",
     "Pick rebates, KrisFlyer miles or yuu Points",
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-09-30T01:18:47+00:00",
+   "data_as_of": "2026-10-08T05:18:30+00:00",
    "data_method": "scrape"
   },
   {
@@ -706,15 +707,15 @@
     "blocks": [
      {
       "upto_kwh": 300,
-      "rate": 30.0
+      "rate": 29.2
      },
      {
       "upto_kwh": 600,
-      "rate": 29.4
+      "rate": 28.6
      },
      {
       "upto_kwh": null,
-      "rate": 28.0
+      "rate": 27.6
      }
     ]
    },
@@ -727,7 +728,7 @@
    "smart_meter_required": true,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/08-Stack-It-Up-24-20-aug-2026",
+   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/08-Stack-It-Up-24-8-oct-2026",
    "source_url": "https://pacificlight.com.sg/home/plans-new",
    "terms": {
     "etf_text": "HDB 1 and 2 Room - $160 HDB 3 Room - $220 HDB 4 Room - $320 HDB 5 Room - $380 HDB Executive, Jumbo or Multi-Gen - $460 Condominium, Apartment or Shophouse - $480 Terrace - $720 Semi-Detached - $1,000 Bungalow or Penthouse - $2,000",
@@ -755,17 +756,17 @@
     "auto_renewal_text": "You will be notified at least 10 business days before your contract expires. On the renewal date, we will notify you of your auto-renewal electricity rates, with at least one of the tiered rates priced below the prevailing Regulated Tariff. All other fees shall remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
     "auto_renews": false,
     "contract_months_factsheet": 24,
-    "fetched_at": "2026-09-22T07:05:36+00:00",
-    "source_url": "https://pacificlight.com.sg/support/factsheet-detail/08-Stack-It-Up-24-20-aug-2026"
+    "fetched_at": "2026-10-08T05:19:18+00:00",
+    "source_url": "https://pacificlight.com.sg/support/factsheet-detail/08-Stack-It-Up-24-8-oct-2026"
    },
-   "plan_code": "PLE_STACKITUP24M_2026.08.20",
+   "plan_code": "PLE_STACKITUP24M_2026.10.08",
    "extras": [
     "Full rates in Factsheet",
     "Pick rebates, KrisFlyer miles or yuu Points",
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-09-30T01:18:47+00:00",
+   "data_as_of": "2026-10-08T05:18:30+00:00",
    "data_method": "scrape"
   },
   {
@@ -775,7 +776,7 @@
    "name": "Savvy Saver",
    "price_type": "fixed",
    "rates": {
-    "rate": 29.4
+    "rate": 28.9
    },
    "contract_months": 36,
    "daily_charge_cents": 0.0,
@@ -786,7 +787,7 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/9-savvy-saver-36-20-aug-2026",
+   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/9-savvy-saver-36-8-oct-2026",
    "source_url": "https://pacificlight.com.sg/home/plans-new",
    "terms": {
     "etf_text": "HDB 1 and 2 Room - $160 HDB 3 Room - $220 HDB 4 Room - $320 HDB 5 Room - $380 HDB Executive, Jumbo or Multi-Gen - $460 Condominium, Apartment or Shophouse - $480 Terrace - $720 Semi-Detached - $1,000 Bungalow or Penthouse - $2,000",
@@ -814,16 +815,16 @@
     "auto_renewal_text": "You will be notified at least 10 business days before your contract expires. On the renewal date, we will notify you of your auto-renewal electricity rates, which will be lower than the prevailing Regulated Tariff. All other fees shall remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
     "auto_renews": false,
     "contract_months_factsheet": 36,
-    "fetched_at": "2026-09-22T07:05:41+00:00",
-    "source_url": "https://pacificlight.com.sg/support/factsheet-detail/9-savvy-saver-36-20-aug-2026"
+    "fetched_at": "2026-10-08T05:19:23+00:00",
+    "source_url": "https://pacificlight.com.sg/support/factsheet-detail/9-savvy-saver-36-8-oct-2026"
    },
-   "plan_code": "PLE_SAVVYSAVER36M_2026.08.20",
+   "plan_code": "PLE_SAVVYSAVER36M_2026.10.08",
    "extras": [
     "Pick rebates, KrisFlyer miles or yuu Points",
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-09-30T01:18:47+00:00",
+   "data_as_of": "2026-10-08T05:18:30+00:00",
    "data_method": "scrape"
   },
   {
@@ -875,7 +876,7 @@
     "Monthly recurring payment via GIRO only",
     "Early Termination Charge Waiver. Terms Apply."
    ],
-   "data_as_of": "2026-09-30T01:18:47+00:00",
+   "data_as_of": "2026-10-08T05:18:30+00:00",
    "data_method": "scrape"
   },
   {
@@ -933,7 +934,7 @@
    "name": "LifePower36",
    "price_type": "fixed",
    "rates": {
-    "rate": 29.4
+    "rate": 28.9
    },
    "contract_months": 36,
    "daily_charge_cents": 0.0,
@@ -944,7 +945,7 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-36at1",
+   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-36au1",
    "source_url": "https://www.senokoenergy.com/households/price-plans",
    "terms": {
     "etf_text": "S$872 if termination is before or within 1st to 12th month from contract start date. S$545 if termination is within 13th to 24th month from contract start date. S$327 if termination is within 25th to 36th month from contract start date.",
@@ -973,11 +974,11 @@
     "auto_renewal_text": "Yes (At least 10 Business Days before the expiry date of your contract, you will be notified of the auto-renewed electricity rate, which will be lower than the prevailing Regulated Tariff at the point of renewal. All other applicable charges/fees will be the same or better than the existing quantum.) 1. If advanced meter is required, such fee (S$43.60 per m",
     "auto_renews": true,
     "contract_months_factsheet": 36,
-    "fetched_at": "2026-09-22T07:05:46+00:00",
-    "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-36at1"
+    "fetched_at": "2026-10-08T05:19:24+00:00",
+    "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-36au1"
    },
-   "plan_code": "HH-GMOFIXPG-36at1",
-   "data_as_of": "2026-09-30T01:18:49+00:00",
+   "plan_code": "HH-GMOFIXPG-36au1",
+   "data_as_of": "2026-10-08T05:18:31+00:00",
    "data_method": "scrape"
   },
   {
@@ -987,7 +988,7 @@
    "name": "LifePower24",
    "price_type": "fixed",
    "rates": {
-    "rate": 29.8
+    "rate": 29.0
    },
    "contract_months": 24,
    "daily_charge_cents": 0.0,
@@ -998,7 +999,7 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-24at1",
+   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-24au1",
    "source_url": "https://www.senokoenergy.com/households/price-plans",
    "terms": {
     "etf_text": "S$545 if termination is before or within 1st to 12th month from contract start date. S$327 if termination is within 13th to 24th month from contract start date.",
@@ -1022,11 +1023,11 @@
     "auto_renewal_text": "Yes (Auto-renewed contract will remain as standard Fixed Price Plan with 24 months duration. Auto- renewed electricity rate will be lower than the prevailing regulated tariff at renewal. All other fees will be the same as existing rates.)",
     "auto_renews": true,
     "contract_months_factsheet": 24,
-    "fetched_at": "2026-09-22T07:05:51+00:00",
-    "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-24at1"
+    "fetched_at": "2026-10-08T05:19:29+00:00",
+    "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-24au1"
    },
-   "plan_code": "HH-GMOFIXPG-24at1",
-   "data_as_of": "2026-09-30T01:18:49+00:00",
+   "plan_code": "HH-GMOFIXPG-24au1",
+   "data_as_of": "2026-10-08T05:18:31+00:00",
    "data_method": "scrape"
   },
   {
@@ -1036,7 +1037,7 @@
    "name": "LifePower12",
    "price_type": "fixed",
    "rates": {
-    "rate": 31.0
+    "rate": 30.5
    },
    "contract_months": 12,
    "daily_charge_cents": 0.0,
@@ -1047,7 +1048,7 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-12at1",
+   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-12au1",
    "source_url": "https://www.senokoenergy.com/households/price-plans",
    "terms": {
     "etf_text": "S$327 if termination is before or within 1st to 12th month from contract start date.",
@@ -1066,11 +1067,11 @@
     "auto_renewal_text": "Yes (Auto-renewed contract will remain as standard Fixed Price Plan with 12 months duration. Auto- renewed electricity rate will be lower than the prevailing regulated tariff at renewal. All other fees will be the same as existing rates.)",
     "auto_renews": true,
     "contract_months_factsheet": 12,
-    "fetched_at": "2026-09-22T07:05:56+00:00",
-    "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-12at1"
+    "fetched_at": "2026-10-08T05:19:34+00:00",
+    "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-12au1"
    },
-   "plan_code": "HH-GMOFIXPG-12at1",
-   "data_as_of": "2026-09-30T01:18:49+00:00",
+   "plan_code": "HH-GMOFIXPG-12au1",
+   "data_as_of": "2026-10-08T05:18:31+00:00",
    "data_method": "scrape"
   },
   {
@@ -1124,7 +1125,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFDOTPG-36al1"
    },
    "plan_code": "HH-GMOFDOTPG-36al1",
-   "data_as_of": "2026-09-30T01:18:49+00:00",
+   "data_as_of": "2026-10-08T05:18:31+00:00",
    "data_method": "scrape"
   },
   {
@@ -1173,7 +1174,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFDOTPG-24al1"
    },
    "plan_code": "HH-GMOFDOTPG-24al1",
-   "data_as_of": "2026-09-30T01:18:49+00:00",
+   "data_as_of": "2026-10-08T05:18:31+00:00",
    "data_method": "scrape"
   },
   {
@@ -1234,7 +1235,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOPOPPG-24ak2"
    },
    "plan_code": "HH-GMOPOPPG-24ak2",
-   "data_as_of": "2026-09-30T01:18:49+00:00",
+   "data_as_of": "2026-10-08T05:18:31+00:00",
    "data_method": "scrape"
   },
   {
@@ -1244,7 +1245,7 @@
    "name": "LifeGreen24",
    "price_type": "fixed",
    "rates": {
-    "rate": 30.18
+    "rate": 29.68
    },
    "contract_months": 24,
    "daily_charge_cents": 0.0,
@@ -1255,7 +1256,7 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXFG-24at1",
+   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXFG-24au1",
    "source_url": "https://www.senokoenergy.com/households/price-plans",
    "terms": {
     "etf_text": "S$545 if termination is before or within 1st to 12th month from contract start date. S$327 if termination is within 13th to 24th month from contract start date.",
@@ -1279,11 +1280,11 @@
     "auto_renewal_text": "Yes (Auto-renewed contract will remain as standard Fixed Price Plan with 24 months duration. Auto- renewed electricity rate will be lower than the prevailing regulated tariff at renewal. All other fees will be the same as existing rates.)",
     "auto_renews": true,
     "contract_months_factsheet": 24,
-    "fetched_at": "2026-09-22T07:06:16+00:00",
-    "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXFG-24at1"
+    "fetched_at": "2026-10-08T05:19:39+00:00",
+    "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXFG-24au1"
    },
-   "plan_code": "HH-GMOFIXFG-24at1",
-   "data_as_of": "2026-09-30T01:18:49+00:00",
+   "plan_code": "HH-GMOFIXFG-24au1",
+   "data_as_of": "2026-10-08T05:18:31+00:00",
    "data_method": "scrape"
   },
   {
@@ -1320,7 +1321,7 @@
     "source_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerfix_24_20260828(273.4)-$100_bill_rebate.pdf"
    },
    "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/standard_tnc_v190626.pdf",
-   "data_as_of": "2026-09-30T01:18:49+00:00",
+   "data_as_of": "2026-10-08T05:18:32+00:00",
    "data_method": "scrape"
   },
   {
@@ -1357,7 +1358,7 @@
     "source_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerfix_36_20260828(269.7)-$160_bill_rebate.pdf"
    },
    "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/non-standard-tnc_v190626.pdf",
-   "data_as_of": "2026-09-30T01:18:49+00:00",
+   "data_as_of": "2026-10-08T05:18:32+00:00",
    "data_method": "scrape"
   },
   {
@@ -1394,7 +1395,7 @@
     "source_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerdot_6_20260803(10_).pdf"
    },
    "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/standard_tnc_v190626.pdf",
-   "data_as_of": "2026-09-30T01:18:49+00:00",
+   "data_as_of": "2026-10-08T05:18:32+00:00",
    "data_method": "scrape"
   },
   {
@@ -1431,7 +1432,7 @@
     "source_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerfix_12_20260803(284.4).pdf"
    },
    "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/standard_tnc_v190626.pdf",
-   "data_as_of": "2026-09-30T01:18:49+00:00",
+   "data_as_of": "2026-10-08T05:18:32+00:00",
    "data_method": "scrape"
   }
  ]

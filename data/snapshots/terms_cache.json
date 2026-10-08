@@ -1,7 +1,7 @@
 {
  "https://drive.google.com/file/d/1fTfTjEgjD_TpZxUzqO5uyjNkR1nsHDwQ/view?usp=sharing": {
   "error": "no fact-sheet fields found",
-  "fetched_at": "2026-09-30T01:18:50+00:00"
+  "fetched_at": "2026-10-08T05:18:33+00:00"
  },
  "https://drive.google.com/file/d/1DwYQ0jUXNmtRIfbOt6OmxNz5o9rLH3dw/view?usp=sharing": {
   "error": "no fact-sheet fields found",
@@ -9,11 +9,11 @@
  },
  "https://drive.google.com/file/d/1rAbOhMarW3NZD_2AOkP6PC71F-GfYqfW/view?usp=sharing": {
   "error": "no fact-sheet fields found",
-  "fetched_at": "2026-09-30T01:18:59+00:00"
+  "fetched_at": "2026-10-08T05:18:42+00:00"
  },
  "https://drive.google.com/file/d/1F6y3F6zOlakB_rLRIMpuoru4_e4Z6Ej9/view?usp=sharing": {
   "error": "no fact-sheet fields found",
-  "fetched_at": "2026-09-30T01:19:06+00:00"
+  "fetched_at": "2026-10-08T05:18:47+00:00"
  },
  "https://pacificlight.com.sg/support/factsheet-detail/1-easy-save-no-contract-1-july-2026": {
   "etf_text": "As per Termination Charges in Electricity Contract, not applicable for Easy Save plan.",
@@ -480,5 +480,311 @@
   "auto_renews": true,
   "contract_months_factsheet": 12,
   "fetched_at": "2026-09-22T07:06:32+00:00"
+ },
+ "https://drive.google.com/file/d/165FkF_27bn2Q945tbgyenP1bcmPQIXXC/view?usp=sharing": {
+  "error": "no fact-sheet fields found",
+  "fetched_at": "2026-10-08T05:18:37+00:00"
+ },
+ "https://pacificlight.com.sg/support/factsheet-detail/02-easy-peasy-no-contract-7-oct-2026": {
+  "etf_text": "As per Termination Charges in Electricity Contract, not applicable for Easy Peasy plan.",
+  "early_termination_fee_sgd": 0.0,
+  "standard": false,
+  "security_deposit_text": "HDB 1 and 2 Room - $80 HDB 3 Room - $110 HDB 4 Room - $160 HDB 5 Room - $190 HDB Executive, Jumbo or Multi-Gen - $230 Condominium, Apartment or Shophouse - $240 Terrace - $360 Semi-Detached - $500 Bungalow - $1,000 Penthouse - $1,000 Any other fees and charges (see footnote 8): 1. Paper bill fee - $3.27 per bill (T&C",
+  "deposit_waived": false,
+  "deposit_by_dwelling": {
+   "hdb12": 80.0,
+   "hdb3": 110.0,
+   "hdb4": 160.0,
+   "hdb5": 190.0,
+   "condo": 240.0,
+   "landed": 360.0
+  },
+  "late_payment_text": "27.80% per annum, calculated daily from the date of transaction until receipt of full payment.",
+  "auto_renewal_text": "This is a Non-Standard Price Plan with no fixed Contract Duration. You can terminate the Contract at any time giving us 10 business days’ notice.",
+  "auto_renews": false,
+  "fetched_at": "2026-10-08T05:18:48+00:00"
+ },
+ "https://pacificlight.com.sg/support/factsheet-detail/03-9-to-9-no-contract-7-oct-2026": {
+  "etf_text": "As per Termination Charges in Electricity Contract, not applicable for 9 to 9 plan.",
+  "early_termination_fee_sgd": 0.0,
+  "standard": false,
+  "security_deposit_text": "HDB 1 and 2 Room - $80 HDB 3 Room - $110 HDB 4 Room - $160 HDB 5 Room - $190 HDB Executive, Jumbo or Multi-Gen - $230 Condominium, Apartment or Shophouse - $240 Terrace - $360 Semi-Detached - $500 Bungalow - $1,000 Penthouse - $1,000 Any other fees and charges (see footnote 8): 1. Paper bill fee - $3.27 per bill (T&C",
+  "deposit_waived": false,
+  "deposit_by_dwelling": {
+   "hdb12": 80.0,
+   "hdb3": 110.0,
+   "hdb4": 160.0,
+   "hdb5": 190.0,
+   "condo": 240.0,
+   "landed": 360.0
+  },
+  "late_payment_text": "27.80% per annum, calculated daily from the date of transaction until receipt of full payment",
+  "auto_renewal_text": "This is a Non-Standard Price Plan with no fixed Contract Duration. You can terminate the Contract at any time giving us 10 business days’ notice.",
+  "auto_renews": false,
+  "fetched_at": "2026-10-08T05:18:53+00:00"
+ },
+ "https://pacificlight.com.sg/support/factsheet-detail/04-sunny-side-up-12-01-oct-2026": {
+  "etf_text": "HDB 1 and 2 Room - $160 HDB 3 Room - $220 HDB 4 Room - $320 HDB 5 Room - $380 HDB Executive, Jumbo or Multi-Gen - $460 Condominium, Apartment or Shophouse - $480 Terrace - $720 Semi-Detached - $1,000 Bungalow or Penthouse - $2,000",
+  "etf_by_dwelling": {
+   "hdb12": 160.0,
+   "hdb3": 220.0,
+   "hdb4": 320.0,
+   "hdb5": 380.0,
+   "condo": 480.0,
+   "landed": 720.0
+  },
+  "early_termination_fee_sgd": 320.0,
+  "standard": true,
+  "security_deposit_text": "HDB 1 and 2 Room - $80 HDB 3 Room - $110 HDB 4 Room - $160 HDB 5 Room - $190 HDB Executive, Jumbo or Multi-Gen - $230 Condominium, Apartment or Shophouse - $240 Terrace - $360 Semi-Detached - $500 Bungalow or Penthouse - $1,000",
+  "deposit_waived": false,
+  "deposit_by_dwelling": {
+   "hdb12": 80.0,
+   "hdb3": 110.0,
+   "hdb4": 160.0,
+   "hdb5": 190.0,
+   "condo": 240.0,
+   "landed": 360.0
+  },
+  "late_payment_text": "27.80% per annum, calculated daily from the date of transaction until receipt of full payment.",
+  "auto_renewal_text": "Auto-renewed contract will remain on the same plan and duration. The electricity rate will be lower than the prevailing Regulated Tariff at renewal. All other fees remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
+  "auto_renews": false,
+  "contract_months_factsheet": 12,
+  "fetched_at": "2026-10-08T05:18:58+00:00"
+ },
+ "https://pacificlight.com.sg/support/factsheet-detail/05-savvy-saver-12-8-oct-2026": {
+  "etf_text": "HDB 1 and 2 Room - $160 HDB 3 Room - $220 HDB 4 Room - $320 HDB 5 Room - $380 HDB Executive, Jumbo or Multi-Gen - $460 Condominium, Apartment or Shophouse - $480 Terrace - $720 Semi-Detached - $1,000 Bungalow or Penthouse - $2,000",
+  "etf_by_dwelling": {
+   "hdb12": 160.0,
+   "hdb3": 220.0,
+   "hdb4": 320.0,
+   "hdb5": 380.0,
+   "condo": 480.0,
+   "landed": 720.0
+  },
+  "early_termination_fee_sgd": 320.0,
+  "standard": true,
+  "security_deposit_text": "HDB 1 and 2 Room - $80 HDB 3 Room - $110 HDB 4 Room - $160 HDB 5 Room - $190 HDB Executive, Jumbo or Multi-Gen - $230 Condominium, Apartment or Shophouse - $240 Terrace - $360 Semi-Detached - $500 Bungalow or Penthouse - $1,000",
+  "deposit_waived": false,
+  "deposit_by_dwelling": {
+   "hdb12": 80.0,
+   "hdb3": 110.0,
+   "hdb4": 160.0,
+   "hdb5": 190.0,
+   "condo": 240.0,
+   "landed": 360.0
+  },
+  "late_payment_text": "27.80% per annum, calculated daily from the date of transaction until receipt of full payment.",
+  "auto_renewal_text": "Auto-renewed contract will remain on the same plan and duration. The electricity rate will be lower than the prevailing Regulated Tariff at renewal. All other fees remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
+  "auto_renews": false,
+  "contract_months_factsheet": 12,
+  "fetched_at": "2026-10-08T05:19:03+00:00"
+ },
+ "https://pacificlight.com.sg/support/factsheet-detail/06-savvy-saver-24-8-oct-2026": {
+  "etf_text": "HDB 1 and 2 Room - $160 HDB 3 Room - $220 HDB 4 Room - $320 HDB 5 Room - $380 HDB Executive, Jumbo or Multi-Gen - $460 Condominium, Apartment or Shophouse - $480 Terrace - $720 Semi-Detached - $1,000 Bungalow or Penthouse - $2,000",
+  "etf_by_dwelling": {
+   "hdb12": 160.0,
+   "hdb3": 220.0,
+   "hdb4": 320.0,
+   "hdb5": 380.0,
+   "condo": 480.0,
+   "landed": 720.0
+  },
+  "early_termination_fee_sgd": 320.0,
+  "standard": true,
+  "security_deposit_text": "HDB 1 and 2 Room - $80 HDB 3 Room - $110 HDB 4 Room - $160 HDB 5 Room - $190 HDB Executive, Jumbo or Multi-Gen - $230 Condominium, Apartment or Shophouse - $240 Terrace - $360 Semi-Detached - $500 Bungalow or Penthouse - $1,000",
+  "deposit_waived": false,
+  "deposit_by_dwelling": {
+   "hdb12": 80.0,
+   "hdb3": 110.0,
+   "hdb4": 160.0,
+   "hdb5": 190.0,
+   "condo": 240.0,
+   "landed": 360.0
+  },
+  "late_payment_text": "27.80% per annum, calculated daily from the date of transaction until receipt of full payment.",
+  "auto_renewal_text": "Auto-renewed contract will remain on the same plan and duration. The electricity rate will be lower than the prevailing Regulated Tariff at renewal. All other fees remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
+  "auto_renews": false,
+  "contract_months_factsheet": 24,
+  "fetched_at": "2026-10-08T05:19:08+00:00"
+ },
+ "https://pacificlight.com.sg/support/factsheet-detail/07-save-while-sleeping-24-8-oct-2026": {
+  "etf_text": "HDB 1 and 2 Room - $160 HDB 3 Room - $220 HDB 4 Room - $320 HDB 5 Room - $380 HDB Executive, Jumbo or Multi-Gen - $460 Condominium, Apartment or Shophouse - $480 Terrace - $720 Semi-Detached - $1,000 Bungalow or Penthouse - $2,000",
+  "etf_by_dwelling": {
+   "hdb12": 160.0,
+   "hdb3": 220.0,
+   "hdb4": 320.0,
+   "hdb5": 380.0,
+   "condo": 480.0,
+   "landed": 720.0
+  },
+  "early_termination_fee_sgd": 320.0,
+  "standard": false,
+  "security_deposit_text": "HDB 1 and 2 Room - $80 HDB 3 Room - $110 HDB 4 Room - $160 HDB 5 Room - $190 HDB Executive, Jumbo or Multi-Gen - $230 Condominium, Apartment or Shophouse - $240 Terrace - $360 Semi-Detached - $500 Bungalow or Penthouse - $1,000 Any other fees and charges (see footnote 8): Other charges (only if applicable) Paper bill",
+  "deposit_waived": false,
+  "deposit_by_dwelling": {
+   "hdb12": 80.0,
+   "hdb3": 110.0,
+   "hdb4": 160.0,
+   "hdb5": 190.0,
+   "condo": 240.0,
+   "landed": 360.0
+  },
+  "late_payment_text": "27.80% per annum, calculated daily from the date of transaction until receipt of full payment.",
+  "auto_renewal_text": "You will be notified at least 10 business days before your contract expires. On the renewal date, we will notify you of your auto-renewal electricity rates, with at least one of the tiered rates priced below the prevailing Regulated Tariff. All other fees shall remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
+  "auto_renews": false,
+  "contract_months_factsheet": 24,
+  "fetched_at": "2026-10-08T05:19:13+00:00"
+ },
+ "https://pacificlight.com.sg/support/factsheet-detail/08-Stack-It-Up-24-8-oct-2026": {
+  "etf_text": "HDB 1 and 2 Room - $160 HDB 3 Room - $220 HDB 4 Room - $320 HDB 5 Room - $380 HDB Executive, Jumbo or Multi-Gen - $460 Condominium, Apartment or Shophouse - $480 Terrace - $720 Semi-Detached - $1,000 Bungalow or Penthouse - $2,000",
+  "etf_by_dwelling": {
+   "hdb12": 160.0,
+   "hdb3": 220.0,
+   "hdb4": 320.0,
+   "hdb5": 380.0,
+   "condo": 480.0,
+   "landed": 720.0
+  },
+  "early_termination_fee_sgd": 320.0,
+  "standard": false,
+  "security_deposit_text": "HDB 1 and 2 Room - $80 HDB 3 Room - $110 HDB 4 Room - $160 HDB 5 Room - $190 HDB Executive, Jumbo or Multi-Gen - $230 Condominium, Apartment or Shophouse - $240 Terrace - $360 Semi-Detached - $500 Bungalow or Penthouse - $1,000",
+  "deposit_waived": false,
+  "deposit_by_dwelling": {
+   "hdb12": 80.0,
+   "hdb3": 110.0,
+   "hdb4": 160.0,
+   "hdb5": 190.0,
+   "condo": 240.0,
+   "landed": 360.0
+  },
+  "late_payment_text": "27.80% per annum, calculated daily from the date of transaction until receipt of full payment.",
+  "auto_renewal_text": "You will be notified at least 10 business days before your contract expires. On the renewal date, we will notify you of your auto-renewal electricity rates, with at least one of the tiered rates priced below the prevailing Regulated Tariff. All other fees shall remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
+  "auto_renews": false,
+  "contract_months_factsheet": 24,
+  "fetched_at": "2026-10-08T05:19:18+00:00"
+ },
+ "https://pacificlight.com.sg/support/factsheet-detail/9-savvy-saver-36-8-oct-2026": {
+  "etf_text": "HDB 1 and 2 Room - $160 HDB 3 Room - $220 HDB 4 Room - $320 HDB 5 Room - $380 HDB Executive, Jumbo or Multi-Gen - $460 Condominium, Apartment or Shophouse - $480 Terrace - $720 Semi-Detached - $1,000 Bungalow or Penthouse - $2,000",
+  "etf_by_dwelling": {
+   "hdb12": 160.0,
+   "hdb3": 220.0,
+   "hdb4": 320.0,
+   "hdb5": 380.0,
+   "condo": 480.0,
+   "landed": 720.0
+  },
+  "early_termination_fee_sgd": 320.0,
+  "standard": false,
+  "security_deposit_text": "HDB 1 and 2 Room - $80 HDB 3 Room - $110 HDB 4 Room - $160 HDB 5 Room - $190 HDB Executive, Jumbo or Multi-Gen - $230 Condominium, Apartment or Shophouse - $240 Terrace - $360 Semi-Detached - $500 Bungalow or Penthouse - $1,000",
+  "deposit_waived": false,
+  "deposit_by_dwelling": {
+   "hdb12": 80.0,
+   "hdb3": 110.0,
+   "hdb4": 160.0,
+   "hdb5": 190.0,
+   "condo": 240.0,
+   "landed": 360.0
+  },
+  "late_payment_text": "27.80% per annum, calculated daily from the date of transaction until receipt of full payment",
+  "auto_renewal_text": "You will be notified at least 10 business days before your contract expires. On the renewal date, we will notify you of your auto-renewal electricity rates, which will be lower than the prevailing Regulated Tariff. All other fees shall remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
+  "auto_renews": false,
+  "contract_months_factsheet": 36,
+  "fetched_at": "2026-10-08T05:19:23+00:00"
+ },
+ "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-36au1": {
+  "etf_text": "S$872 if termination is before or within 1st to 12th month from contract start date. S$545 if termination is within 13th to 24th month from contract start date. S$327 if termination is within 25th to 36th month from contract start date.",
+  "etf_schedule": [
+   {
+    "from_month": 1,
+    "to_month": 12,
+    "fee_sgd": 872.0
+   },
+   {
+    "from_month": 13,
+    "to_month": 24,
+    "fee_sgd": 545.0
+   },
+   {
+    "from_month": 25,
+    "to_month": 36,
+    "fee_sgd": 327.0
+   }
+  ],
+  "early_termination_fee_sgd": 872.0,
+  "standard": false,
+  "security_deposit_text": "Waived",
+  "deposit_waived": true,
+  "late_payment_text": "The higher of S$0.50 or 1% on outstanding charges",
+  "auto_renewal_text": "Yes (At least 10 Business Days before the expiry date of your contract, you will be notified of the auto-renewed electricity rate, which will be lower than the prevailing Regulated Tariff at the point of renewal. All other applicable charges/fees will be the same or better than the existing quantum.) 1. If advanced meter is required, such fee (S$43.60 per m",
+  "auto_renews": true,
+  "contract_months_factsheet": 36,
+  "fetched_at": "2026-10-08T05:19:24+00:00"
+ },
+ "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-24au1": {
+  "etf_text": "S$545 if termination is before or within 1st to 12th month from contract start date. S$327 if termination is within 13th to 24th month from contract start date.",
+  "etf_schedule": [
+   {
+    "from_month": 1,
+    "to_month": 12,
+    "fee_sgd": 545.0
+   },
+   {
+    "from_month": 13,
+    "to_month": 24,
+    "fee_sgd": 327.0
+   }
+  ],
+  "early_termination_fee_sgd": 545.0,
+  "standard": true,
+  "security_deposit_text": "Waived",
+  "deposit_waived": true,
+  "late_payment_text": "The higher of S$0.50 or 1% on outstanding charges",
+  "auto_renewal_text": "Yes (Auto-renewed contract will remain as standard Fixed Price Plan with 24 months duration. Auto- renewed electricity rate will be lower than the prevailing regulated tariff at renewal. All other fees will be the same as existing rates.)",
+  "auto_renews": true,
+  "contract_months_factsheet": 24,
+  "fetched_at": "2026-10-08T05:19:29+00:00"
+ },
+ "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-12au1": {
+  "etf_text": "S$327 if termination is before or within 1st to 12th month from contract start date.",
+  "etf_schedule": [
+   {
+    "from_month": 1,
+    "to_month": 12,
+    "fee_sgd": 327.0
+   }
+  ],
+  "early_termination_fee_sgd": 327.0,
+  "standard": true,
+  "security_deposit_text": "Waived",
+  "deposit_waived": true,
+  "late_payment_text": "The higher of S$0.50 or 1% on outstanding charges",
+  "auto_renewal_text": "Yes (Auto-renewed contract will remain as standard Fixed Price Plan with 12 months duration. Auto- renewed electricity rate will be lower than the prevailing regulated tariff at renewal. All other fees will be the same as existing rates.)",
+  "auto_renews": true,
+  "contract_months_factsheet": 12,
+  "fetched_at": "2026-10-08T05:19:34+00:00"
+ },
+ "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXFG-24au1": {
+  "etf_text": "S$545 if termination is before or within 1st to 12th month from contract start date. S$327 if termination is within 13th to 24th month from contract start date.",
+  "etf_schedule": [
+   {
+    "from_month": 1,
+    "to_month": 12,
+    "fee_sgd": 545.0
+   },
+   {
+    "from_month": 13,
+    "to_month": 24,
+    "fee_sgd": 327.0
+   }
+  ],
+  "early_termination_fee_sgd": 545.0,
+  "standard": true,
+  "security_deposit_text": "Waived",
+  "deposit_waived": true,
+  "late_payment_text": "The higher of S$0.50 or 1% on outstanding charges",
+  "auto_renewal_text": "Yes (Auto-renewed contract will remain as standard Fixed Price Plan with 24 months duration. Auto- renewed electricity rate will be lower than the prevailing regulated tariff at renewal. All other fees will be the same as existing rates.)",
+  "auto_renews": true,
+  "contract_months_factsheet": 24,
+  "fetched_at": "2026-10-08T05:19:39+00:00"
  }
 }

@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-09-30T01:18:47+00:00",
+ "fetched_at": "2026-10-08T05:18:30+00:00",
  "plans": [
   {
    "id": "pacificlight-easy-save-0",
@@ -41,7 +41,7 @@
    "name": "Easy Peasy",
    "price_type": "fixed",
    "rates": {
-    "rate": 26.0
+    "rate": 27.0
    },
    "contract_months": 0,
    "daily_charge_cents": 55.0,
@@ -52,7 +52,7 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/02-easy-peasy-no-contract-6-jul-2026",
+   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/02-easy-peasy-no-contract-7-oct-2026",
    "source_url": "https://pacificlight.com.sg/home/plans-new",
    "terms": {
     "early_termination_fee_sgd": 0.0,
@@ -76,7 +76,7 @@
    "rates": {
     "periods": [
      {
-      "rate": 38.0,
+      "rate": 36.95,
       "windows": [
        {
         "days": "all",
@@ -86,7 +86,7 @@
       ]
      }
     ],
-    "default_rate": 18.5
+    "default_rate": 20.05
    },
    "contract_months": 0,
    "daily_charge_cents": 101.0,
@@ -97,7 +97,7 @@
    "smart_meter_required": true,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/03-9-to-9-no-contract-6-jul-2026",
+   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/03-9-to-9-no-contract-7-oct-2026",
    "source_url": "https://pacificlight.com.sg/home/plans-new",
    "terms": {
     "early_termination_fee_sgd": 0.0,
@@ -107,7 +107,7 @@
    },
    "plan_code": "PLE_9TO9FIXED_2022.09.23 ",
    "extras": [
-    "18.50¢/kWh (9pm - 9am) & 38.00¢/kWh (9am - 9pm)",
+    "20.05¢/kWh (9pm - 9am) & 36.95¢/kWh (9am - 9pm)",
     "Daily Charge of $1.01/day",
     "No early termination charge",
     "Security Deposit Waiver with Recurring Card Payment"
@@ -120,7 +120,7 @@
    "name": "Sunny Side-Up",
    "price_type": "fixed",
    "rates": {
-    "rate": 31.5
+    "rate": 31.0
    },
    "contract_months": 12,
    "daily_charge_cents": 0.0,
@@ -131,13 +131,13 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/04-sunny-side-up-12-7-aug-2026",
+   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/04-sunny-side-up-12-01-oct-2026",
    "source_url": "https://pacificlight.com.sg/home/plans-new",
    "terms": {
     "auto_renewal_text": "Auto-renewed contract will remain at the same plan name of similar duration. Auto-renewed electricity rate will be lower than the prevailing Regulated Tariff at renewal. All other fees will remain the same. This is subject to Clause 3.2 of the Residential Electricity Contract.",
     "source_url": "https://pacificlight.com.sg/json/plan.json"
    },
-   "plan_code": "PLE_SUNNYSIDEUP12M_2026.08.07",
+   "plan_code": "PLE_SUNNYSIDEUP12M_2026.10.01",
    "extras": [
     "Be carbon neutral with free RECs",
     "Pick KrisFlyer miles or yuu Points",
@@ -151,7 +151,7 @@
    "name": "Savvy Saver",
    "price_type": "fixed",
    "rates": {
-    "rate": 31.0
+    "rate": 30.5
    },
    "contract_months": 12,
    "daily_charge_cents": 0.0,
@@ -162,13 +162,13 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/05-savvy-saver-12-7-aug-2026",
+   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/05-savvy-saver-12-8-oct-2026",
    "source_url": "https://pacificlight.com.sg/home/plans-new",
    "terms": {
     "auto_renewal_text": "Auto-renewed contract will remain on the same plan and duration. The electricity rate will be lower than the prevailing Regulated Tariff at renewal. All other fees remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
     "source_url": "https://pacificlight.com.sg/json/plan.json"
    },
-   "plan_code": "PLE_SAVVYSAVER12M_2026.08.07",
+   "plan_code": "PLE_SAVVYSAVER12M_2026.10.08",
    "extras": [
     "Pick KrisFlyer miles or yuu Points",
     "Security Deposit Waiver with Recurring Card Payment"
@@ -181,7 +181,7 @@
    "name": "Savvy Saver",
    "price_type": "fixed",
    "rates": {
-    "rate": 29.8
+    "rate": 29.0
    },
    "contract_months": 24,
    "daily_charge_cents": 0.0,
@@ -192,13 +192,13 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/06-savvy-saver-24-20-aug-2026",
+   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/06-savvy-saver-24-8-oct-2026",
    "source_url": "https://pacificlight.com.sg/home/plans-new",
    "terms": {
     "auto_renewal_text": "Auto-renewed contract will remain on the same plan and duration. The electricity rate will be lower than the prevailing Regulated Tariff at renewal. All other fees remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
     "source_url": "https://pacificlight.com.sg/json/plan.json"
    },
-   "plan_code": "PLE_SAVVYSAVER24M_2026.08.20",
+   "plan_code": "PLE_SAVVYSAVER24M_2026.10.08",
    "extras": [
     "Pick rebates, KrisFlyer miles or yuu Points",
     "Use a referral code for S$20 off",
@@ -214,7 +214,7 @@
    "rates": {
     "periods": [
      {
-      "rate": 34.5,
+      "rate": 33.0,
       "windows": [
        {
         "days": "all",
@@ -224,7 +224,7 @@
       ]
      }
     ],
-    "default_rate": 22.5
+    "default_rate": 23.0
    },
    "contract_months": 24,
    "daily_charge_cents": 0.0,
@@ -235,15 +235,15 @@
    "smart_meter_required": true,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/07-save-while-sleeping-24-20-aug-2026",
+   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/07-save-while-sleeping-24-8-oct-2026",
    "source_url": "https://pacificlight.com.sg/home/plans-new",
    "terms": {
     "auto_renewal_text": "You will be notified at least 10 business days before your contract expires. On the renewal date, we will notify you of your auto-renewal electricity rates, with at least one of the tiered rates priced below the prevailing Regulated Tariff. All other fees shall remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
     "source_url": "https://pacificlight.com.sg/json/plan.json"
    },
-   "plan_code": "PLE_SWSFIXED24M_2026.08.20",
+   "plan_code": "PLE_SWSFIXED24M_2026.10.08",
    "extras": [
-    "22.50¢/kWh (11pm - 7am) & 34.50¢/kWh (7am - 11pm)",
+    "23.00¢/kWh (11pm - 7am) & 33.00¢/kWh (7am - 11pm)",
     "Pick rebates, KrisFlyer miles or yuu Points",
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
@@ -259,15 +259,15 @@
     "blocks": [
      {
       "upto_kwh": 300,
-      "rate": 30.0
+      "rate": 29.2
      },
      {
       "upto_kwh": 600,
-      "rate": 29.4
+      "rate": 28.6
      },
      {
       "upto_kwh": null,
-      "rate": 28.0
+      "rate": 27.6
      }
     ]
    },
@@ -280,13 +280,13 @@
    "smart_meter_required": true,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/08-Stack-It-Up-24-20-aug-2026",
+   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/08-Stack-It-Up-24-8-oct-2026",
    "source_url": "https://pacificlight.com.sg/home/plans-new",
    "terms": {
     "auto_renewal_text": "You will be notified at least 10 business days before your contract expires. On the renewal date, we will notify you of your auto-renewal electricity rates, with at least one of the tiered rates priced below the prevailing Regulated Tariff. All other fees shall remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
     "source_url": "https://pacificlight.com.sg/json/plan.json"
    },
-   "plan_code": "PLE_STACKITUP24M_2026.08.20",
+   "plan_code": "PLE_STACKITUP24M_2026.10.08",
    "extras": [
     "Full rates in Factsheet",
     "Pick rebates, KrisFlyer miles or yuu Points",
@@ -301,7 +301,7 @@
    "name": "Savvy Saver",
    "price_type": "fixed",
    "rates": {
-    "rate": 29.4
+    "rate": 28.9
    },
    "contract_months": 36,
    "daily_charge_cents": 0.0,
@@ -312,13 +312,13 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/9-savvy-saver-36-20-aug-2026",
+   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/9-savvy-saver-36-8-oct-2026",
    "source_url": "https://pacificlight.com.sg/home/plans-new",
    "terms": {
     "auto_renewal_text": "You will be notified at least 10 business days before your contract expires. On the renewal date, we will notify you of your auto-renewal electricity rates, which will be lower than the prevailing Regulated Tariff. All other fees shall remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
     "source_url": "https://pacificlight.com.sg/json/plan.json"
    },
-   "plan_code": "PLE_SAVVYSAVER36M_2026.08.20",
+   "plan_code": "PLE_SAVVYSAVER36M_2026.10.08",
    "extras": [
     "Pick rebates, KrisFlyer miles or yuu Points",
     "Use a referral code for S$20 off",
@@ -360,8 +360,8 @@
   }
  ],
  "observations": {
-  "regulated_tariff_cents_incl_gst": 34.78,
-  "tariff_quarter": "Q3 2026"
+  "regulated_tariff_cents_incl_gst": 31.16,
+  "tariff_quarter": "Q4 2026"
  },
  "status": "ok",
  "message": ""
