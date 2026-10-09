@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-08T05:18:31+00:00",
+ "fetched_at": "2026-10-09T02:12:40+00:00",
  "plans": [
   {
    "id": "senoko-lifepower36-36",
@@ -176,7 +176,8 @@
   }
  ],
  "observations": {
-  "regulated_tariff_cents_incl_gst": 31.16
+  "regulated_tariff_cents_incl_gst": 31.16,
+  "tariff_quarter": "Q4 2026"
  },
  "status": "ok",
  "message": ""
