@@ -786,5 +786,9 @@
   "auto_renews": true,
   "contract_months_factsheet": 24,
   "fetched_at": "2026-10-08T05:19:39+00:00"
+ },
+ "https://drive.google.com/file/d/1-esZga-Svnc7YeBKl7tWI_Xxx676LmdF/view?usp=sharing": {
+  "error": "no fact-sheet fields found",
+  "fetched_at": "2026-10-10T01:46:16+00:00"
  }
 }
