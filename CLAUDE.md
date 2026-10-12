@@ -12,7 +12,7 @@ Singapore Open Electricity Market (OEM) retailer and plan for a household:
 ## Commands
 
 ```bash
-python -m pytest -q          # 93 Python tests, offline (tests/fixtures, tests/fixtures_build.py)
+python -m pytest -q          # 111 Python tests, offline (tests/fixtures, tests/fixtures_build.py)
 node --test                  # 41 JS tests (tests/js/*.test.mjs)
 python -m scraper.run plans [--force] [--only id,id]
 python -m scraper.run datasets [--force]
@@ -151,6 +151,16 @@ Context: `Refresh plan data` failed every day from 2026-10-01 with `KeyError: '2
 | Q14 | **Senoko also labels the tariff quarter**, from its "Qn YYYY SP Tariff of Y¢/kWh" banner, but only when Y equals the page's "prevailing SP tariff" figure. A page that contradicts itself gets no label. | Claude (confirm-tariff-quarter) | Closes the PacificLight-down gap. The live page was checked once on 2026-10-08 ("Q4 2026 … 31.16") |
 | Q15 | **The page flags an unconfirmed or inconsistent current tariff** (`tariffNotice`): when the banner quote has no quarter, or differs from `model.json.tariff.current_incl_gst` by more than 0.005¢ | Claude (confirm-tariff-quarter) | Defence in depth for Q1 ("degrade visibly") if both labelled sources fail |
 | Q13 | The user runs `git pull --ff-only` once, because the local checkout was 6 bot commits behind. Afterwards, pull before editing locally. Claude never pulls. | User | Git writes are the user's job |
+
+## Curated refresh and ingest tests — 2026-10-12
+
+| # | Decision | By | Rationale |
+|---|---|---|---|
+| C1 | Keppel and Sembcorp curated prices re-verified from their rendered pages in the in-app browser (a page view the user directed, not a scrape). Keppel: FIXED24 29.80→29.00, FIXED36 29.40→28.90, FIXED12 34.77→31.15. Sembcorp: 24M 29.80→29.00. Other plans unchanged. `verified_at` set to 2026-10-12 | Claude (user: "continue with all outstanding tasks") | Backlog item P3. Keppel's ex-GST figures × 1.09 match the GST-inclusive ones |
+| C2 | Keppel **SURESAVE DOT removed**: no longer listed on the plan page (`verified_from`) as of 2026-10-12. Keppel's promotions page rendered no offer cards at all, so it is not cited as evidence | Claude | Curated data follows `verified_from` only; no invented plans |
+| C3 | Sembcorp loaded in a real browser with no visible challenge, but **S4 stands**: a browser clears managed challenges silently, which says nothing about CI. The site is not probed with `requests` | Claude | Never test or bypass bot protection |
+| C4 | Composition rules 6 (fact sheet once per URL) and 8 (weekly dataset refresh) are now tested: change test-ingest-rate-rules, `tests/test_ingest_rate_rules.py`, 18 tests. No production code changed | Claude | Ingest STATUS "Needs work" #2 |
+
 ---
 
 # Edge cases discussed and how they are handled
@@ -174,7 +184,7 @@ Context: `Refresh plan data` failed every day from 2026-10-01 with `KeyError: '2
 | Time-of-use windows that wrap past midnight; weekday-only peaks (Keppel Weekend Saver) | `inWindow` handles wrap-around and day types | `billing.test.mjs` |
 | Stacked usage tiers (Stack It Up) | Marginal block costing | `block (stacked) tariff is marginal` |
 | Daily charges make a low headline rate expensive | Included in bills and effective ¢/kWh | `discount-off-tariff and daily charges` |
-| SP-customers-only plans or rebates (Keppel SureSave, Geneco GENECO200) | Plan hidden / smaller rebate used unless the household is on SP | `eligible()`, `rebate_sgd_non_sp` |
+| SP-customers-only plans or rebates (Keppel SureSave until it was delisted on 2026-10-12; Geneco GENECO200) | Plan hidden / smaller rebate used unless the household is on SP | `eligible()`, `rebate_sgd_non_sp` |
 | Peak/off-peak plan without a smart meter | $43.60 installation fee added | `switchCost`/`entryCost` |
 | Moving out mid-contract | Exit fee charged at the horizon (can flip the winner) | `moving out before the contract ends…` |
 | Exit fee depends on the month you leave | Schedule lookup by elapsed month | `ETF schedule by month and by dwelling` |
@@ -210,11 +220,17 @@ Context: `Refresh plan data` failed every day from 2026-10-01 with `KeyError: '2
 | `model_status.json` missing (older deployment) | Treated as "no information"; one 404 in the console | `loadData` (`optional`) |
 | GST round trip drifts 0.01 on quoted values | The quote is published as is | `test_recorded_quote_quarters_publish_the_quote_exactly` |
 | The ARX model wins the backtest (it never has; random walk always won) | `backtest` calls it `"model"` but `simulate_tariff` only knew `"full"`, so it would have raised `ValueError`. The name is now mapped. Found by the rule-1 test | `tests/test_build_model.py` (rule 1, each candidate wins in turn) |
+| A fact sheet already fetched successfully | Never re-fetched; fact-sheet URLs are versioned | `test_successful_cache_entry_is_never_refetched_however_old` |
+| A fact-sheet fetch fails (network error or robots.txt) | Cached as an error; the plan gets no fact-sheet terms; retried after 7 days | `test_recent_error_entry_is_not_retried_and_plan_gets_no_terms`, `test_error_entry_older_than_seven_days_is_retried_and_replaced`, `test_robots_disallowed_is_cached_as_an_error_and_counts_as_a_fetch` |
+| More than 25 new fact sheets in one run | The first 25 are fetched; the rest stay uncached until the next run | `test_at_most_25_fact_sheets_are_fetched_per_run` |
+| A fact sheet yields only the standard/non-standard flag (no ETF or auto-renewal text) | Cached as "no fact-sheet fields found", so the flag is not used and the plan's `standard` stays as the adapter set it (possibly unknown). Known; left unchanged | `test_fact_sheet_without_any_known_field_is_cached_as_an_error` |
+| A retailer withdraws a curated plan | It is removed from `data/curated/*.json` with a dated note | `data/curated/keppel.json` note (SureSave, 2026-10-12) |
+| A dataset source fails during the weekly refresh | Its previous value and `fetched_at` are kept with `ok: false`; the other sources still refresh | `test_a_failing_source_keeps_its_previous_value_and_fetch_time`, `test_a_failing_source_with_no_previous_snapshot_is_recorded_as_missing` |
 
 # Known limits / open items
 
 - ~~Git wasn't installed on the dev machine, so the GitHub workflows have never run.~~ They ran from 2026-09-25 (green until 2026-09-30, then failing until the Q-series fix). Fix verified live 2026-10-08: manual run green, including the bot `git push` under checkout v7; `tariff_quotes.json` committed with Q3 and Q4; Pages deployed.
-- Keppel and Sembcorp need manual updates in `data/curated/*.json` (bump `verified_at`).
+- Keppel and Sembcorp need manual updates in `data/curated/*.json` (bump `verified_at`). Last re-verified 2026-10-12.
 - ~~Only PacificLight labels the tariff quarter …~~ Closed 2026-10-08 by Q14/Q15. Both PacificLight and Senoko label the quarter, and if both fail the page warns.
 - Load profiles are typical shapes (adjustable night share), not metered data.
 - Discount-off-tariff plans are assumed to discount the whole per-kWh tariff.
