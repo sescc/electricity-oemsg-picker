@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-12T16:30:02+00:00",
+ "generated_at": "2026-10-13T03:04:24+00:00",
  "regulated_tariff": {
   "cents_incl_gst": 31.16,
   "quarter": "Q4 2026",
@@ -10,7 +10,7 @@
   "disagreeing_sources": {},
   "n_sources": 2,
   "ignored_sources": {},
-  "observed_at": "2026-10-12T01:21:07+00:00",
+  "observed_at": "2026-10-13T03:04:08+00:00",
   "stale": false
  },
  "plans": [
@@ -36,7 +36,7 @@
    "source_url": "https://www.geneco.sg/residential/electricity-plans/",
    "terms": {},
    "plan_code": "GetItFixed12_20261009",
-   "data_as_of": "2026-10-12T01:20:58+00:00",
+   "data_as_of": "2026-10-13T03:04:00+00:00",
    "data_method": "scrape"
   },
   {
@@ -64,7 +64,7 @@
    "terms": {},
    "plan_code": "GetItFixed24_20260930",
    "rebate_sgd_non_sp": 100.0,
-   "data_as_of": "2026-10-12T01:20:58+00:00",
+   "data_as_of": "2026-10-13T03:04:00+00:00",
    "data_method": "scrape"
   },
   {
@@ -89,7 +89,7 @@
    "source_url": "https://www.geneco.sg/residential/electricity-plans/",
    "terms": {},
    "plan_code": "GiveUsATry_20260804",
-   "data_as_of": "2026-10-12T01:20:58+00:00",
+   "data_as_of": "2026-10-13T03:04:00+00:00",
    "data_method": "scrape"
   },
   {
@@ -126,7 +126,7 @@
    "source_url": "https://www.geneco.sg/residential/electricity-plans/",
    "terms": {},
    "plan_code": "GetIt7To7_20260824",
-   "data_as_of": "2026-10-12T01:20:58+00:00",
+   "data_as_of": "2026-10-13T03:04:00+00:00",
    "data_method": "scrape"
   },
   {
@@ -309,7 +309,7 @@
     "No early termination charge",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-10-12T01:21:06+00:00",
+   "data_as_of": "2026-10-13T03:04:07+00:00",
    "data_method": "scrape"
   },
   {
@@ -358,7 +358,7 @@
     "No early termination charge",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-10-12T01:21:06+00:00",
+   "data_as_of": "2026-10-13T03:04:07+00:00",
    "data_method": "scrape"
   },
   {
@@ -420,7 +420,7 @@
     "No early termination charge",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-10-12T01:21:06+00:00",
+   "data_as_of": "2026-10-13T03:04:07+00:00",
    "data_method": "scrape"
   },
   {
@@ -478,7 +478,7 @@
     "Pick KrisFlyer miles or yuu Points",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-10-12T01:21:06+00:00",
+   "data_as_of": "2026-10-13T03:04:07+00:00",
    "data_method": "scrape"
   },
   {
@@ -535,7 +535,7 @@
     "Pick KrisFlyer miles or yuu Points",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-10-12T01:21:06+00:00",
+   "data_as_of": "2026-10-13T03:04:07+00:00",
    "data_method": "scrape"
   },
   {
@@ -593,7 +593,7 @@
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-10-12T01:21:06+00:00",
+   "data_as_of": "2026-10-13T03:04:07+00:00",
    "data_method": "scrape"
   },
   {
@@ -664,7 +664,7 @@
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-10-12T01:21:06+00:00",
+   "data_as_of": "2026-10-13T03:04:07+00:00",
    "data_method": "scrape"
   },
   {
@@ -736,7 +736,7 @@
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-10-12T01:21:06+00:00",
+   "data_as_of": "2026-10-13T03:04:07+00:00",
    "data_method": "scrape"
   },
   {
@@ -794,7 +794,7 @@
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-10-12T01:21:06+00:00",
+   "data_as_of": "2026-10-13T03:04:07+00:00",
    "data_method": "scrape"
   },
   {
@@ -846,7 +846,7 @@
     "Monthly recurring payment via GIRO only",
     "Early Termination Charge Waiver. Terms Apply."
    ],
-   "data_as_of": "2026-10-12T01:21:06+00:00",
+   "data_as_of": "2026-10-13T03:04:07+00:00",
    "data_method": "scrape"
   },
   {
@@ -948,7 +948,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-36au1"
    },
    "plan_code": "HH-GMOFIXPG-36au1",
-   "data_as_of": "2026-10-12T01:21:07+00:00",
+   "data_as_of": "2026-10-13T03:04:08+00:00",
    "data_method": "scrape"
   },
   {
@@ -997,7 +997,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-24au1"
    },
    "plan_code": "HH-GMOFIXPG-24au1",
-   "data_as_of": "2026-10-12T01:21:07+00:00",
+   "data_as_of": "2026-10-13T03:04:08+00:00",
    "data_method": "scrape"
   },
   {
@@ -1041,7 +1041,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-12au1"
    },
    "plan_code": "HH-GMOFIXPG-12au1",
-   "data_as_of": "2026-10-12T01:21:07+00:00",
+   "data_as_of": "2026-10-13T03:04:08+00:00",
    "data_method": "scrape"
   },
   {
@@ -1095,7 +1095,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFDOTPG-36al1"
    },
    "plan_code": "HH-GMOFDOTPG-36al1",
-   "data_as_of": "2026-10-12T01:21:07+00:00",
+   "data_as_of": "2026-10-13T03:04:08+00:00",
    "data_method": "scrape"
   },
   {
@@ -1144,7 +1144,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFDOTPG-24al1"
    },
    "plan_code": "HH-GMOFDOTPG-24al1",
-   "data_as_of": "2026-10-12T01:21:07+00:00",
+   "data_as_of": "2026-10-13T03:04:08+00:00",
    "data_method": "scrape"
   },
   {
@@ -1205,7 +1205,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOPOPPG-24ak2"
    },
    "plan_code": "HH-GMOPOPPG-24ak2",
-   "data_as_of": "2026-10-12T01:21:07+00:00",
+   "data_as_of": "2026-10-13T03:04:08+00:00",
    "data_method": "scrape"
   },
   {
@@ -1254,7 +1254,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXFG-24au1"
    },
    "plan_code": "HH-GMOFIXFG-24au1",
-   "data_as_of": "2026-10-12T01:21:07+00:00",
+   "data_as_of": "2026-10-13T03:04:08+00:00",
    "data_method": "scrape"
   },
   {
@@ -1264,7 +1264,7 @@
    "name": "PowerFIX 24",
    "price_type": "fixed",
    "rates": {
-    "rate": 29.8
+    "rate": 30.9
    },
    "contract_months": 24,
    "daily_charge_cents": 0.0,
@@ -1275,7 +1275,7 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerfix_24_20260828(273.4)-$100_bill_rebate.pdf",
+   "factsheet_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerfix_24_20261006(283.5)-$100_bill_rebate.pdf",
    "source_url": "https://www.savewithtuas.com/our-electricity-plans/",
    "terms": {
     "etf_text": "$200.00 (no GST)",
@@ -1287,11 +1287,11 @@
     "auto_renewal_text": "Yes: · Auto-renewed contract will remain as standard Fixed Price Plan with 24 months duration. · Auto-renewed electricity rate will be lower than the prevailing regulated tariff at renewal. · All other fees will be the same or better than existing rates. · The Retailer reserves the right to withdraw the auto-renewal offer by giving at least 18 business days",
     "auto_renews": true,
     "contract_months_factsheet": 24,
-    "fetched_at": "2026-09-22T07:06:17+00:00",
-    "source_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerfix_24_20260828(273.4)-$100_bill_rebate.pdf"
+    "fetched_at": "2026-10-13T03:04:14+00:00",
+    "source_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerfix_24_20261006(283.5)-$100_bill_rebate.pdf"
    },
    "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/standard_tnc_v190626.pdf",
-   "data_as_of": "2026-10-12T01:21:08+00:00",
+   "data_as_of": "2026-10-13T03:04:09+00:00",
    "data_method": "scrape"
   },
   {
@@ -1301,7 +1301,7 @@
    "name": "PowerFIX 36",
    "price_type": "fixed",
    "rates": {
-    "rate": 29.4
+    "rate": 30.63
    },
    "contract_months": 36,
    "daily_charge_cents": 0.0,
@@ -1312,7 +1312,7 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerfix_36_20260828(269.7)-$160_bill_rebate.pdf",
+   "factsheet_url": "https://www.savewithtuas.com/assets/pdf/2026/powerfix_36_20261008(281)-$160_bill_rebate.pdf",
    "source_url": "https://www.savewithtuas.com/our-electricity-plans/",
    "terms": {
     "etf_text": "$200.00 (no GST)",
@@ -1324,48 +1324,11 @@
     "auto_renewal_text": "Yes: · By 18 business days before the expiry of the contract, you will be notified of the auto- renewed electricity rate, which will be lower than the prevailing regulated tariff at the point of renewal. · All other applicable charges/fees will be the same or better than the existing quantum. · The Retailer reserves the right to withdraw the auto-renewal of",
     "auto_renews": true,
     "contract_months_factsheet": 36,
-    "fetched_at": "2026-09-22T07:06:22+00:00",
-    "source_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerfix_36_20260828(269.7)-$160_bill_rebate.pdf"
+    "fetched_at": "2026-10-13T03:04:19+00:00",
+    "source_url": "https://www.savewithtuas.com/assets/pdf/2026/powerfix_36_20261008(281)-$160_bill_rebate.pdf"
    },
    "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/non-standard-tnc_v190626.pdf",
-   "data_as_of": "2026-10-12T01:21:08+00:00",
-   "data_method": "scrape"
-  },
-  {
-   "id": "tuas-powerdot-6-6",
-   "retailer_id": "tuas",
-   "retailer": "Tuas Power",
-   "name": "PowerDOT 6",
-   "price_type": "dot_pct",
-   "rates": {
-    "discount_pct": 10.0
-   },
-   "contract_months": 6,
-   "daily_charge_cents": 0.0,
-   "rebate_sgd": 0.0,
-   "rebate_note": null,
-   "standard": true,
-   "green": false,
-   "smart_meter_required": false,
-   "eligibility": null,
-   "conditions": [],
-   "factsheet_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerdot_6_20260803(10_).pdf",
-   "source_url": "https://www.savewithtuas.com/our-electricity-plans/",
-   "terms": {
-    "etf_text": "$200.00 (no GST)",
-    "early_termination_fee_sgd": 200.0,
-    "standard": true,
-    "security_deposit_text": "Security Deposit (“SD”) shall be collected and retained on behalf of Retailer by SP Services Limited (“SP”). Existing SP’s customers will not be required to provide additional SD. Non-existing SP’s customers will be required to provide a SD equivalent to 65% of the SD as determined and published by SP.",
-    "deposit_waived": false,
-    "late_payment_text": "1% per month on outstanding amount",
-    "auto_renewal_text": "Yes: · Auto-renewed contract will remain as standard Discount Off the Regulated Tariff Plan with 6 months duration. · Auto-renewed electricity rate will be lower than the prevailing regulated tariff at renewal. · All other fees will be the same or better than existing rates. · The Retailer reserves the right to withdraw the auto-renewal offer by giving at l",
-    "auto_renews": true,
-    "contract_months_factsheet": 6,
-    "fetched_at": "2026-09-22T07:06:27+00:00",
-    "source_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerdot_6_20260803(10_).pdf"
-   },
-   "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/standard_tnc_v190626.pdf",
-   "data_as_of": "2026-10-12T01:21:08+00:00",
+   "data_as_of": "2026-10-13T03:04:09+00:00",
    "data_method": "scrape"
   },
   {
@@ -1375,7 +1338,7 @@
    "name": "PowerFIX 12",
    "price_type": "fixed",
    "rates": {
-    "rate": 31.0
+    "rate": 31.15
    },
    "contract_months": 12,
    "daily_charge_cents": 0.0,
@@ -1386,7 +1349,7 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerfix_12_20260803(284.4).pdf",
+   "factsheet_url": "https://www.savewithtuas.com/assets/pdf/2026/powerfix_12_20261006(285.8).pdf",
    "source_url": "https://www.savewithtuas.com/our-electricity-plans/",
    "terms": {
     "etf_text": "$200.00 (no GST)",
@@ -1398,11 +1361,11 @@
     "auto_renewal_text": "Yes: · Auto-renewed contract will remain as standard Fixed Price Plan with 12 months duration. · Auto-renewed electricity rate will be lower than the prevailing regulated tariff at renewal. · All other fees will be the same or better than existing rates. · The Retailer reserves the right to withdraw the auto-renewal offer by giving at least 18 business days",
     "auto_renews": true,
     "contract_months_factsheet": 12,
-    "fetched_at": "2026-09-22T07:06:32+00:00",
-    "source_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerfix_12_20260803(284.4).pdf"
+    "fetched_at": "2026-10-13T03:04:24+00:00",
+    "source_url": "https://www.savewithtuas.com/assets/pdf/2026/powerfix_12_20261006(285.8).pdf"
    },
    "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/standard_tnc_v190626.pdf",
-   "data_as_of": "2026-10-12T01:21:08+00:00",
+   "data_as_of": "2026-10-13T03:04:09+00:00",
    "data_method": "scrape"
   }
  ]
