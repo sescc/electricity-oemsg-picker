@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-22T00:42:31+00:00",
+ "generated_at": "2026-10-23T00:42:19+00:00",
  "regulated_tariff": {
   "cents_incl_gst": 31.16,
   "quarter": "Q4 2026",
@@ -10,7 +10,7 @@
   "disagreeing_sources": {},
   "n_sources": 2,
   "ignored_sources": {},
-  "observed_at": "2026-10-22T00:42:31+00:00",
+  "observed_at": "2026-10-23T00:41:47+00:00",
   "stale": false
  },
  "plans": [
@@ -36,7 +36,7 @@
    "source_url": "https://www.geneco.sg/residential/electricity-plans/",
    "terms": {},
    "plan_code": "GetItFixed12_20261009",
-   "data_as_of": "2026-10-22T00:42:22+00:00",
+   "data_as_of": "2026-10-23T00:41:38+00:00",
    "data_method": "scrape"
   },
   {
@@ -64,7 +64,7 @@
    "terms": {},
    "plan_code": "GetItFixed24_20260930",
    "rebate_sgd_non_sp": 100.0,
-   "data_as_of": "2026-10-22T00:42:22+00:00",
+   "data_as_of": "2026-10-23T00:41:38+00:00",
    "data_method": "scrape"
   },
   {
@@ -89,7 +89,7 @@
    "source_url": "https://www.geneco.sg/residential/electricity-plans/",
    "terms": {},
    "plan_code": "GiveUsATry_20260804",
-   "data_as_of": "2026-10-22T00:42:22+00:00",
+   "data_as_of": "2026-10-23T00:41:38+00:00",
    "data_method": "scrape"
   },
   {
@@ -126,7 +126,7 @@
    "source_url": "https://www.geneco.sg/residential/electricity-plans/",
    "terms": {},
    "plan_code": "GetIt7To7_20260824",
-   "data_as_of": "2026-10-22T00:42:22+00:00",
+   "data_as_of": "2026-10-23T00:41:38+00:00",
    "data_method": "scrape"
   },
   {
@@ -309,7 +309,7 @@
     "No early termination charge",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-10-22T00:42:29+00:00",
+   "data_as_of": "2026-10-23T00:41:45+00:00",
    "data_method": "scrape"
   },
   {
@@ -358,7 +358,7 @@
     "No early termination charge",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-10-22T00:42:29+00:00",
+   "data_as_of": "2026-10-23T00:41:45+00:00",
    "data_method": "scrape"
   },
   {
@@ -420,7 +420,7 @@
     "No early termination charge",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-10-22T00:42:29+00:00",
+   "data_as_of": "2026-10-23T00:41:45+00:00",
    "data_method": "scrape"
   },
   {
@@ -478,7 +478,7 @@
     "Pick KrisFlyer miles or yuu Points",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-10-22T00:42:29+00:00",
+   "data_as_of": "2026-10-23T00:41:45+00:00",
    "data_method": "scrape"
   },
   {
@@ -535,7 +535,7 @@
     "Pick KrisFlyer miles or yuu Points",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-10-22T00:42:29+00:00",
+   "data_as_of": "2026-10-23T00:41:45+00:00",
    "data_method": "scrape"
   },
   {
@@ -593,7 +593,7 @@
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-10-22T00:42:29+00:00",
+   "data_as_of": "2026-10-23T00:41:45+00:00",
    "data_method": "scrape"
   },
   {
@@ -664,7 +664,7 @@
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-10-22T00:42:29+00:00",
+   "data_as_of": "2026-10-23T00:41:45+00:00",
    "data_method": "scrape"
   },
   {
@@ -736,7 +736,7 @@
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-10-22T00:42:29+00:00",
+   "data_as_of": "2026-10-23T00:41:45+00:00",
    "data_method": "scrape"
   },
   {
@@ -794,7 +794,7 @@
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-10-22T00:42:29+00:00",
+   "data_as_of": "2026-10-23T00:41:45+00:00",
    "data_method": "scrape"
   },
   {
@@ -846,7 +846,7 @@
     "Monthly recurring payment via GIRO only",
     "Early Termination Charge Waiver. Terms Apply."
    ],
-   "data_as_of": "2026-10-22T00:42:29+00:00",
+   "data_as_of": "2026-10-23T00:41:45+00:00",
    "data_method": "scrape"
   },
   {
@@ -904,7 +904,7 @@
    "name": "LifePower36",
    "price_type": "fixed",
    "rates": {
-    "rate": 28.9
+    "rate": 29.95
    },
    "contract_months": 36,
    "daily_charge_cents": 0.0,
@@ -915,7 +915,7 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-36au1",
+   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-36av1",
    "source_url": "https://www.senokoenergy.com/households/price-plans",
    "terms": {
     "etf_text": "S$872 if termination is before or within 1st to 12th month from contract start date. S$545 if termination is within 13th to 24th month from contract start date. S$327 if termination is within 25th to 36th month from contract start date.",
@@ -944,11 +944,11 @@
     "auto_renewal_text": "Yes (At least 10 Business Days before the expiry date of your contract, you will be notified of the auto-renewed electricity rate, which will be lower than the prevailing Regulated Tariff at the point of renewal. All other applicable charges/fees will be the same or better than the existing quantum.) 1. If advanced meter is required, such fee (S$43.60 per m",
     "auto_renews": true,
     "contract_months_factsheet": 36,
-    "fetched_at": "2026-10-08T05:19:24+00:00",
-    "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-36au1"
+    "fetched_at": "2026-10-23T00:41:59+00:00",
+    "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-36av1"
    },
-   "plan_code": "HH-GMOFIXPG-36au1",
-   "data_as_of": "2026-10-22T00:42:31+00:00",
+   "plan_code": "HH-GMOFIXPG-36av1",
+   "data_as_of": "2026-10-23T00:41:47+00:00",
    "data_method": "scrape"
   },
   {
@@ -958,7 +958,7 @@
    "name": "LifePower24",
    "price_type": "fixed",
    "rates": {
-    "rate": 29.0
+    "rate": 30.5
    },
    "contract_months": 24,
    "daily_charge_cents": 0.0,
@@ -969,7 +969,7 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-24au1",
+   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-24av1",
    "source_url": "https://www.senokoenergy.com/households/price-plans",
    "terms": {
     "etf_text": "S$545 if termination is before or within 1st to 12th month from contract start date. S$327 if termination is within 13th to 24th month from contract start date.",
@@ -993,11 +993,11 @@
     "auto_renewal_text": "Yes (Auto-renewed contract will remain as standard Fixed Price Plan with 24 months duration. Auto- renewed electricity rate will be lower than the prevailing regulated tariff at renewal. All other fees will be the same as existing rates.)",
     "auto_renews": true,
     "contract_months_factsheet": 24,
-    "fetched_at": "2026-10-08T05:19:29+00:00",
-    "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-24au1"
+    "fetched_at": "2026-10-23T00:42:04+00:00",
+    "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-24av1"
    },
-   "plan_code": "HH-GMOFIXPG-24au1",
-   "data_as_of": "2026-10-22T00:42:31+00:00",
+   "plan_code": "HH-GMOFIXPG-24av1",
+   "data_as_of": "2026-10-23T00:41:47+00:00",
    "data_method": "scrape"
   },
   {
@@ -1007,7 +1007,7 @@
    "name": "LifePower12",
    "price_type": "fixed",
    "rates": {
-    "rate": 30.5
+    "rate": 31.15
    },
    "contract_months": 12,
    "daily_charge_cents": 0.0,
@@ -1018,7 +1018,7 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-12au1",
+   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-12av1",
    "source_url": "https://www.senokoenergy.com/households/price-plans",
    "terms": {
     "etf_text": "S$327 if termination is before or within 1st to 12th month from contract start date.",
@@ -1037,11 +1037,11 @@
     "auto_renewal_text": "Yes (Auto-renewed contract will remain as standard Fixed Price Plan with 12 months duration. Auto- renewed electricity rate will be lower than the prevailing regulated tariff at renewal. All other fees will be the same as existing rates.)",
     "auto_renews": true,
     "contract_months_factsheet": 12,
-    "fetched_at": "2026-10-08T05:19:34+00:00",
-    "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-12au1"
+    "fetched_at": "2026-10-23T00:42:09+00:00",
+    "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-12av1"
    },
-   "plan_code": "HH-GMOFIXPG-12au1",
-   "data_as_of": "2026-10-22T00:42:31+00:00",
+   "plan_code": "HH-GMOFIXPG-12av1",
+   "data_as_of": "2026-10-23T00:41:47+00:00",
    "data_method": "scrape"
   },
   {
@@ -1095,7 +1095,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFDOTPG-36al1"
    },
    "plan_code": "HH-GMOFDOTPG-36al1",
-   "data_as_of": "2026-10-22T00:42:31+00:00",
+   "data_as_of": "2026-10-23T00:41:47+00:00",
    "data_method": "scrape"
   },
   {
@@ -1144,7 +1144,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFDOTPG-24al1"
    },
    "plan_code": "HH-GMOFDOTPG-24al1",
-   "data_as_of": "2026-10-22T00:42:31+00:00",
+   "data_as_of": "2026-10-23T00:41:47+00:00",
    "data_method": "scrape"
   },
   {
@@ -1156,7 +1156,7 @@
    "rates": {
     "periods": [
      {
-      "rate": 36.95,
+      "rate": 37.95,
       "windows": [
        {
         "days": "all",
@@ -1166,7 +1166,7 @@
       ]
      }
     ],
-    "default_rate": 20.05
+    "default_rate": 21.05
    },
    "contract_months": 24,
    "daily_charge_cents": 0.0,
@@ -1177,7 +1177,7 @@
    "smart_meter_required": true,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOPOPPG-24ak2",
+   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOPOPPG-24av1",
    "source_url": "https://www.senokoenergy.com/households/price-plans",
    "terms": {
     "etf_text": "S$545 if termination is before or within 1st to 12th month from contract start date. S$327 if termination is within 13th to 24th month from contract start date.",
@@ -1198,14 +1198,14 @@
     "security_deposit_text": "Waived",
     "deposit_waived": true,
     "late_payment_text": "The higher of S$0.50 or 1% on outstanding charges",
-    "auto_renewal_text": "Yes. At least 10 Business Days before contract expires, you will be notified of the auto-renewed electricity rate, which may only have the off- peak/lowest/lower-tier rate priced below the prevailing Regulated Tariff at the point of renewal. All other applicable charges/fees will be the same or better than the existing quantum. 1. Advanced meter is required",
+    "auto_renewal_text": "Yes At least 10 Business Days before contract expires, you will be notified of the auto-renewed electricity rate, which may only have the off-peak/lowest/lower-tier rate priced below the prevailing Regulated Tariff at the point of renewal. All other applicable charges/fees will be the same or better than the existing quantum. 1. Advanced meter is required,",
     "auto_renews": true,
     "contract_months_factsheet": 24,
-    "fetched_at": "2026-09-22T07:06:11+00:00",
-    "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOPOPPG-24ak2"
+    "fetched_at": "2026-10-23T00:42:14+00:00",
+    "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOPOPPG-24av1"
    },
-   "plan_code": "HH-GMOPOPPG-24ak2",
-   "data_as_of": "2026-10-22T00:42:31+00:00",
+   "plan_code": "HH-GMOPOPPG-24av1",
+   "data_as_of": "2026-10-23T00:41:47+00:00",
    "data_method": "scrape"
   },
   {
@@ -1215,7 +1215,7 @@
    "name": "LifeGreen24",
    "price_type": "fixed",
    "rates": {
-    "rate": 29.68
+    "rate": 30.88
    },
    "contract_months": 24,
    "daily_charge_cents": 0.0,
@@ -1226,7 +1226,7 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXFG-24au1",
+   "factsheet_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXFG-24av1",
    "source_url": "https://www.senokoenergy.com/households/price-plans",
    "terms": {
     "etf_text": "S$545 if termination is before or within 1st to 12th month from contract start date. S$327 if termination is within 13th to 24th month from contract start date.",
@@ -1250,11 +1250,11 @@
     "auto_renewal_text": "Yes (Auto-renewed contract will remain as standard Fixed Price Plan with 24 months duration. Auto- renewed electricity rate will be lower than the prevailing regulated tariff at renewal. All other fees will be the same as existing rates.)",
     "auto_renews": true,
     "contract_months_factsheet": 24,
-    "fetched_at": "2026-10-08T05:19:39+00:00",
-    "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXFG-24au1"
+    "fetched_at": "2026-10-23T00:42:19+00:00",
+    "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXFG-24av1"
    },
-   "plan_code": "HH-GMOFIXFG-24au1",
-   "data_as_of": "2026-10-22T00:42:31+00:00",
+   "plan_code": "HH-GMOFIXFG-24av1",
+   "data_as_of": "2026-10-23T00:41:47+00:00",
    "data_method": "scrape"
   },
   {
@@ -1291,7 +1291,7 @@
     "source_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerfix_24_20261006(283.5)-$100_bill_rebate.pdf"
    },
    "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/standard_tnc_v190626.pdf",
-   "data_as_of": "2026-10-22T00:42:31+00:00",
+   "data_as_of": "2026-10-23T00:41:48+00:00",
    "data_method": "scrape"
   },
   {
@@ -1328,7 +1328,7 @@
     "source_url": "https://www.savewithtuas.com/assets/pdf/2026/powerfix_36_20261008(281)-$160_bill_rebate.pdf"
    },
    "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/non-standard-tnc_v190626.pdf",
-   "data_as_of": "2026-10-22T00:42:31+00:00",
+   "data_as_of": "2026-10-23T00:41:48+00:00",
    "data_method": "scrape"
   },
   {
@@ -1365,7 +1365,7 @@
     "source_url": "https://www.savewithtuas.com/assets/pdf/2026/powerfix_12_20261006(285.8).pdf"
    },
    "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/standard_tnc_v190626.pdf",
-   "data_as_of": "2026-10-22T00:42:31+00:00",
+   "data_as_of": "2026-10-23T00:41:48+00:00",
    "data_method": "scrape"
   }
  ]

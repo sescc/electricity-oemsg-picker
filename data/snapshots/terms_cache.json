@@ -9,11 +9,11 @@
  },
  "https://drive.google.com/file/d/1rAbOhMarW3NZD_2AOkP6PC71F-GfYqfW/view?usp=sharing": {
   "error": "no fact-sheet fields found",
-  "fetched_at": "2026-10-16T00:26:10+00:00"
+  "fetched_at": "2026-10-23T00:41:53+00:00"
  },
  "https://drive.google.com/file/d/1F6y3F6zOlakB_rLRIMpuoru4_e4Z6Ej9/view?usp=sharing": {
   "error": "no fact-sheet fields found",
-  "fetched_at": "2026-10-16T00:26:16+00:00"
+  "fetched_at": "2026-10-23T00:41:58+00:00"
  },
  "https://pacificlight.com.sg/support/factsheet-detail/1-easy-save-no-contract-1-july-2026": {
   "etf_text": "As per Termination Charges in Electricity Contract, not applicable for Easy Save plan.",
@@ -483,7 +483,7 @@
  },
  "https://drive.google.com/file/d/165FkF_27bn2Q945tbgyenP1bcmPQIXXC/view?usp=sharing": {
   "error": "no fact-sheet fields found",
-  "fetched_at": "2026-10-16T00:26:06+00:00"
+  "fetched_at": "2026-10-23T00:41:48+00:00"
  },
  "https://pacificlight.com.sg/support/factsheet-detail/02-easy-peasy-no-contract-7-oct-2026": {
   "etf_text": "As per Termination Charges in Electricity Contract, not applicable for Easy Peasy plan.",
@@ -826,5 +826,125 @@
   "auto_renews": true,
   "contract_months_factsheet": 12,
   "fetched_at": "2026-10-13T03:04:24+00:00"
+ },
+ "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-36av1": {
+  "etf_text": "S$872 if termination is before or within 1st to 12th month from contract start date. S$545 if termination is within 13th to 24th month from contract start date. S$327 if termination is within 25th to 36th month from contract start date.",
+  "etf_schedule": [
+   {
+    "from_month": 1,
+    "to_month": 12,
+    "fee_sgd": 872.0
+   },
+   {
+    "from_month": 13,
+    "to_month": 24,
+    "fee_sgd": 545.0
+   },
+   {
+    "from_month": 25,
+    "to_month": 36,
+    "fee_sgd": 327.0
+   }
+  ],
+  "early_termination_fee_sgd": 872.0,
+  "standard": false,
+  "security_deposit_text": "Waived",
+  "deposit_waived": true,
+  "late_payment_text": "The higher of S$0.50 or 1% on outstanding charges",
+  "auto_renewal_text": "Yes (At least 10 Business Days before the expiry date of your contract, you will be notified of the auto-renewed electricity rate, which will be lower than the prevailing Regulated Tariff at the point of renewal. All other applicable charges/fees will be the same or better than the existing quantum.) 1. If advanced meter is required, such fee (S$43.60 per m",
+  "auto_renews": true,
+  "contract_months_factsheet": 36,
+  "fetched_at": "2026-10-23T00:41:59+00:00"
+ },
+ "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-24av1": {
+  "etf_text": "S$545 if termination is before or within 1st to 12th month from contract start date. S$327 if termination is within 13th to 24th month from contract start date.",
+  "etf_schedule": [
+   {
+    "from_month": 1,
+    "to_month": 12,
+    "fee_sgd": 545.0
+   },
+   {
+    "from_month": 13,
+    "to_month": 24,
+    "fee_sgd": 327.0
+   }
+  ],
+  "early_termination_fee_sgd": 545.0,
+  "standard": true,
+  "security_deposit_text": "Waived",
+  "deposit_waived": true,
+  "late_payment_text": "The higher of S$0.50 or 1% on outstanding charges",
+  "auto_renewal_text": "Yes (Auto-renewed contract will remain as standard Fixed Price Plan with 24 months duration. Auto- renewed electricity rate will be lower than the prevailing regulated tariff at renewal. All other fees will be the same as existing rates.)",
+  "auto_renews": true,
+  "contract_months_factsheet": 24,
+  "fetched_at": "2026-10-23T00:42:04+00:00"
+ },
+ "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-12av1": {
+  "etf_text": "S$327 if termination is before or within 1st to 12th month from contract start date.",
+  "etf_schedule": [
+   {
+    "from_month": 1,
+    "to_month": 12,
+    "fee_sgd": 327.0
+   }
+  ],
+  "early_termination_fee_sgd": 327.0,
+  "standard": true,
+  "security_deposit_text": "Waived",
+  "deposit_waived": true,
+  "late_payment_text": "The higher of S$0.50 or 1% on outstanding charges",
+  "auto_renewal_text": "Yes (Auto-renewed contract will remain as standard Fixed Price Plan with 12 months duration. Auto- renewed electricity rate will be lower than the prevailing regulated tariff at renewal. All other fees will be the same as existing rates.)",
+  "auto_renews": true,
+  "contract_months_factsheet": 12,
+  "fetched_at": "2026-10-23T00:42:09+00:00"
+ },
+ "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOPOPPG-24av1": {
+  "etf_text": "S$545 if termination is before or within 1st to 12th month from contract start date. S$327 if termination is within 13th to 24th month from contract start date.",
+  "etf_schedule": [
+   {
+    "from_month": 1,
+    "to_month": 12,
+    "fee_sgd": 545.0
+   },
+   {
+    "from_month": 13,
+    "to_month": 24,
+    "fee_sgd": 327.0
+   }
+  ],
+  "early_termination_fee_sgd": 545.0,
+  "standard": false,
+  "security_deposit_text": "Waived",
+  "deposit_waived": true,
+  "late_payment_text": "The higher of S$0.50 or 1% on outstanding charges",
+  "auto_renewal_text": "Yes At least 10 Business Days before contract expires, you will be notified of the auto-renewed electricity rate, which may only have the off-peak/lowest/lower-tier rate priced below the prevailing Regulated Tariff at the point of renewal. All other applicable charges/fees will be the same or better than the existing quantum. 1. Advanced meter is required,",
+  "auto_renews": true,
+  "contract_months_factsheet": 24,
+  "fetched_at": "2026-10-23T00:42:14+00:00"
+ },
+ "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXFG-24av1": {
+  "etf_text": "S$545 if termination is before or within 1st to 12th month from contract start date. S$327 if termination is within 13th to 24th month from contract start date.",
+  "etf_schedule": [
+   {
+    "from_month": 1,
+    "to_month": 12,
+    "fee_sgd": 545.0
+   },
+   {
+    "from_month": 13,
+    "to_month": 24,
+    "fee_sgd": 327.0
+   }
+  ],
+  "early_termination_fee_sgd": 545.0,
+  "standard": true,
+  "security_deposit_text": "Waived",
+  "deposit_waived": true,
+  "late_payment_text": "The higher of S$0.50 or 1% on outstanding charges",
+  "auto_renewal_text": "Yes (Auto-renewed contract will remain as standard Fixed Price Plan with 24 months duration. Auto- renewed electricity rate will be lower than the prevailing regulated tariff at renewal. All other fees will be the same as existing rates.)",
+  "auto_renews": true,
+  "contract_months_factsheet": 24,
+  "fetched_at": "2026-10-23T00:42:19+00:00"
  }
 }
