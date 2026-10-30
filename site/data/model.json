@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T01:49:21+00:00",
+ "generated_at": "2026-10-30T02:01:07+00:00",
  "sources": {
   "ses": {
    "ok": false,
@@ -10,17 +10,17 @@
   "tariff_datagov": {
    "ok": true,
    "url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_61eac3cdb086814af485dcc682b75ae9&limit=5",
-   "fetched_at": "2026-10-23T00:42:27+00:00"
+   "fetched_at": "2026-10-30T02:01:06+00:00"
   },
   "weather_history": {
    "ok": true,
    "url": "https://archive-api.open-meteo.com/v1/archive",
-   "fetched_at": "2026-10-23T00:42:28+00:00"
+   "fetched_at": "2026-10-30T02:01:07+00:00"
   },
   "weather_seasonal": {
    "ok": true,
    "url": "https://seasonal-api.open-meteo.com/v1/seasonal",
-   "fetched_at": "2026-10-23T00:42:29+00:00"
+   "fetched_at": "2026-10-30T02:01:07+00:00"
   }
  },
  "gst_factor": 1.09,
@@ -42,45 +42,45 @@
   },
   "forecast": {
    "2026-11": {
-    "cdd_per_day": 1.1397,
-    "raw_cdd_per_day": 2.0013,
-    "p10": 0.8884,
-    "p90": 1.4084,
+    "cdd_per_day": 1.0597,
+    "raw_cdd_per_day": 1.8674,
+    "p10": 0.8255,
+    "p90": 1.3255,
     "members": 50
    },
    "2026-12": {
-    "cdd_per_day": 1.737,
-    "raw_cdd_per_day": 2.5987,
-    "p10": 1.3867,
-    "p90": 1.99,
+    "cdd_per_day": 1.6058,
+    "raw_cdd_per_day": 2.4135,
+    "p10": 1.4018,
+    "p90": 1.7828,
     "members": 50
    },
    "2027-01": {
-    "cdd_per_day": 1.9785,
+    "cdd_per_day": 2.0324,
     "raw_cdd_per_day": 2.8401,
-    "p10": 1.5995,
-    "p90": 2.3384,
+    "p10": 1.6535,
+    "p90": 2.3923,
     "members": 50
    },
    "2027-02": {
-    "cdd_per_day": 2.5897,
+    "cdd_per_day": 2.6436,
     "raw_cdd_per_day": 3.4513,
-    "p10": 2.2347,
-    "p90": 2.9956,
+    "p10": 2.2887,
+    "p90": 3.0495,
     "members": 50
    },
    "2027-03": {
-    "cdd_per_day": 3.3555,
+    "cdd_per_day": 3.4094,
     "raw_cdd_per_day": 4.2171,
-    "p10": 2.8834,
-    "p90": 3.79,
+    "p10": 2.9374,
+    "p90": 3.8439,
     "members": 50
    },
    "2027-04": {
-    "cdd_per_day": 3.514,
-    "raw_cdd_per_day": 4.3757,
-    "p10": 3.0643,
-    "p90": 3.8818,
+    "cdd_per_day": 3.5634,
+    "raw_cdd_per_day": 4.3711,
+    "p10": 3.1591,
+    "p90": 3.8857,
     "members": 50
    }
   },
