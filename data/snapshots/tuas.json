@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-01T01:12:55+00:00",
+ "fetched_at": "2026-11-02T01:31:19+00:00",
  "plans": [
   {
    "id": "tuas-powerfix-24-24",
@@ -12,14 +12,14 @@
    },
    "contract_months": 24,
    "daily_charge_cents": 0.0,
-   "rebate_sgd": 100.0,
+   "rebate_sgd": 120.0,
    "rebate_note": "One-time bill rebate with promo code ONLINE",
    "standard": true,
    "green": false,
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://www.savewithtuas.com/assets/pdf/2026/fs/powerfix_24_20261006(283.5)-$100_bill_rebate.pdf",
+   "factsheet_url": "https://www.savewithtuas.com/assets/powerfix_24_20261008(283.5)-$120_bill_rebate.pdf",
    "source_url": "https://www.savewithtuas.com/our-electricity-plans/",
    "terms": {},
    "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/standard_tnc_v190626.pdf"
@@ -35,14 +35,14 @@
    },
    "contract_months": 36,
    "daily_charge_cents": 0.0,
-   "rebate_sgd": 160.0,
+   "rebate_sgd": 200.0,
    "rebate_note": "One-time bill rebate with promo code ONLINE",
    "standard": false,
    "green": false,
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://www.savewithtuas.com/assets/pdf/2026/powerfix_36_20261008(281)-$160_bill_rebate.pdf",
+   "factsheet_url": "https://www.savewithtuas.com/assets/powerfix_36_20261006(281)-$200_bill_rebate.pdf",
    "source_url": "https://www.savewithtuas.com/our-electricity-plans/",
    "terms": {},
    "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/non-standard-tnc_v190626.pdf"

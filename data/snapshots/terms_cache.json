@@ -946,5 +946,29 @@
   "auto_renews": true,
   "contract_months_factsheet": 24,
   "fetched_at": "2026-10-23T00:42:19+00:00"
+ },
+ "https://www.savewithtuas.com/assets/powerfix_24_20261008(283.5)-$120_bill_rebate.pdf": {
+  "etf_text": "$200.00 (no GST)",
+  "early_termination_fee_sgd": 200.0,
+  "standard": true,
+  "security_deposit_text": "Security Deposit (“SD”) shall be collected and retained on behalf of Retailer by SP Services Limited (“SP”). Existing SP’s customers will not be required to provide additional SD. Non-existing SP’s customers will be required to provide a SD equivalent to 65% of the SD as determined and published by SP.",
+  "deposit_waived": false,
+  "late_payment_text": "1% per month on outstanding amount",
+  "auto_renewal_text": "Yes: · Auto-renewed contract will remain as standard Fixed Price Plan with 24 months duration. · Auto-renewed electricity rate will be lower than the prevailing regulated tariff at renewal. · All other fees will be the same or better than existing rates. · The Retailer reserves the right to withdraw the auto-renewal offer by giving at least 18 business days",
+  "auto_renews": true,
+  "contract_months_factsheet": 24,
+  "fetched_at": "2026-11-02T01:31:25+00:00"
+ },
+ "https://www.savewithtuas.com/assets/powerfix_36_20261006(281)-$200_bill_rebate.pdf": {
+  "etf_text": "$200.00 (no GST)",
+  "early_termination_fee_sgd": 200.0,
+  "standard": false,
+  "security_deposit_text": "Security Deposit (“SD”) shall be collected and retained on behalf of Retailer by SP Services Limited (“SP”). Existing SP’s customers will not be required to provide additional SD. Non-existing SP’s customers will be required to provide a SD equivalent to 65% of the SD as determined and published by SP.",
+  "deposit_waived": false,
+  "late_payment_text": "1% per month on outstanding amount",
+  "auto_renewal_text": "Yes: · By 18 business days before the expiry of the contract, you will be notified of the auto- renewed electricity rate, which will be lower than the prevailing regulated tariff at the point of renewal. · All other applicable charges/fees will be the same or better than the existing quantum. · The Retailer reserves the right to withdraw the auto-renewal of",
+  "auto_renews": true,
+  "contract_months_factsheet": 36,
+  "fetched_at": "2026-11-02T01:31:30+00:00"
  }
 }
