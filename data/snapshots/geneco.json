@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-02T01:31:09+00:00",
+ "fetched_at": "2026-11-03T03:28:45+00:00",
  "plans": [
   {
    "id": "geneco-get-it-fixed-12-12",
@@ -36,7 +36,7 @@
    "contract_months": 24,
    "daily_charge_cents": 0.0,
    "rebate_sgd": 200.0,
-   "rebate_note": "Exclusive rate for the first 1000 sign-ups. For SP Customers: Use promo code GENECO200 for $200 bill rebate. For all other customers: Use promo code GENECO100 for $100 bill rebate. Limited sign-ups, T&Cs apply.",
+   "rebate_note": "For SP Customers: Use promo code GENECO200 for $200 bill rebate. For all other customers: Use promo code GENECO100 for $100 bill rebate. Limited sign-ups, T&Cs apply.",
    "standard": true,
    "green": false,
    "smart_meter_required": false,
