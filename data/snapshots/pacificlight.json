@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-04T02:21:33+00:00",
+ "fetched_at": "2026-11-05T02:29:39+00:00",
  "plans": [
   {
    "id": "pacificlight-easy-save-0",
@@ -162,7 +162,7 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/05-savvy-saver-12-8-oct-2026",
+   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/05-savvy-saver-12-08-oct-2026",
    "source_url": "https://pacificlight.com.sg/home/plans-new",
    "terms": {
     "auto_renewal_text": "Auto-renewed contract will remain on the same plan and duration. The electricity rate will be lower than the prevailing Regulated Tariff at renewal. All other fees remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
