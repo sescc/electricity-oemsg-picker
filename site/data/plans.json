@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T02:29:43+00:00",
+ "generated_at": "2026-11-06T02:29:30+00:00",
  "regulated_tariff": {
   "cents_incl_gst": 31.16,
   "quarter": "Q4 2026",
@@ -10,7 +10,7 @@
   "disagreeing_sources": {},
   "n_sources": 2,
   "ignored_sources": {},
-  "observed_at": "2026-11-05T02:29:41+00:00",
+  "observed_at": "2026-11-06T02:29:13+00:00",
   "stale": false
  },
  "plans": [
@@ -36,7 +36,7 @@
    "source_url": "https://www.geneco.sg/residential/electricity-plans/",
    "terms": {},
    "plan_code": "GetItFixed12_20261009",
-   "data_as_of": "2026-11-05T02:29:30+00:00",
+   "data_as_of": "2026-11-06T02:29:04+00:00",
    "data_method": "scrape"
   },
   {
@@ -64,7 +64,7 @@
    "terms": {},
    "plan_code": "GetItFixed24_20260930",
    "rebate_sgd_non_sp": 100.0,
-   "data_as_of": "2026-11-05T02:29:30+00:00",
+   "data_as_of": "2026-11-06T02:29:04+00:00",
    "data_method": "scrape"
   },
   {
@@ -89,7 +89,7 @@
    "source_url": "https://www.geneco.sg/residential/electricity-plans/",
    "terms": {},
    "plan_code": "GiveUsATry_20260804",
-   "data_as_of": "2026-11-05T02:29:30+00:00",
+   "data_as_of": "2026-11-06T02:29:04+00:00",
    "data_method": "scrape"
   },
   {
@@ -126,7 +126,7 @@
    "source_url": "https://www.geneco.sg/residential/electricity-plans/",
    "terms": {},
    "plan_code": "GetIt7To7_20260824",
-   "data_as_of": "2026-11-05T02:29:30+00:00",
+   "data_as_of": "2026-11-06T02:29:04+00:00",
    "data_method": "scrape"
   },
   {
@@ -309,7 +309,7 @@
     "No early termination charge",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-11-05T02:29:39+00:00",
+   "data_as_of": "2026-11-06T02:29:11+00:00",
    "data_method": "scrape"
   },
   {
@@ -358,7 +358,7 @@
     "No early termination charge",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-11-05T02:29:39+00:00",
+   "data_as_of": "2026-11-06T02:29:11+00:00",
    "data_method": "scrape"
   },
   {
@@ -420,7 +420,7 @@
     "No early termination charge",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-11-05T02:29:39+00:00",
+   "data_as_of": "2026-11-06T02:29:11+00:00",
    "data_method": "scrape"
   },
   {
@@ -430,7 +430,7 @@
    "name": "Sunny Side-Up",
    "price_type": "fixed",
    "rates": {
-    "rate": 31.0
+    "rate": 31.15
    },
    "contract_months": 12,
    "daily_charge_cents": 0.0,
@@ -441,7 +441,7 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/04-sunny-side-up-12-01-oct-2026",
+   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/04-sunny-side-up-12-5-nov-2026",
    "source_url": "https://pacificlight.com.sg/home/plans-new",
    "terms": {
     "etf_text": "HDB 1 and 2 Room - $160 HDB 3 Room - $220 HDB 4 Room - $320 HDB 5 Room - $380 HDB Executive, Jumbo or Multi-Gen - $460 Condominium, Apartment or Shophouse - $480 Terrace - $720 Semi-Detached - $1,000 Bungalow or Penthouse - $2,000",
@@ -469,16 +469,16 @@
     "auto_renewal_text": "Auto-renewed contract will remain at the same plan name of similar duration. Auto-renewed electricity rate will be lower than the prevailing Regulated Tariff at renewal. All other fees will remain the same. This is subject to Clause 3.2 of the Residential Electricity Contract.",
     "auto_renews": false,
     "contract_months_factsheet": 12,
-    "fetched_at": "2026-10-08T05:18:58+00:00",
-    "source_url": "https://pacificlight.com.sg/support/factsheet-detail/04-sunny-side-up-12-01-oct-2026"
+    "fetched_at": "2026-11-06T02:29:25+00:00",
+    "source_url": "https://pacificlight.com.sg/support/factsheet-detail/04-sunny-side-up-12-5-nov-2026"
    },
-   "plan_code": "PLE_SUNNYSIDEUP12M_2026.10.01",
+   "plan_code": "PLE_SUNNYSIDEUP12M_2026.11.05",
    "extras": [
     "Be carbon neutral with free RECs",
     "Pick KrisFlyer miles or yuu Points",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-11-05T02:29:39+00:00",
+   "data_as_of": "2026-11-06T02:29:11+00:00",
    "data_method": "scrape"
   },
   {
@@ -488,7 +488,7 @@
    "name": "Savvy Saver",
    "price_type": "fixed",
    "rates": {
-    "rate": 30.5
+    "rate": 31.15
    },
    "contract_months": 12,
    "daily_charge_cents": 0.0,
@@ -499,7 +499,7 @@
    "smart_meter_required": false,
    "eligibility": null,
    "conditions": [],
-   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/05-savvy-saver-12-08-oct-2026",
+   "factsheet_url": "https://pacificlight.com.sg/support/factsheet-detail/05-savvy-saver-12-5-nov-2026",
    "source_url": "https://pacificlight.com.sg/home/plans-new",
    "terms": {
     "etf_text": "HDB 1 and 2 Room - $160 HDB 3 Room - $220 HDB 4 Room - $320 HDB 5 Room - $380 HDB Executive, Jumbo or Multi-Gen - $460 Condominium, Apartment or Shophouse - $480 Terrace - $720 Semi-Detached - $1,000 Bungalow or Penthouse - $2,000",
@@ -527,15 +527,15 @@
     "auto_renewal_text": "Auto-renewed contract will remain on the same plan and duration. The electricity rate will be lower than the prevailing Regulated Tariff at renewal. All other fees remain unchanged. This is subject to Clause 3.2 of the Residential Electricity Contract.",
     "auto_renews": false,
     "contract_months_factsheet": 12,
-    "fetched_at": "2026-11-05T02:29:43+00:00",
-    "source_url": "https://pacificlight.com.sg/support/factsheet-detail/05-savvy-saver-12-08-oct-2026"
+    "fetched_at": "2026-11-06T02:29:30+00:00",
+    "source_url": "https://pacificlight.com.sg/support/factsheet-detail/05-savvy-saver-12-5-nov-2026"
    },
-   "plan_code": "PLE_SAVVYSAVER12M_2026.10.08",
+   "plan_code": "PLE_SAVVYSAVER12M_2026.11.05",
    "extras": [
     "Pick KrisFlyer miles or yuu Points",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-11-05T02:29:39+00:00",
+   "data_as_of": "2026-11-06T02:29:11+00:00",
    "data_method": "scrape"
   },
   {
@@ -593,7 +593,7 @@
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-11-05T02:29:39+00:00",
+   "data_as_of": "2026-11-06T02:29:11+00:00",
    "data_method": "scrape"
   },
   {
@@ -664,7 +664,7 @@
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-11-05T02:29:39+00:00",
+   "data_as_of": "2026-11-06T02:29:11+00:00",
    "data_method": "scrape"
   },
   {
@@ -736,7 +736,7 @@
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-11-05T02:29:39+00:00",
+   "data_as_of": "2026-11-06T02:29:11+00:00",
    "data_method": "scrape"
   },
   {
@@ -794,7 +794,7 @@
     "Use a referral code for S$20 off",
     "Security Deposit Waiver with Recurring Card Payment"
    ],
-   "data_as_of": "2026-11-05T02:29:39+00:00",
+   "data_as_of": "2026-11-06T02:29:11+00:00",
    "data_method": "scrape"
   },
   {
@@ -846,7 +846,7 @@
     "Monthly recurring payment via GIRO only",
     "Early Termination Charge Waiver. Terms Apply."
    ],
-   "data_as_of": "2026-11-05T02:29:39+00:00",
+   "data_as_of": "2026-11-06T02:29:11+00:00",
    "data_method": "scrape"
   },
   {
@@ -948,7 +948,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-36av1"
    },
    "plan_code": "HH-GMOFIXPG-36av1",
-   "data_as_of": "2026-11-05T02:29:41+00:00",
+   "data_as_of": "2026-11-06T02:29:13+00:00",
    "data_method": "scrape"
   },
   {
@@ -997,7 +997,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-24av1"
    },
    "plan_code": "HH-GMOFIXPG-24av1",
-   "data_as_of": "2026-11-05T02:29:41+00:00",
+   "data_as_of": "2026-11-06T02:29:13+00:00",
    "data_method": "scrape"
   },
   {
@@ -1041,7 +1041,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXPG-12av1"
    },
    "plan_code": "HH-GMOFIXPG-12av1",
-   "data_as_of": "2026-11-05T02:29:41+00:00",
+   "data_as_of": "2026-11-06T02:29:13+00:00",
    "data_method": "scrape"
   },
   {
@@ -1095,7 +1095,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFDOTPG-36al1"
    },
    "plan_code": "HH-GMOFDOTPG-36al1",
-   "data_as_of": "2026-11-05T02:29:41+00:00",
+   "data_as_of": "2026-11-06T02:29:13+00:00",
    "data_method": "scrape"
   },
   {
@@ -1144,7 +1144,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFDOTPG-24al1"
    },
    "plan_code": "HH-GMOFDOTPG-24al1",
-   "data_as_of": "2026-11-05T02:29:41+00:00",
+   "data_as_of": "2026-11-06T02:29:13+00:00",
    "data_method": "scrape"
   },
   {
@@ -1205,7 +1205,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOPOPPG-24av1"
    },
    "plan_code": "HH-GMOPOPPG-24av1",
-   "data_as_of": "2026-11-05T02:29:41+00:00",
+   "data_as_of": "2026-11-06T02:29:13+00:00",
    "data_method": "scrape"
   },
   {
@@ -1254,7 +1254,7 @@
     "source_url": "https://www.senokoenergy.com/custom/document/FS?plancode=HH-GMOFIXFG-24av1"
    },
    "plan_code": "HH-GMOFIXFG-24av1",
-   "data_as_of": "2026-11-05T02:29:41+00:00",
+   "data_as_of": "2026-11-06T02:29:13+00:00",
    "data_method": "scrape"
   },
   {
@@ -1291,7 +1291,7 @@
     "source_url": "https://www.savewithtuas.com/assets/powerfix_24_20261008(283.5)-$120_bill_rebate.pdf"
    },
    "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/standard_tnc_v190626.pdf",
-   "data_as_of": "2026-11-05T02:29:42+00:00",
+   "data_as_of": "2026-11-06T02:29:14+00:00",
    "data_method": "scrape"
   },
   {
@@ -1328,7 +1328,7 @@
     "source_url": "https://www.savewithtuas.com/assets/powerfix_36_20261006(281)-$200_bill_rebate.pdf"
    },
    "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/non-standard-tnc_v190626.pdf",
-   "data_as_of": "2026-11-05T02:29:42+00:00",
+   "data_as_of": "2026-11-06T02:29:14+00:00",
    "data_method": "scrape"
   },
   {
@@ -1365,7 +1365,7 @@
     "source_url": "https://www.savewithtuas.com/assets/pdf/2026/powerfix_12_20261006(285.8).pdf"
    },
    "terms_url": "https://www.savewithtuas.com/assets/pdf/2026/standard_tnc_v190626.pdf",
-   "data_as_of": "2026-11-05T02:29:42+00:00",
+   "data_as_of": "2026-11-06T02:29:14+00:00",
    "data_method": "scrape"
   }
  ]
