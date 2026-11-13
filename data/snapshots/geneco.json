@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-12T03:01:57+00:00",
+ "fetched_at": "2026-11-13T02:38:41+00:00",
  "plans": [
   {
    "id": "geneco-get-it-fixed-12-12",
@@ -13,7 +13,7 @@
    "contract_months": 12,
    "daily_charge_cents": 0.0,
    "rebate_sgd": 15.0,
-   "rebate_note": "Use promo code GENECO15 ($15 bill rebate, limited sign-ups)​. T&Cs apply.",
+   "rebate_note": "Use promo code GENECO15 for $15 bill rebate​. Limited sign-ups, T&Cs apply.",
    "standard": true,
    "green": false,
    "smart_meter_required": false,
