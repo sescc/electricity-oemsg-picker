@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20T03:19:50+00:00",
+ "generated_at": "2026-11-27T04:16:49+00:00",
  "sources": {
   "ses": {
    "ok": false,
@@ -10,17 +10,17 @@
   "tariff_datagov": {
    "ok": true,
    "url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_61eac3cdb086814af485dcc682b75ae9&limit=5",
-   "fetched_at": "2026-11-20T03:19:52+00:00"
+   "fetched_at": "2026-11-27T04:16:50+00:00"
   },
   "weather_history": {
    "ok": true,
    "url": "https://archive-api.open-meteo.com/v1/archive",
-   "fetched_at": "2026-11-20T03:19:53+00:00"
+   "fetched_at": "2026-11-27T04:16:52+00:00"
   },
   "weather_seasonal": {
    "ok": true,
    "url": "https://seasonal-api.open-meteo.com/v1/seasonal",
-   "fetched_at": "2026-11-20T03:19:54+00:00"
+   "fetched_at": "2026-11-27T04:16:52+00:00"
   }
  },
  "ses": {
@@ -4125,15 +4125,15 @@
  },
  "weather_seasonal": {
   "2026-12": {
-   "cdd_mean": 59.79,
-   "cdd_p10": 51.19,
-   "cdd_p90": 66.39,
+   "cdd_mean": 63.22,
+   "cdd_p10": 54.52,
+   "cdd_p90": 71.98,
    "members": 50
   },
   "2027-01": {
-   "cdd_mean": 86.13,
-   "cdd_p10": 76.0,
-   "cdd_p90": 94.24,
+   "cdd_mean": 80.8,
+   "cdd_p10": 70.7,
+   "cdd_p90": 87.67,
    "members": 50
   },
   "2027-02": {
@@ -4155,9 +4155,9 @@
    "members": 50
   },
   "2027-05": {
-   "cdd_mean": 135.09,
-   "cdd_p10": 125.51,
-   "cdd_p90": 144.18,
+   "cdd_mean": 134.27,
+   "cdd_p10": 123.99,
+   "cdd_p90": 145.27,
    "members": 50
   }
  }
